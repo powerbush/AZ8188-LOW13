@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+	<TextView 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textColor="#FFF"
+		android:textSize="36sp"
+		android:padding="10dp"
+		android:text="@string/app_name"
+		android:gravity="center_horizontal"
+		android:background="@drawable/dialog_top" />
+	<LinearLayout 
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+		android:background="@drawable/dialog_bg">
+		<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="#FFF"
+			android:textSize="36sp"
+			android:layout_margin="10dp"
+			android:gravity="center_horizontal"
+			android:text="@string/alerttext" />
+			
+		<LinearLayout 
+			android:orientation="horizontal"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:background="@drawable/dialog_bg">
+			<Button
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:text="@string/alertconfirm"
+				android:textSize="32sp"
+				android:layout_weight="1"
+				android:textColor="#FFF"
+				android:background="@drawable/dialog_button"
+				android:layout_margin="10dp"
+				android:onClick="openActivity" />
+			<Button
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:text="@string/alertcancel"
+				android:textSize="32sp"
+				android:layout_weight="1"
+				android:textColor="#FFF"
+				android:background="@drawable/dialog_button"
+				android:layout_margin="10dp"
+				android:onClick="dismissDialog" />
+		</LinearLayout>
+	</LinearLayout>
+	<ImageView
+		android:layout_marginTop="-3dp"
+		android:src="@drawable/dialog_bottom"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" />
+</LinearLayout>

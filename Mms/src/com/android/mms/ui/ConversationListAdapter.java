@@ -60,6 +60,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.CursorAdapter;
+import android.view.ViewGroup.LayoutParams;  
 
 /**
  * The back-end data adapter for ConversationList.
@@ -68,7 +69,7 @@ import android.widget.CursorAdapter;
 public class ConversationListAdapter extends CursorAdapter implements AbsListView.RecyclerListener {
     private static final String TAG = "ConversationListAdapter";
     private static final boolean LOCAL_LOGV = false;
-
+	
     private final LayoutInflater mFactory;
     private OnContentChangedListener mOnContentChangedListener;
 
@@ -83,9 +84,17 @@ public class ConversationListAdapter extends CursorAdapter implements AbsListVie
             Log.e(TAG, "Unexpected bound view: " + view);
             return;
         }
-
         ConversationListItem headerView = (ConversationListItem) view;
         Conversation conv = Conversation.from(context, cursor);
+	/*-------------------------by lai----------------------------*/	
+	if(Conversation.MmsCheckPhoneNum==true){
+		Conversation.MmsCheckPhoneNum=false;
+  		headerView.setVisibility(View.GONE);
+                LayoutParams laParams=(LayoutParams)headerView.getLayoutParams();
+                laParams.height=1;//对该控件的布局参数做修改
+                headerView.setLayoutParams(laParams);//重新设定布局
+  	}
+	/*-------------------------by lai----------------------------*/	
         ConversationListItemData ch = new ConversationListItemData(context, conv);
         headerView.bind(context, ch);
     }
@@ -96,25 +105,50 @@ public class ConversationListAdapter extends CursorAdapter implements AbsListVie
     }
 
     @Override
-    public View newView(Context context, Cursor cursor, ViewGroup parent) {
+    public View newView(Context context, Cursor cursor, ViewGroup parent) {//一般都这样写，返回列表行元素，注意这里返回的就是bindView中的view
         if (LOCAL_LOGV) Log.v(TAG, "inflating new view");
         return mFactory.inflate(R.layout.conversation_list_item, parent, false);
     }
 
-    public interface OnContentChangedListener {
-        void onContentChanged(ConversationListAdapter adapter);
-    }
+    /*-------------------------by lai----------------------------*/
+    //public View getView(int position, View convertView, ViewGroup parent) {    
+       //return super.getView(position, convertView, parent);                                                                     
+    //}  
+   /*-------------------------by lai----------------------------*/
+		
 
-    public void setOnContentChangedListener(OnContentChangedListener l) {
-        mOnContentChangedListener = l;
-    }
+  
+  public interface OnContentChangedListener {  //定义一个内容变化监听器
+  
+      void onContentChanged(ConversationListAdapter adapter);
+  
+  }
 
-    @Override
-    protected void onContentChanged() {
-        if (mCursor != null && !mCursor.isClosed()) {
-            if (mOnContentChangedListener != null) {
-                mOnContentChangedListener.onContentChanged(this);
-            }
-        }
-    }
+ 
+ 
+  public void setOnContentChangedListener(OnContentChangedListener l) {
+  
+      mOnContentChangedListener = l;
+  
+  }
+
+ 
+ 
+  @Override
+  
+  protected void onContentChanged() {
+  
+      if (mCursor != null && !mCursor.isClosed()) {
+  
+          if (mOnContentChangedListener != null) {
+  
+              mOnContentChangedListener.onContentChanged(this);
+  
+          }
+  
+      }
+  
+  }
+
 }
+

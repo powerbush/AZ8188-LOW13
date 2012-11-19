@@ -66,7 +66,8 @@
 
 		    <service android:name=".util.OMACPReceiverService"
 				         android:exported="true" /> 
-        <activity android:name=".ui.ConversationList"
+				         
+        <activity android:name=".ui.ConversationMainList"
                   android:label="@string/app_label"
                   android:configChanges="orientation|keyboardHidden"
                   android:launchMode="singleTop">
@@ -91,10 +92,25 @@
                 <data android:mimeType="vnd.android.cursor.dir/cb-messages" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".ui.ConversationList"
+                  android:label="@string/app_label"
+                  android:configChanges="orientation|keyboardHidden"
+                  android:launchMode="singleTop">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
         <activity android:name=".ui.MultiDeleteActivity"
                   android:configChanges="orientation|keyboardHidden">        
         </activity>
-        
+
+	<!--by lai
+        <activity android:name=".block.BlockListActivity"
+        	  android:theme="@style/userdefined">        
+        </activity>
+-->        
          <activity android:name=".ui.CBMessageListActivity"
                   android:theme="@/android:style/Theme.NoTitleBar"
                   android:configChanges="orientation|keyboardHidden"
@@ -129,7 +145,7 @@
             android:theme="@/android:style/Theme.NoTitleBar"
             android:configChanges="orientation|keyboardHidden"
             android:windowSoftInputMode="stateHidden"
-            android:launchMode="singleTop" >
+            >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />

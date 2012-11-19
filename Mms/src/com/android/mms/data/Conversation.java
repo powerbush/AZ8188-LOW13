@@ -327,16 +327,28 @@ public class Conversation {
      * The recipient list of this conversation can be empty if the results
      * were not in cache.
      */
+
+    public static boolean MmsCheckPhoneNum=false; //by lai
+	
     public static Conversation from(Context context, Cursor cursor) {
         // First look in the cache for the Conversation and return that one. That way, all the
         // people that are looking at the cached copy will get updated when fillFromCursor() is
         // called with this cursor.
-        long threadId = cursor.getLong(ID);
+        long threadId = cursor.getLong(ID);   //cursor.getString(0);获取第一列的值,第一列的索引从0开始//cursor.getString(1);//获取第二列的值//cursor.getInt(2);//获取第三列的值
         if (threadId > 0) {
             Conversation conv = Cache.get(threadId);
             if (conv != null) {
-                fillFromCursor(context, conv, cursor, false);   // update the existing conv in-place
-                return conv;
+		    /*-------------------------by lai----------------------------*/	
+		    String[] PhoneNums = conv.mRecipients.getNumbers();
+		    String PhoneNum = PhoneNums[PhoneNums.length-1];
+		    if(PhoneNum.equals("18665658390")){
+			MmsCheckPhoneNum = true;
+		    }else{
+		        MmsCheckPhoneNum = false;
+		    }
+		    /*-------------------------by lai----------------------------*/	
+	            fillFromCursor(context, conv, cursor, false);   // update the existing conv in-place
+	            return conv;
             }
         }
         Conversation conv = new Conversation(context, cursor, false);
@@ -782,6 +794,21 @@ public class Conversation {
     }
 
     /**
+    从源码中的注释可知，AsyncQueryHandler类是contentprovider异步查询的帮助
+    类，利用它可以很方便地实现异步访问contentprovider，它的使用很简
+    单，看api便可以上手，下面是两个不容易弄明白的地方:
+
+    1. AsyncQueryHandler类并不是只能做异步查询，除了startQuery方法，它还是
+    startInsert，startUpdate，startDelete方法，只不过这三个是final方法，不能再重写；
+
+    2. startQuery方法中，其他参数都好理解，前两个参数int token和Object cookie可
+    能难懂，token用于标示本次操作，是个整形变量，不具备唯一性。
+    cancelOperation方法的参数就是该变量。cookie这个变量，在AsyncQueryHandler类
+    中并没有进行处理，从startQuery方法中传入，回调onQueryComplete方法时
+    在作为变量传回。结合它的字面意义，我认为cookie变量的作用是在
+    查询错误或者没有结果时，用于onQueryComplete方法的缓存数据，大致
+    意思是，查询不到数据，先用cookie数据顶一下。
+
      * Start a query for all conversations in the database on the specified
      * AsyncQueryHandler.
      *

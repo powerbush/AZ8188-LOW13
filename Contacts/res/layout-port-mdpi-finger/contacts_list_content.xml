@@ -66,7 +66,7 @@
 						android:layout_width="match_parent" android:text="@string/add_contact_dlg_title"
 						android:layout_height="match_parent" android:layout_weight="1"
 						android:ellipsize="marquee" />-->
-<ImageButton android:id="@+id/contact_list_gallery_but"
+					<ImageButton android:id="@+id/contact_list_gallery_but"
 						android:layout_width="46px" android:src="@drawable/sym_action_view_contact"
 						android:layout_height="match_parent" 
 						android:layout_marginLeft="5dp"

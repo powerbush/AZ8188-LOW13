@@ -56,8 +56,9 @@
     <string name="AzInformationNoticeErr">紧急联系人上传失败！请检查网络是否打开，并重新添加紧急联系人。</string>
     <string name="AzInformationNoticeOk">紧急联系人上传成功!</string>
     <string name="AzHeadContact">紧急联系人</string>
+    <string name="AzHeadContactDelAll">全部删除</string>
     <string name="AzHeadContactDel">删除</string>
-    <string name="AzHeadContactdial">删除</string>
+    <string name="AzHeadContactdial">呼叫</string>
     <string name="Succe">成功</string>
     <string name="False">失败</string>
     <string name="Boy">男</string>

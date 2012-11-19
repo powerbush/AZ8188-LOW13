@@ -130,9 +130,9 @@ public final class R {
         public static final int title=0x7f030013;
     }
     public static final class string {
-        public static final int AType=0x7f060047;
-        public static final int Add=0x7f060045;
-        public static final int Armyman=0x7f060040;
+        public static final int AType=0x7f060048;
+        public static final int Add=0x7f060046;
+        public static final int Armyman=0x7f060041;
         public static final int AzCertificateNumNotice=0x7f06002e;
         public static final int AzCertificateTypeNotice=0x7f06002d;
         public static final int AzConstitutionNotice=0x7f060032;
@@ -140,8 +140,9 @@ public final class R {
         public static final int AzDataTypNotice=0x7f060030;
         public static final int AzDiseaseTpyeNotice=0x7f060031;
         public static final int AzHeadContact=0x7f060037;
-        public static final int AzHeadContactDel=0x7f060038;
-        public static final int AzHeadContactdial=0x7f060039;
+        public static final int AzHeadContactDel=0x7f060039;
+        public static final int AzHeadContactDelAll=0x7f060038;
+        public static final int AzHeadContactdial=0x7f06003a;
         public static final int AzImeiNum=0x7f060033;
         public static final int AzInfoExitNotice=0x7f060029;
         public static final int AzInfoUpErr=0x7f060028;
@@ -153,29 +154,29 @@ public final class R {
         public static final int AzNameNotice=0x7f06002c;
         public static final int AzUpdataIng=0x7f06002b;
         public static final int AzWaiting=0x7f06002a;
-        public static final int BType=0x7f060048;
-        public static final int Boy=0x7f06003c;
-        public static final int CType=0x7f060049;
-        public static final int DType=0x7f06004a;
-        public static final int Decrease=0x7f060046;
-        public static final int Driver=0x7f060041;
-        public static final int EType=0x7f06004b;
-        public static final int FType=0x7f06004c;
-        public static final int False=0x7f06003b;
-        public static final int GType=0x7f06004d;
-        public static final int Girl=0x7f06003d;
-        public static final int HType=0x7f06004e;
-        public static final int IType=0x7f06004f;
-        public static final int IdCard=0x7f06003e;
-        public static final int NewInfo=0x7f060043;
-        public static final int Other=0x7f060042;
-        public static final int Passport=0x7f06003f;
-        public static final int PersonEmergencyContact=0x7f060052;
-        public static final int PersonInfo=0x7f060054;
-        public static final int PersonLocation=0x7f060051;
-        public static final int PersonTongXunLu=0x7f060053;
-        public static final int Succe=0x7f06003a;
-        public static final int UpData=0x7f060044;
+        public static final int BType=0x7f060049;
+        public static final int Boy=0x7f06003d;
+        public static final int CType=0x7f06004a;
+        public static final int DType=0x7f06004b;
+        public static final int Decrease=0x7f060047;
+        public static final int Driver=0x7f060042;
+        public static final int EType=0x7f06004c;
+        public static final int FType=0x7f06004d;
+        public static final int False=0x7f06003c;
+        public static final int GType=0x7f06004e;
+        public static final int Girl=0x7f06003e;
+        public static final int HType=0x7f06004f;
+        public static final int IType=0x7f060050;
+        public static final int IdCard=0x7f06003f;
+        public static final int NewInfo=0x7f060044;
+        public static final int Other=0x7f060043;
+        public static final int Passport=0x7f060040;
+        public static final int PersonEmergencyContact=0x7f060053;
+        public static final int PersonInfo=0x7f060055;
+        public static final int PersonLocation=0x7f060052;
+        public static final int PersonTongXunLu=0x7f060054;
+        public static final int Succe=0x7f06003b;
+        public static final int UpData=0x7f060045;
         public static final int apnDeleteData=0x7f06001d;
         public static final int apnDialerPhone=0x7f06001a;
         public static final int apnEditData=0x7f06001c;
@@ -214,7 +215,7 @@ public final class R {
         public static final int emergencycontactinput=0x7f060003;
         public static final int emergencycontent=0x7f060002;
         public static final int nodata=0x7f060004;
-        public static final int phbdelete=0x7f060050;
+        public static final int phbdelete=0x7f060051;
     }
     public static final class style {
         public static final int CustomWindowTitleBackground=0x7f070000;

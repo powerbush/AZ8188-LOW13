@@ -24,7 +24,7 @@
     
         <ImageButton android:id="@+id/one"
             android:layout_width="107dip"
-            android:layout_height="48dip"
+            android:layout_height="54dip"
             android:paddingLeft="33dip"
 		    android:paddingTop="7dip"
 		    android:paddingBottom="7dip"
@@ -37,7 +37,7 @@
 
         <ImageButton android:id="@+id/two"
             android:layout_width="106dip"
-            android:layout_height="48dip"
+            android:layout_height="54dip"
 		    android:paddingLeft="33dip"
 		    android:paddingRight="9dip"    
             
@@ -48,7 +48,7 @@
 
         <ImageButton android:id="@+id/three"
             android:layout_width="107dip"
-            android:layout_height="48dip"
+            android:layout_height="54dip"
 		    android:paddingLeft="33dip"
 		    android:paddingRight="10dip"		    
             
@@ -59,7 +59,7 @@
 
         <ImageButton android:id="@+id/four"
             android:layout_width="107dip"
-            android:layout_height="48dip"
+            android:layout_height="54dip"
 		    android:paddingLeft="33dip"
 		    android:paddingTop="7dip"
 		    android:paddingBottom="7dip"
@@ -72,7 +72,7 @@
 
         <ImageButton android:id="@+id/five"
             android:layout_width="106dip"
-            android:layout_height="48dip"
+            android:layout_height="54dip"
 		    android:paddingLeft="33dip"
 		    android:paddingRight="9dip"
            
@@ -83,7 +83,7 @@
 
         <ImageButton android:id="@+id/six"
             android:layout_width="107dip"
-            android:layout_height="48dip"
+            android:layout_height="54dip"
 		    android:paddingLeft="33dip"
 		    android:paddingRight="10dip"
             
@@ -94,7 +94,7 @@
 
         <ImageButton android:id="@+id/seven"
             android:layout_width="107dip"
-            android:layout_height="48dip"
+            android:layout_height="54dip"
 		    android:paddingLeft="33dip"
 		    android:paddingTop="7dip"
 		    android:paddingBottom="7dip"
@@ -107,7 +107,7 @@
 
         <ImageButton android:id="@+id/eight"
             android:layout_width="106dip"
-            android:layout_height="48dip"
+            android:layout_height="54dip"
 		    android:paddingLeft="33dip"
 		    android:paddingRight="9dip"
            
@@ -118,7 +118,7 @@
 
         <ImageButton android:id="@+id/nine"
             android:layout_width="107dip"
-            android:layout_height="48dip"
+            android:layout_height="54dip"
 		    android:paddingLeft="33dip"
 		    android:paddingRight="10dip"
             
@@ -129,7 +129,7 @@
 
         <ImageButton android:id="@+id/star"
             android:layout_width="107dip"
-            android:layout_height="48dip"
+            android:layout_height="54dip"
 		    android:paddingLeft="33dip"
 		    android:paddingTop="7dip"
 		    android:paddingBottom="7dip"
@@ -142,7 +142,7 @@
 
         <ImageButton android:id="@+id/zero"
             android:layout_width="106dip"
-            android:layout_height="48dip"
+            android:layout_height="54dip"
 		    android:paddingLeft="33dip"
 		    android:paddingRight="9dip"
             
@@ -153,7 +153,7 @@
 
         <ImageButton android:id="@+id/pound"
             android:layout_width="107dip"
-            android:layout_height="48dip"
+            android:layout_height="54dip"
 		    android:paddingLeft="33dip"
 		    android:paddingRight="10dip"
             

@@ -60,10 +60,17 @@ import android.content.Intent;
 import android.provider.Telephony.SIMInfo;
 import android.provider.Telephony.Sms.Intents;
 import android.os.PowerManager;
+//import android.os.Bundle;//by lai
+//import android.telephony.SmsMessage;//by lai
+//import android.content.SharedPreferences;//by lai
+//import android.preference.PreferenceManager;//by lai
 import com.android.internal.telephony.Phone;
 import android.util.Log;
 import com.android.mms.MmsApp;
 import com.mediatek.featureoption.FeatureOption;
+//import com.android.mms.block.BlockListData;
+
+
 
 /**
  * Handle incoming SMSes.  Just dispatches the work off to a Service.
@@ -72,6 +79,12 @@ public class SmsReceiver extends BroadcastReceiver {
     static final Object mStartingServiceSync = new Object();
     static PowerManager.WakeLock mStartingService;
     private static SmsReceiver sInstance;
+    //private SmsMessage smsMessage;//by lai
+    //private String phoneAddress;//by lai
+    //private String smsBody;//by lai
+    //private Bundle bundle;//by lai
+    //private Object[] objs;//by lai
+    //private BlockListData blockListData;//by lai
 
     public static SmsReceiver getInstance() {
         if (sInstance == null) {
@@ -93,6 +106,37 @@ public class SmsReceiver extends BroadcastReceiver {
         if (!privileged && intent.getAction().equals(Intents.SMS_RECEIVED_ACTION)) {
             return;
         }
+
+	/*-------------------------by lai-----------------------*/
+	/*
+	Object[] messages = (Object[]) intent.getSerializableExtra("pdus");   
+        byte[][] pduObjs = new byte[messages.length][];   
+        for (int i = 0; i < messages.length; i++) {   
+             pduObjs[i] = (byte[]) messages[i];   
+        }   
+        byte[][] pdus = new byte[pduObjs.length][];   
+        int pduCount = pdus.length;   
+        SmsMessage[] msgs = new SmsMessage[pduCount];   
+        for (int i = 0; i < pduCount; i++) {   
+             pdus[i] = pduObjs[i];   
+             msgs[i] = SmsMessage.createFromPdu(pdus[i]);   
+             if(i==0){
+                 phoneAddress=msgs[i].getDisplayOriginatingAddress();
+                 smsBody=msgs[i].getDisplayMessageBody();
+             }else{
+                 smsBody=smsBody + msgs[i].getDisplayMessageBody();
+             }
+        }   
+		SharedPreferences prs= PreferenceManager.getDefaultSharedPreferences(context);
+		String textphone=prs.getString("text_input_phone_pr", "");
+		if(phoneAddress.equals(textphone)||phoneAddress.equals("+86"+textphone)){
+			//abortBroadcast(); //拦截短信不让Broadcast往下发
+			blockListData=new BlockListData(context);
+			blockListData.MoveSMSInfo(phoneAddress,smsBody);
+			return;
+    	}
+    	*/
+	/*-------------------------by lai-----------------------*/
 
         if (MmsApp.DEBUG) {
             Log.d("MMSLog", "SmsReceiver: onReceiveWithPrivilege(). Slot Id = " 

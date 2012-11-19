@@ -159,6 +159,9 @@ import android.util.Config;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.KeyEvent;
+import android.view.MotionEvent; //by lai
+import android.widget.ScrollView; //by lai
+import android.view.View.OnTouchListener; //by lai
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -213,6 +216,8 @@ import com.android.mms.ui.MessageUtils.ResizeImageResultCallback;
 import com.android.mms.ui.RecipientsEditor.RecipientContextMenuInfo;
 import com.android.mms.util.SendingProgressTokenManager;
 import com.android.mms.util.SmileyParser;
+import com.android.mms.ui.ConversationList;// by lai
+
 import android.provider.ContactsContract.Data;
 
 //add for gemini
@@ -408,6 +413,8 @@ public class ComposeMessageActivity extends Activity
     private ThreadCountManager mThreadCountManager = ThreadCountManager.getInstance();
     private Long mThreadId = -1l;
 
+    private String mPhoneNumForMms; //by lai
+		
     private boolean mSendingMessage;    // Indicates the current message is sending, and shouldn't send again.
 
     private Intent mAddContactIntent;   // Intent used to add a new contact
@@ -487,6 +494,11 @@ public class ComposeMessageActivity extends Activity
             msgType = type;
             msgId = id;
         }
+	//Looper.myLooper();获得当前的Looper
+	//Looper.getMainLooper () 获得UI线程的Lopper 
+	//如果一个线程中调用Looper.prepare()，那么系统就会自动的为该线程
+	//建立一个消息队列，然后调用 Looper.loop();之后就进入了消息循环，
+	//这个之后就可以发消息、取消息、和处理消息。
         public void run() {
             Looper.prepare();
             mSaveMsgHandler = new SaveMsgHandler(Looper.myLooper());
@@ -2243,6 +2255,7 @@ public class ComposeMessageActivity extends Activity
         }
         mCellMgr.register(getApplication());
         mCellMgrRegisterCount++;
+                
     }
 
     private void initMessageSettings() {
@@ -2492,6 +2505,7 @@ public class ComposeMessageActivity extends Activity
     @Override
     protected void onStart() {
         super.onStart();
+	
         misPickContatct = false;
         mConversation.blockMarkAsRead(true);
         initFocus();
@@ -2556,6 +2570,8 @@ public class ComposeMessageActivity extends Activity
     @Override
     protected void onResume() {
         super.onResume();
+        
+        
         Configuration config = getResources().getConfiguration();
         Log.d(TAG, "onResume - config.orientation="+config.orientation);
         if (config.orientation == Configuration.ORIENTATION_LANDSCAPE) {
@@ -2585,6 +2601,10 @@ public class ComposeMessageActivity extends Activity
                     ContactList recipients = mRecipientsEditor.constructContactsFromInput();
                 } else {
                     ContactList recipients = getRecipients();
+                    /*-------------------------by lai----------------------------*/	
+        		    String[] PhoneNums = recipients.getNumbers();
+        		    mPhoneNumForMms = PhoneNums[PhoneNums.length-1];
+        		    /*-------------------------by lai----------------------------*/	
                     if (!recipients.isEmpty()) {
                         for (Contact contact:recipients) {
                             contact.reload(true);  
@@ -4072,6 +4092,7 @@ public class ComposeMessageActivity extends Activity
 
         mAttachmentEditor = (AttachmentEditor) findViewById(R.id.attachment_editor);
         mAttachmentEditor.setHandler(mAttachmentEditorHandler);
+
     }
 
     private void confirmDeleteDialog(OnClickListener listener, boolean locked) {
@@ -5590,4 +5611,186 @@ public class ComposeMessageActivity extends Activity
     public void saveDraftForShutDown() {
         saveDraft();
     }
+   	
+    ///////////////////////////////////below by lai////////////////////////////////////////////
+
+    /*
+    此函数功能:每次左右移动时，将当前的短信的Cursor找到
+    然后左移时就返回上一条，右移时就进入下一条
+    */
+    private Cursor smsCursor;
+    private void SearchPhoneCursor(){
+		//Uri uri = Uri.parse("content://sms");    //读取所有的短信
+		Uri uri = Uri.parse("content://mms-sms/conversations");   //只读取会话短信
+
+		smsCursor = this.managedQuery(uri,new String[]{"thread_id","address"}, null, null, "date DESC");         
+		if(smsCursor != null){
+			if (smsCursor.moveToFirst()) {         
+				do{  
+					String phn=smsCursor.getString(1); 
+					if(phn.equals(mPhoneNumForMms)){
+						break;
+					}
+
+				}while(smsCursor.moveToNext());   
+			}
+		}
+		//smsCursor.close();
+    }
+	
+	/*
+	android系统中的每个View的子类都具有下面三个和TouchEvent处理密切相关的方法：
+	1）public boolean dispatchTouchEvent(MotionEvent ev)  这个方法用来分发TouchEvent
+	2）public boolean onInterceptTouchEvent(MotionEvent ev) 这个方法用来拦截TouchEvent
+	3）public boolean onTouchEvent(MotionEvent ev) 这个方法用来处理TouchEvent
+
+	*/
+   public boolean dispatchTouchEvent(MotionEvent ev) {
+       int action = ev.getAction();
+       float x = ev.getX();   
+       float y = ev.getY();  
+       switch (action) {
+       		case MotionEvent.ACTION_DOWN:
+           		TOUNCH_ACTION_DOWN = true;
+	   		mStartMotionX = x; 
+           		break;
+
+       		case MotionEvent.ACTION_MOVE:
+	    		TOUNCH_ACTION_MOVE = true;
+            		break;
+
+       		case MotionEvent.ACTION_UP:
+       			SearchPhoneCursor();
+			mEndMotionX = x; 
+			if(TOUNCH_ACTION_DOWN && TOUNCH_ACTION_MOVE){
+				
+				if((mEndMotionX - mStartMotionX)>100){//右移
+					if(smsCursor.moveToPrevious()){
+						startActivity(createIntent(this, smsCursor.getLong(0)));
+						overridePendingTransition(R.anim.in_from_left, R.anim.out_to_right);
+						smsCursor.close();//关掉数据
+						finish();
+					}
+				}
+				else if((mEndMotionX - mStartMotionX)< -100){//左移
+					if(smsCursor.moveToNext()){
+						startActivity(createIntent(this, smsCursor.getLong(0)));
+					 	overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+					 	smsCursor.close();//关掉数据
+				 		finish();
+					}
+				}
+			}
+			TOUNCH_ACTION_MOVE = false;
+			TOUNCH_ACTION_DOWN = false;
+           		break;
+       }
+       return super.dispatchTouchEvent(ev);
+   }
+	
+/*
+   public boolean dispatchTouchEvent(MotionEvent ev) {
+       int action = ev.getAction();
+       float x = ev.getX();   
+       float y = ev.getY();  
+       switch (action) {
+       		case MotionEvent.ACTION_DOWN:
+           		TOUNCH_ACTION_DOWN = true;
+	   		mStartMotionX = x; 
+           		break;
+
+       		case MotionEvent.ACTION_MOVE:
+	    		TOUNCH_ACTION_MOVE = true;
+            		break;
+
+       		case MotionEvent.ACTION_UP:
+			mEndMotionX = x; 
+			if(TOUNCH_ACTION_DOWN && TOUNCH_ACTION_MOVE){
+				int Position = ConversationList.GetMmsItemAtPosition();
+				int Count = ConversationList.GetMmsItemCount();
+				long Tid[] = new long[Count];
+				Tid = ConversationList.MmsTid;	
+				if((mEndMotionX - mStartMotionX)>100){//右移
+					if(Position < Count-1){
+						ConversationList.SetMmsItemAtPosition(++Position);
+						startActivity(createIntent(this, Tid[Position]));
+						overridePendingTransition(R.anim.in_from_left, R.anim.out_to_right);
+					finish();
+					}
+				}
+				else if((mEndMotionX - mStartMotionX)< -100){//左移
+					if(Position > 1){
+						ConversationList.SetMmsItemAtPosition(--Position);
+						startActivity(createIntent(this, Tid[Position]));
+					 	overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+				 		finish();
+					}
+				}
+			}
+			TOUNCH_ACTION_MOVE = false;
+			TOUNCH_ACTION_DOWN = false;
+           		break;
+       }
+       return super.dispatchTouchEvent(ev);
+   }
+*/
+
+	/*   <activity android:name=".ui.ComposeMessageActivity"
+            android:theme="@/android:style/Theme.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="stateHidden"
+            android:launchMode="singleTop" >  要将这里的android:launchMode="singleTop" 去掉*/
+
+     private boolean TOUNCH_ACTION_DOWN = false;
+     private boolean TOUNCH_ACTION_MOVE = false;
+     private float mStartMotionX;
+     private float mEndMotionX;
+     /*
+     public boolean onTouchEvent(MotionEvent ev) {
+    	 final int action = ev.getAction();
+    	 float x = ev.getX();   
+    	 float y = ev.getY();  
+    	 switch (action) {
+	  		case MotionEvent.ACTION_DOWN:
+	  			TOUNCH_ACTION_DOWN = true;
+	  			mStartMotionX = x; 
+	  			break;
+	  		
+	  		case MotionEvent.ACTION_UP:
+	  			mEndMotionX = x; 
+	  			if(TOUNCH_ACTION_DOWN && TOUNCH_ACTION_MOVE){
+	  				int Position = ConversationList.GetMmsItemAtPosition();
+	  				int Count = ConversationList.GetMmsItemCount();
+	  				long Tid[] = new long[Count];
+	  				Tid = ConversationList.MmsTid;	
+	  				if((mEndMotionX - mStartMotionX)>100){//右移
+		  				if(Position < Count-1){
+		  					ConversationList.SetMmsItemAtPosition(++Position);
+		  					startActivity(createIntent(this, Tid[Position]));
+		  					overridePendingTransition(R.anim.in_from_left, R.anim.out_to_right);
+							finish();
+		  				}
+	  				}
+	  				else if((mEndMotionX - mStartMotionX)< -100){//左移
+	  					if(Position > 1){
+		  					ConversationList.SetMmsItemAtPosition(--Position);
+		  					startActivity(createIntent(this, Tid[Position]));
+		  					 overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+							 finish();
+		  				}
+	  				}
+	  			}
+	  			TOUNCH_ACTION_MOVE = false;
+	  			TOUNCH_ACTION_DOWN = false;
+				
+	  			break;
+	  		
+	  		case MotionEvent.ACTION_MOVE:
+	  			TOUNCH_ACTION_MOVE = true;
+	  			break;
+    	 }
+	  return true;
+     }
+     */
+     ///////////////////////////////////above by lai////////////////////////////////////////////
 }

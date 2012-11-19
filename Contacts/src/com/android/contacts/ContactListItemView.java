@@ -476,7 +476,7 @@ public class ContactListItemView extends ViewGroup {
         if (mHorizontalDividerDrawable == null) {
             mHorizontalDividerDrawable = mContext.getResources().getDrawable(
                     com.android.internal.R.drawable.divider_horizontal_dark_opaque);
-            mHorizontalDividerHeight = mHorizontalDividerDrawable.getIntrinsicHeight();
+            mHorizontalDividerHeight = 0;//mHorizontalDividerDrawable.getIntrinsicHeight();
         }
     }
 

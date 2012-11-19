@@ -2,13 +2,20 @@
 <resources>
     <string name="hello">Hello</string>
     <string name="app_name">健康信息</string>
-    <string name="testnuminput"> 请输入测试号码</string>
-    <string name="confirm"> 确定</string>
-    <string name="phonenum"> 号码</string>
-    <string name="smscontent"> 内容</string>
-    <string name="smssendto"> 转发</string>
-    <string name="smsdelete"> 删除</string>
-    <string name="smsdeleteall"> 删除全部</string>
-    
-    
+    <string name="testnuminput">请输入测试号码</string>
+    <string name="confirm">确定</string>
+    <string name="phonenum">号码</string>
+    <string name="smscontent">内容</string>
+    <string name="smssendto">转发</string>
+    <string name="smsdelete">删除</string>
+    <string name="smsdeleteall">删除全部</string>
+    <string name="smscontexttitle">健康咨询</string>
+    <string name="alerttext">关爱行今日温馨健康提示！~</string>
+    <string name="alertconfirm">查看</string>
+    <string name="alertcancel">取消</string>
+    <string name="title_template">{name}{call}，您好！</string>
+    <string name="male">男</string>
+    <string name="famale">女</string>
+    <string name="call_male">先生</string>
+    <string name="call_female">女士</string>
 </resources>

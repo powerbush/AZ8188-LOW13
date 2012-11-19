@@ -4,12 +4,14 @@
   android:orientation="vertical"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:background="@android:color/white"
+  android:background="#FEFEFC"
   >
    
     <ListView 
     android:id="@+id/listview_contact_sms"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="#0000"
+    android:cacheColorHint="#0000"
     ></ListView>
 </LinearLayout>

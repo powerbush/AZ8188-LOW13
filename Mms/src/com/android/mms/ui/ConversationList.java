@@ -134,7 +134,11 @@ public class ConversationList extends ListActivity
     private static final String TAG = "ConversationList";
     private static final boolean DEBUG = false;
     private static final boolean LOCAL_LOGV = DEBUG;
-
+    /*
+    public static  int MmsItemAtPosition;//by lai
+    public static  int MmsItemCount;//by lai
+    public static  long MmsTid[];//by lai
+    */
     private static final int THREAD_LIST_QUERY_TOKEN       = 1701;
     public static final int DELETE_CONVERSATION_TOKEN      = 1801;
     public static final int HAVE_LOCKED_MESSAGES_TOKEN     = 1802;
@@ -182,11 +186,11 @@ public class ConversationList extends ListActivity
         
         mStatusBarManager = (StatusBarManager)getSystemService(Context.STATUS_BAR_SERVICE);
         mQueryHandler = new ThreadListQueryHandler(getContentResolver());
-
+	
         ListView listView = getListView();
         listView.setItemsCanFocus(true);
-        View headerView = LayoutInflater.from(this).inflate(R.layout.conversation_header_item, null);   
-        listView.addHeaderView(headerView);        
+        //View headerView = LayoutInflater.from(this).inflate(R.layout.conversation_header_item, null);//by lai   
+        //listView.addHeaderView(headerView);       //by lai 
               
         listView.setOnCreateContextMenuListener(mConvListOnCreateContextMenuListener);
         listView.setOnKeyListener(mThreadListKeyListener);
@@ -217,7 +221,7 @@ public class ConversationList extends ListActivity
 
     private void initListAdapter() {
         mListAdapter = new ConversationListAdapter(this, null);
-        mListAdapter.setOnContentChangedListener(mContentChangedListener);
+        mListAdapter.setOnContentChangedListener(mContentChangedListener);//给自己设置 监听器，当curser的contentObserver 发现curser改变时，OnContentChangedListener 中的方法将会被调用
         setListAdapter(mListAdapter);
         getListView().setRecyclerListener(mListAdapter);
     }
@@ -538,9 +542,42 @@ public class ConversationList extends ListActivity
                 Log.d(TAG, "onListItemClick: pos=" + position + ", view=" + v + ", tid=" + tid);
             }
 	        Log.i(WP_TAG, "ConversationList: " + "ch.getType() is : " + ch.getType());
+
+		/*-------------------by lai--------------------------------*/
+		/*
+	        MmsItemAtPosition = position;
+	        MmsItemCount = getListView().getCount();
+	        MmsTid = new long[MmsItemCount];
+	        for(int p=1;p<MmsItemCount;p++){
+	        	cursor  = (Cursor) getListView().getItemAtPosition(p);
+	        	if (cursor == null) {
+	        		break;
+	        	}
+	        	conv = Conversation.from(this, cursor);
+	       		MmsTid[p]= conv.getThreadId();
+	        }
+	        */
+	       /*-------------------by lai--------------------------------*/
+		   
 	        openThread(tid, ch.getType());
     }
-
+    /*
+    public static int GetMmsItemAtPosition(){//by lai
+		return MmsItemAtPosition;
+    }
+    
+    public static void SetMmsItemAtPosition(int p){//by lai
+		MmsItemAtPosition = p ;
+    }
+    
+    public static int GetMmsItemCount(){//by lai
+		return MmsItemCount;
+    }
+    
+    public static long[] GetMmsTid(){//by lai
+		return MmsTid;
+    }
+    */
     private void createNewMessage() {
         startActivity(ComposeMessageActivity.createIntent(this, 0));
     }
@@ -581,7 +618,18 @@ public class ConversationList extends ListActivity
 
         return intent;
     }
-
+	/*
+	options menu:    按MENU键来显示， 在屏幕最下面最多显示6个菜单选
+		项（icon menu，不可以有checkable），如果多于6个的其他的会以
+		“more” icon menu来调出（expanded menu），通过activity的
+		onCreateOptionsMenu来生成，只能在menu第一次生成时调用；想改
+		变options menu，只能在onPrepareOptionsMenu里来实现；处理 options menu 
+		里菜单项，要用activity的onOptionsItemSelected来实现。
+	context menu:    在view上需要按上2s显示，与某个view绑定在一起，在
+		activity的onCreate里使用registerForContextMenu(getListView()) 为view注册context menu，
+		菜单的实现由在activity的onCreateContextMenu来完成。在activity的
+		onContextItemSelected完成选中菜单的处理。
+	*/
     private final OnCreateContextMenuListener mConvListOnCreateContextMenuListener =
         new OnCreateContextMenuListener() {
         public void onCreateContextMenu(ContextMenu menu, View v,
@@ -902,7 +950,7 @@ public class ConversationList extends ListActivity
             }
         }
     }
-
+    
     private final class ThreadListQueryHandler extends BaseProgressQueryHandler {
         public ThreadListQueryHandler(ContentResolver contentResolver) {
             super(contentResolver);
@@ -912,15 +960,15 @@ public class ConversationList extends ListActivity
         protected void onQueryComplete(int token, Object cookie, Cursor cursor) {
             switch (token) {
             case THREAD_LIST_QUERY_TOKEN:
-                if (cursor != null) {
+            	if (cursor != null) {
                     /* After deleting a conversation, The ListView may refresh again.
                      * Because the cursor is not changed before query again, it may
                      * cause that the deleted threads's data is added in the cache again
                      * by ConversationListAdapter::bindView().
                      * We need to remove the not existed conversation in cache*/
-                    Conversation.removeInvalidCache(cursor);
+        			Conversation.removeInvalidCache(cursor);
+        			mListAdapter.changeCursor(cursor);
 
-                    mListAdapter.changeCursor(cursor);
                 }
                 setTitle(getString(R.string.app_label));
                 setProgressBarIndeterminateVisibility(false);
@@ -1033,4 +1081,5 @@ class ConversationHeaderItem extends RelativeLayout {
         	
         });
     } 
+    
 }

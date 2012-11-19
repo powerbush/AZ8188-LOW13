@@ -2,9 +2,9 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Disabled views -->
     <item android:state_focused="true" android:state_enabled="false"
-        android:drawable="@drawable/phone_dial_num_bg_call_btn" />
+        android:drawable="@drawable/phone_dial_bg_call_btn_normal" />
     <item android:state_enabled="false"
-        android:drawable="@drawable/phone_dial_num_bg_call_btn" />
+        android:drawable="@drawable/phone_dial_bg_call_btn_normal" />
         
     <!-- Enabled views -->
     <item android:state_pressed="true"
@@ -12,6 +12,6 @@
     <item android:state_focused="true"
         android:drawable="@drawable/phone_dial_bg_call_btn_focus" />
     <item
-        android:drawable="@drawable/phone_dial_num_bg_call_btn" />
+        android:drawable="@drawable/phone_dial_bg_call_btn_normal" />
 </selector>
 

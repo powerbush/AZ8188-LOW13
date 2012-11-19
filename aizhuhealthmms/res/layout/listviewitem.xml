@@ -1,39 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:orientation="horizontal"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  android:background="@android:color/white"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	 android:orientation="horizontal"
+	 android:layout_width="match_parent"
+	 android:layout_height="match_parent"
   >
-    
-    <ImageView 
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="@drawable/msn"
-    />
-    <LinearLayout 
-    android:layout_height="wrap_content"
-    android:layout_width="fill_parent"
-    android:orientation="vertical"
+    <LinearLayout android:id="@+id/recv_date_time"
+    	android:orientation="vertical"
+    	android:layout_height="wrap_content"
+    	android:layout_width="fill_parent"
+    	android:gravity="right"
+		android:layout_alignParentRight="true"
+		android:layout_alignParentTop="true"
+		android:paddingRight="15dp"
     >
-    <TextView 
-    android:id="@+id/phome_contact_sms"
-    android:layout_height="wrap_content"
-    android:layout_width="fill_parent"
-    android:textSize="20dp"
-    android:textColor="@android:color/black"
-    android:text="@string/phonenum"
-    />
-    <TextView
-    android:id="@+id/body_content_sms"
-    android:layout_height="wrap_content"
-    android:layout_width="fill_parent"
-    android:textSize="20dp"
-    android:textColor="@android:color/black"
-    android:text="@string/smscontent"
-    />
+    	<TextView android:id="@+id/recvdate"
+    		android:layout_height="wrap_content"
+    		android:layout_width="wrap_content"
+    		android:textSize="28sp"
+    		android:textStyle="bold"
+    		android:textColor="#333"/>
+    	<TextView android:id="@+id/recvtime"
+    		android:layout_height="wrap_content"
+    		android:layout_width="wrap_content"
+    		android:textSize="28sp"
+    		android:textStyle="bold"
+    		android:textColor="#333"/>
     </LinearLayout>
-    
-    
-</LinearLayout>
+    <TextView android:id="@+id/phome_contact_sms"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+    	android:textSize="28sp"
+		android:textColor="@android:color/white"
+		android:text="@string/phonenum"
+		android:visibility="gone"
+    />
+    <TextView android:id="@+id/body_content_sms"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+    	android:textSize="40sp"
+		android:textColor="@android:color/black"
+		android:text="@string/smscontent"
+		android:background="@drawable/health_mms_bg"
+		android:layout_below="@+id/recv_date_time"
+    />
+</RelativeLayout>
