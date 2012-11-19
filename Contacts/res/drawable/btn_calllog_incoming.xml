@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true"
+        android:drawable="@drawable/btn_calllog_bg_pressed_02" />
+    <item android:state_focused="true"
+        android:drawable="@drawable/btn_calllog_bg_foucs_02" />
+    <item
+        android:drawable="@drawable/btn_calllog_bg_normal_02" />
+</selector>

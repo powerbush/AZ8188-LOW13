@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+
+    <!-- Begin: Colors for new Call Log   -->
+    <color name="calllog_button_font_color">#ff3b3b3b</color>
+    <color name="calllog_button_background_color">#ffdcdcdc</color>
+    <color name="calllog_list_item_head_background_color">#ff555758</color>
+    <color name="calllog_list_item_head_font_color">#ffc0c2c3</color>
+    <color name="calllog_list_item_name_font_color">#ff4c4e4e</color>
+    <color name="calllog_list_item_label_font_color">#ff868585</color>
+    <color name="calllog_list_item_number_font_color">#ff868585</color>
+    <color name="calllog_list_item_simname_font_color">#ffffffff</color>
+    <color name="calllog_list_item_time_font_color">#ff868585</color>
+    <!-- End: Colors for new Call Log   -->
+
+
+    <drawable name="white_background">#ffffffff</drawable>
+    
+    <color name="textColorIconOverlay">#fff</color>
+    <color name="textColorIconOverlayShadow">#000</color>
+    <color name="sect_secondary">#4fff</color>
+    <color name="quickcontact_disambig">#f2f2f2</color>
+    <color name="quickcontact_disambig_divider">#afafaf</color>
+
+    <color name="edit_divider">#ff666666</color>
+    <color name="background_secondary">#ff202020</color>
+    <color name="msg_background_secondary">#ff000000</color>    
+    <color name="pinned_header_background_old">#ff202020</color>
+
+    <color name="translucent_search_background">#cc000000</color>
+    <color name="FavoriteNameColor">#ffffff</color> 
+  	<color name="StatusbarTextColor">#000000</color> 
+  	<color name="EventReadColor">#acacab</color> 
+  	<color name="EventFriendNameColor">#4c4c4c</color> 
+
+	<color name="RedTry">#ffff0000</color>
+	<color name="GreenTry">#ff00ff00</color>
+	<color name="BlueTry">#ff0000ff</color>
+	
+	<!-- New color values for Gemini Enhancement -->
+	<color name="background">#ffffffff</color>
+	<!-- <color name="background">#ffff0000</color>-->
+	<color name="bright_foreground_light">#ff4c4e4e</color>
+	<color name="pinned_header_background">#ff4c4e4e</color>
+	<color name="bright_foreground_light_disabled">#804c4e4e</color>
+	<color name="dim_foreground_light">#ff484d4e</color>
+	<color name="dim_foreground_light_disabled">#80484d4e</color>
+	<color name="tab_label_select">#ffffff</color>
+	<color name="tab_label_unselect">#7c7c7c</color>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/tab_bottom"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	android:background="@drawable/tab_new_bg" >
+	<ImageView android:id="@+id/tab_icon" android:layout_width="wrap_content"
+		android:layout_height="20px" android:layout_centerHorizontal="true"/>
+	<TextView android:id="@+id/tab_label" android:layout_width="match_parent"
+		android:layout_height="14px" android:layout_below="@id/tab_icon"
+		android:layout_centerHorizontal="true"
+		android:ellipsize="marquee"  
+		android:singleLine="true"
+        android:gravity="center_horizontal"
+                android:layout_marginTop="-4px"
+                android:textSize="13sp"
+		android:textColor="#7d7c7c" />
+</RelativeLayout>

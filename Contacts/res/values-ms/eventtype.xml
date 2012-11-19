@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="kaixin1">foto dimuat naik</string>
+    <string name="kaixin2">blog diterbitkan</string>
+    <string name="kaixin3">status dikemas kini</string>
+    <string name="kaixin1018">dirakamkan</string>
+    <string name="kaixin1088">dihantar kepada kami</string>
+    <string name="kaixin1016">diundi</string>
+    <string name="renren21or23">blog dikongsi</string>
+    <string name="renren32or36">foto dikongsi</string>
+    <string name="renren33">album dikongsi</string>
+    <string name="renren34or35">gambar profil dikemas kini</string>
+    <string name="renren40">(anda) ditambah sebagai rakan</string>
+    <string name="renren41">sedang mengikuti anda</string>
+    <string name="renren51or54">berkongsi pautan</string>
+    <string name="fb80">dikongsi</string>
+    <string name="fb12">membuat kejadian</string>
+    <string name="twitter100">tweet</string>
+    <string name="twitter200">tweet semula</string>
+    <string name="renren10or11">Status dikemas kini</string>
+    <string name="renren20or22">Blog diterbitkan</string>
+    <string name="renren30or31">Foto dimuat naikkan</string>
+    <string name="fb66">Blog diterbitkan</string>
+    <string name="fb46">Status dikemas kini</string>
+    <string name="fb247">Foto dimuat naikkan</string>
+    <string name="flickr100">Foto dimuat naikkan</string>
+    <string name="fb100">Foto dikongsi</string>
+</resources>

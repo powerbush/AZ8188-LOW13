@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#3366cd"
+  >
+    <RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <ImageView 
+    android:id="@+id/phone_contact_image"
+    android:layout_height="160dip"
+    android:layout_width="160dip"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="50dip"
+    android:background="@drawable/contact_phone_image_1"
+    />
+<TextView  
+	android:id="@+id/phone_contact_name"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="@string/hello"
+    android:textSize="25dip"
+    android:layout_below="@id/phone_contact_image"
+    android:layout_marginTop="20dip"
+    android:gravity="center_horizontal"
+    />
+    
+    <TextView
+    android:id="@+id/phone_contact_numbler"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+     android:textSize="25dip"
+     android:gravity="center_horizontal"
+     android:layout_below="@id/phone_contact_name"
+    android:text="@string/contact_phone_numbler"
+    android:layout_marginTop="20dip"
+    >
+    
+    
+    </TextView>
+    
+    </RelativeLayout>
+</LinearLayout>

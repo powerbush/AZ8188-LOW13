@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    
+    <string name="block_incoming_call">"Chặn trực tiếp cuộc gọi đến"</string>
+    <string name="join_null_contact">"Không thể k.nối với số l.lạc trống"</string>
+    <string name="ok">OK</string>
+    <!-- Dialog title for the "radio enable" UI for emergency calls -->
+    <string name="emergency_enable_radio_dialog_title">Gọi khẩn cấp</string>
+    <!-- Emergency dialer: message displayed in an error dialog -->
+    <string name="dial_emergency_error">Chưa t.hiện c.gọi, <xliff:g id="non_emergency_number">%s</xliff:g> k.phải là số gọi kh.cấp!</string>
+    <!-- Emergency dialer: message displayed in an error dialog -->
+    <string name="dial_emergency_empty_error">Chưa t.hiện c.gọi, hãy gọi số kh.cấp!</string>   
+    <string name="listTotalContactsavedinPhone">"Không tìm thấy danh bạ lưu trên ĐT."</string>
+
+    <string name="name">Tên</string>  
+    <string name="numbers">Số điện thoại</string>     
+    <string name="number_too_long">"Số quá dài."</string>
+    <string name="name_too_long">"Tên quá dài."</string>  
+    <string name="storage_full">"Bộ nhớ đã đầy."</string>     
+    <string name="store_location">"Hãy chọn vị trí lưu trữ"</string>
+    <string name="cannot_insert_null_number">"Không thể lưu số liên lạc không có số ĐT."</string>
+    <string name="set_success">"Đã cài thành công ảnh chụp chính."</string>
+    <string name="remove_success">"Đã xóa thành công ảnh chụp."</string>
+    <string name="AirPlane_mode_on">"Không thể lưu số l.lạc khi c.độ máy bay đang bật."</string>
+    <string name="AirPlane_mode_on_delete">"Không thể xóa số l.lạc khi c.độ máy bay đang bật."</string>
+    <string name="FDNEnabled">Không thể lưu liên lạc khi FDN Bật.</string>
+    <string name="sim_invalid">Không thể lưu liên lạc khi thẻ SIM không hợp lệ.</string>
+    <string name="FDNEnabled_delete">Không thể xóa liên lạc khi FDN Bật.</string>
+    <string name="sim_invalid_delete">Không thể xóa liên lạc khi thẻ SIM không hợp lệ.</string>
+    <string name="generic_failure">Hư Hỏng Chung.</string>
+    <string name="sim_invalid_number">Không thể lưu số không hợp lệ.</string>
+    <string name="insert_error">Lỗi chèn số l.lạc trên SIM.</string>
+    <string name="delete_error">K.thể xóa số l.lạc trên SIM.</string>
+    <string name="batch_delete_error">Không thể xóa một phần hoặc t.bộ số l.lạc trên SIM, hãy k.tra cài đặt.</string>
+    <string name="contactsList">Danh bạ</string>
+    <string name="launcherDialer">Điện thoại</string>
+    <string name="shortcutContact">Số l.lạc</string>
+    <string name="shortcutDialContact">Gọi trực tiếp</string>
+    <string name="shortcutMessageContact">Nhắn tin trực tiếp</string>
+    <string name="shortcutActivityTitle">Chọn phím tắt số liên lạc</string>
+    <string name="callShortcutActivityTitle">Chọn số cần gọi</string>
+    <string name="messageShortcutActivityTitle">Chọn số cần nhắn tin</string>
+    <string name="starredList">Đã đ.dấu sao</string>
+    <string name="frequentList">T.xuyên</string>
+    <string name="strequentList">Mục yêu thích</string>
+    <string name="viewContactTitle">Chi tiết số l.lạc</string>
+    <string name="viewContactDesription">Xem số l.lạc</string>
+    <string name="editContactDescription">Sửa số l.lạc</string>
+    <string name="insertContactDescription">Tạo số l.lạc</string>
+    <string name="searchHint">Tìm số liên lạc</string>
+    <string name="menu_search">Tìm kiếm</string>
+    <string name="menu_newContact">Số l.lạc mới</string>
+    <string name="menu_viewContact">Xem số l.lạc</string>
+    <string name="menu_callNumber">Gọi số <xliff:g id="NAME">%s</xliff:g></string>
+    <string name="menu_addStar">Thêm vào mục y.thích</string>
+    <string name="menu_removeStar">Xóa khỏi mục yêu thích</string>
+    <string name="menu_editContact">Sửa số l.lạc</string>
+    <string name="menu_deleteContact">Xóa số liên lạc</string>
+    <string name="menu_call">Gọi số l.lạc</string>
+    <string name="menu_sendSMS">N.tin cho số l.lạc</string>
+    <string name="menu_sendEmail">Gửi email</string>
+    <string name="menu_viewAddress">Địa chỉ bản đồ</string>
+    <string name="menu_makeDefaultNumber">Tạo số mặc định</string>
+    <string name="menu_makeDefaultEmail">Tạo email mặc định</string>
+    <string name="menu_splitAggregate">Tách</string>
+    <string name="contactsSplitMessage">Đã tách các số l.lạc</string>
+    <string name="splitConfirmation_title">Tách số l.lạc</string>
+    <string name="splitConfirmation">Bạn muốn chia tách số liên lạc đơn này thành nhiều số liên lạc: một cho mỗi nhóm th.tin số l.lạc vốn đã được kết hợp thành?</string>
+    <string name="menu_joinAggregate">Kết hợp</string>
+    <string name="menu_showSources">Hiển thị nguồn</string>
+    <string name="menu_hideSources">Ẩn nguồn</string>
+    <string name="titleJoinAggregate">K.hợp số l.lạc</string>
+    <string name="titleJoinContactDataWith">K.hợp các số l.lạc</string>
+    <string name="blurbJoinContactDataWith">Chọn số liên lạc bạn muốn kết hợp với <xliff:g id="NAME">%s</xliff:g>.</string>
+    <string name="showAllContactsJoinItem">H.thị mọi số l.lạc</string>
+    <string name="separatorJoinAggregateSuggestions">Các số l.lạc đề nghị</string>
+    <string name="separatorJoinAggregateAll">Mọi số l.lạc</string>
+    <string name="contactsJoinedMessage">Đã k.hợp các số l.lạc</string>
+    <string name="menu_contactOptions">Tùy chọn</string>
+    <string name="contactOptionsTitle">Tùy chọn</string>
+    <string name="deleteConfirmation_title">Xóa</string>
+    <string name="readOnlyContactWarning">Bạn k.thể xóa các số l.lạc khỏi t.khoản chỉ được phép đọc nhưng có thể ẩn chúng trong d.sách l.lạc. </string>
+    <string name="readOnlyContactDeleteConfirmation">Số liên lạc này chứa thông tin từ nhiều tài khoản. Th.tin từ các t.khoản chỉ được phép đọc sẽ được ẩn trong d.sách l.lạc và bạn k.thể xóa nó.</string>
+    <string name="multipleContactDeleteConfirmation">Xóa số liên lạc này sẽ xóa thông tin khỏi nhiều tài khoản.</string>
+    <string name="deleteConfirmation">Số l.lạc này sẽ bị xóa.</string>
+    <string name="menu_done">Hoàn tất</string>
+    <string name="menu_doNotSave">Phục hồi</string>
+    <string name="editContact_title_edit">Sửa số l.lạc</string>
+    <string name="editContact_title_insert">Số l.lạc mới</string>
+    <string name="menu_addItem">Th.tin khác</string>
+    <string name="label_phonetic_name">Ngữ âm</string>
+    <string name="label_notes">Ghi chú</string>
+    <string name="label_ringtone">N.chuông</string>
+    <string name="ghostData_name">Đầu và cuối</string>
+    <string name="ghostData_phonetic_name">Tên ngữ âm</string>
+    <string name="ghostData_company">Công ty</string>
+    <string name="ghostData_phone">Số điện thoại</string>
+    <string name="ghostData_title">Tiêu đề</string>
+    <string name="invalidContactMessage">Số l.lạc này không tồn tại.</string>
+    <string name="pickerNewContactHeader">Tạo số liên lạc mới</string>
+    <string name="selectLabel">Chọn nhãn</string>
+    <string name="selectStorelocation">Chọn nhãn</string>
+    
+    <string name="phoneLabelsGroup">Điện thoại</string>
+    <string name="emailLabelsGroup">Email</string>
+    <string name="imLabelsGroup">IM</string>
+    <string name="postalLabelsGroup">Địa chỉ nhà</string>
+    <string-array name="otherLabels">
+        <item>Tổ chức</item>
+        <item>Ghi chú</item>
+    </string-array>
+    <string name="photoPickerNotFoundText">Không có sẵn hình trên điện thoại.</string>
+    <string name="attachToContact">B.tượng số l.lạc</string>
+    <string name="customLabelPickerTitle">"Tên nhãn tùy chỉnh"</string>
+    <string name="menu_displayGroup">T.chọn hiển thị</string>
+    <string name="displayGroups">T.chọn hiển thị</string>
+    <string name="send_to_voicemail_checkbox">Chuyển c.gọi tr.tiếp sang thư thoại</string>
+    <string name="send_to_voicemail_view">C.gọi được chuyển tr.tiếp sang thư thoại.</string>
+    <string name="default_ringtone">M.định</string>
+    <string name="changePicture">Đổi b.tượng</string>
+    <string name="removePicture">Xóa b.tượng</string>
+    <string name="noContacts">K.có số l.lạc.</string>
+    <string name="noMatchingContacts">Không t.thấy số l.lạc thích hợp.</string>
+    <string name="noContactsWithPhoneNumbers">Không có các số l.lạc có số ĐT.</string>
+    <string name="noFavorites">K.có mục y.thích.</string>
+    <string name="select_group_title">Nhóm</string>
+    <string name="groupEmpty">Nhóm \"<xliff:g id="groupName">%s</xliff:g>\" của bạn trống.</string>
+    <string name="showAllGroups">Mọi số l.lạc</string>
+    <string name="showFilterPhones">Chỉ các số l.lạc có số ĐT</string>
+    <string name="showFilterPhonesDescrip">Chỉ hiển thị các số liên lạc có số ĐT</string>
+    <string name="headerContactGroups">Chọn các số l.lạc để h.thị</string>
+    <plurals name="groupDescrip">
+        <item quantity="other"><xliff:g id="COUNT">%0$d</xliff:g> số l.lạc</item>
+    </plurals>
+    <plurals name="groupDescripPhones">
+        <item quantity="other"><xliff:g id="COUNT_0">%1$d</xliff:g> số l.lạc, <xliff:g id="COUNTWITHPHONES">%2$d</xliff:g> có số ĐT</item>
+    </plurals>
+    <string name="savingContact">Đang lưu số l.lạc...</string>
+    <string name="savingDisplayGroups">Đang lưu t.chọn hiển thị...</string>
+    <string name="contactCreatedToast">Đã tạo số liên lạc.</string>
+    <string name="contactSavedToast">Đã lưu số l.lạc.</string>
+    <string name="contactSavedErrorToast">Lỗi, không thể lưu các th.đổi số l.lạc.</string>
+    <plurals name="listTotalPhoneContacts">
+        <item quantity="one">Đang hiển thị 1số liên lạc có số ĐT</item>
+        <item quantity="other">Đang hiển thị <xliff:g id="COUNT">%d</xliff:g> số liên lạc có số ĐT</item>
+    </plurals>
+    <string name="listTotalPhoneContactsZero">Không nhìn thấy các số l.lạc có số ĐT</string>
+    <plurals name="listTotalAllContacts">
+        <item quantity="one">Đang h.thị 1 số l.lạc</item>
+        <item quantity="other">Đang h.thị <xliff:g id="COUNT">%d</xliff:g> số l.lạc</item>
+    </plurals>
+    <string name="listTotalAllContactsZero">Không h.thị các số l.lạc</string>
+    <plurals name="listFoundAllContacts">
+        <item quantity="one">Đã t.thấy 1 số l.lạc</item>
+        <item quantity="other">Đã t.thấy <xliff:g id="COUNT">%d</xliff:g> số l.lạc</item>
+    </plurals>
+    <string name="listFoundAllContactsZero">Không t.thấy số l.lạc</string>
+    <plurals name="searchFoundContacts">
+        <item quantity="one">1 số l.lạc</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> số l.lạc</item>
+    </plurals>
+    <string name="contactsIconLabel">Danh bạ</string>
+    <string name="contactsFavoritesLabel">Mục yêu thích</string>
+    <string name="dialerIconLabel">Điện thoại</string>
+    <string name="recentCallsIconLabel">N.ký gọi</string>
+    <string name="liveFolderAll">Mọi số l.lạc</string>
+    <string name="liveFolderFavorites">Số l.lạc có dấu sao</string>
+    <string name="liveFolderPhone">Số liên lạc có số ĐT</string>
+    <string name="menu_sendTextMessage">Gửi t.nhắn văn bản</string>
+    <string name="recentCalls_callNumber">Gọi số <xliff:g id="NAME">%s</xliff:g></string>
+    <string name="recentCalls_vt_callNumber">Gọi video <xliff:g id="NAME">%s</xliff:g></string>    
+    <string name="recentCalls_editNumberBeforeCall">Sửa số trước khi gọi</string>
+    <string name="recentCalls_addToContact">Thêm vào d.bạ</string>
+    <string name="recentCalls_removeFromRecentList">Xóa khỏi nhật ký gọi</string>
+    <string name="recentCalls_deleteAll">Xóa n.ký gọi</string>
+    <string name="recentCalls_empty">N.ký gọi trống.</string>
+    <string name="clearCallLogConfirmation_title">Xóa n.ký gọi</string>
+    <string name="clearCallLogConfirmation">Bạn chắc chắn muốn xóa nhật ký gọi?</string>
+    <string name="imei">IMEI</string>
+    <string name="meid">MEID</string>
+    <string name="voicemail">Thư thoại</string>
+    <string name="unknown">K.xác định</string>
+    <string name="private_num">Số riêng</string>
+    <string name="payphone">ĐT thẻ</string>
+    <string name="dialerKeyboardHintText">Dùng b.phím để gọi</string>
+    <string name="dialerDialpadHintText">Q.số để thêm c.gọi</string>
+    <string name="simContacts_emptyLoading">Đang tải từ thẻ SIM...</string>
+    <string name="simContacts_title">Danh bạ trên SIM</string>
+    <string name="contactsSyncPlug"><font fgcolor="#ff000000">Đồng bộ danh bạ Google!</font>\nSau khi đồng bộ sang điện thoại, bạn có thể sử dụng danh bạ bất kỳ lúc nào.</string>
+    <string name="noContactsHelpTextWithSyncForCreateShortcut">Bạn không có bất kỳ số l.lạc nào để h.thị. (Nếu vừa thêm tài khoản, bạn có thể mất vài phút để đồng bộ danh bạ.)</string>
+    <string name="noContactsHelpTextForCreateShortcut">"Bạn không có bất kỳ số l.lạc nào để h.thị".</string>
+    <string name="noContactsHelpText">Bạn chưa có bất cứ số liên lạc nào để hiển thị.\n\nĐể thêm số liên lạc, bạn có thể:\n<li><font fgcolor="#ff000000"><b>Thêm số liên lạc mới</b></font> để tạo số liên lạc mới từ đầu.\n</li>\n<li>Ngoài ra, bạn có thể nhấn menu và chạm <font fgcolor="#ff000000"><b>Nhập/Xuất</b></font> để có thêm các tùy chọn.\n</li></string>
+    <string name="noContactsHelpTextWithSync">Bạn chưa có bất cứ số liên lạc nào để hiển thị.\n\nĐể thêm số liên lạc, bạn có thể:\n<li><font fgcolor="#ff000000"><b>Thêm số liên lạc mới</b></font> để tạo số liên lạc mới từ đầu.\n</li>\n<li>Ngoài ra, bạn có thể nhấn menu và chạm <font fgcolor="#ff000000"><b>Nhập/Xuất</b></font> để có thêm các tùy chọn.\n</li>
+</string>
+    <string name="noContactsNoSimHelpText">Bạn chưa có bất cứ số liên lạc nào để hiển thị.\n\nĐể thêm số liên lạc, bạn có thể:\n<li><font fgcolor="#ff000000"><b>Thêm số liên lạc mới</b></font> để tạo số liên lạc mới từ đầu.\n</li>\n<li>Ngoài ra, bạn có thể nhấn menu và chạm <font fgcolor="#ff000000"><b>Nhập/Xuất</b></font> để có thêm các tùy chọn.\n</li>
+</string>
+    <string name="noContactsNoSimHelpTextWithSync">Bạn chưa có bất cứ số liên lạc nào để hiển thị.\n\nĐể thêm số liên lạc, bạn có thể:\n<li><font fgcolor="#ff000000"><b>Thêm số liên lạc mới</b></font> để tạo số liên lạc mới từ đầu.\n</li>\n<li>Ngoài ra, bạn có thể nhấn menu và chạm <font fgcolor="#ff000000"><b>Nhập/Xuất</b></font> để có thêm các tùy chọn.\n</li>
+</string>
+    <string name="noFavoritesHelpText">"Bạn k.có b.kỳ mục y.thích nào. \n\nĐể thêm số l.lạc vào d.sách mục yêu thích: \n
+        <li>Chạm thẻ <b>Danh bạ</b>\n</li>
+        \n<li>Chạm số l.lạc bạn muốn thêm vào mục yêu thích\n</li>
+        \n<li>Chạm dấu sao gần tên số liên lạc\n</li>"
+</string>
+    <string name="liveFolder_all_label">Mọi số l.lạc</string>
+    <string name="liveFolder_favorites_label">Đã đ.dấu sao</string>
+    <string name="liveFolder_phones_label">Đ.thoại</string>
+    <string name="dialer_useDtmfDialpad">Dùng b.phím đa tần t.hiệu kép</string>
+    <string name="dialer_returnToInCallScreen">Chuyển về c.gọi hiện hành</string>
+    <string name="dialer_addAnotherCall">Thêm c.gọi</string>
+    <string name="callDetailTitle">C.tiết c.gọi</string>
+    <string name="toast_call_detail_error">Không thể đọc các c.tiết cho c.gọi yêu cầu.</string>
+    <string name="call_type">Loại</string>
+    <string name="type_incoming">Cuộc gọi đến</string>
+    <string name="type_outgoing">Cuộc gọi đi</string>
+    <string name="type_missed">Cuộc gọi nhỡ</string>
+    <string name="actionIncomingCall">Các c.gọi đến</string>
+    <string name="callBack">Gọi lại</string>
+    <string name="callAgain">Gọi lại</string>
+    <string name="returnCall">C.gọi lại</string>
+    <string name="callDetailsDurationFormat"><xliff:g id="MINUTES">%1$s</xliff:g> phút <xliff:g id="SECONDS">%2$s</xliff:g> giây</string>
+    <string name="favoritesFrquentSeparator">Thường liên lạc</string>
+    <string name="add_contact_dlg_title">Thêm số l.lạc</string>
+    <string name="add_contact_dlg_message_fmt">Thêm \"<xliff:g id="EMAIL">%s</xliff:g>\" vào d.bạ?</string>
+    <string name="all_tab_label">Tất cả</string>
+    <string name="description_image_button_one">một</string>
+    <string name="description_image_button_two">hai</string>
+    <string name="description_image_button_three">ba</string>
+    <string name="description_image_button_four">bốn</string>
+    <string name="description_image_button_five">năm</string>
+    <string name="description_image_button_six">sáu</string>
+    <string name="description_image_button_seven">bảy</string>
+    <string name="description_image_button_eight">tám</string>
+    <string name="description_image_button_nine">chín</string>
+    <string name="description_image_button_star">sao</string>
+    <string name="description_image_button_zero">số 0</string>
+    <string name="description_image_button_pound">bảng Anh</string>
+    <string name="description_voicemail_button">thư thoại</string>
+    <string name="description_dial_button">gọi</string>
+    <string name="description_delete_button">phím lùi</string>
+    <string name="description_digits_edittext">số cần gọi</string>
+    <string name="description_contact_photo">ả.chụp số l.lạc</string>
+    <string name="description_minus_button">trừ</string>
+    <string name="description_plus_button">cộng</string>
+    <string name="no_sdcard_title">K.có thẻ SD</string>
+    <string name="no_sdcard_message">Không t.thấy thẻ SD</string>
+    <string name="searching_vcard_title">Đang tìm danh thiếp</string>
+    <string name="select_import_type_title">Bạn muốn nhập danh bạ từ đâu?</string>
+    <string name="import_from_sim">Nhập từ thẻ SIM</string>
+    <string name="import_from_sim1">Nhập từ SIM1</string>
+    <string name="import_from_sim2">Nhập từ SIM2</string>
+    <string name="import_from_sdcard">Nhập từ thẻ SD</string>
+    <string name="export_to_sdcard">Xuất sang thẻ SD</string>
+    <string name="share_visible_contacts">Ch.sẻ số l.lạc hiển thị</string>
+    <string name="import_one_vcard_string">Nhập một file d.thiếp</string>
+    <string name="import_multiple_vcard_string">Nhập nhiều file d.thiếp</string>
+    <string name="import_all_vcard_string">Nhập mọi file d.thiếp</string>
+    <string name="searching_vcard_message">Đang tìm dữ liệu d.thiếp trên thẻ SD</string>
+    <string name="scanning_sdcard_failed_title">Không thể duyệt thẻ SD</string>
+    <string name="scanning_sdcard_failed_message">Không thể duyệt thẻ SD (Ng.nhân: \"<xliff:g id="FAIL_REASON">%s</xliff:g>\")</string>
+    <string name="fail_reason_io_error">Lỗi đầu vào/ra</string>
+    <string name="fail_reason_vcard_parse_error">Không thể ph.tích d.thiếp vì ng.nhân đột ngột</string>
+    <string name="fail_reason_invalid_vcard_file_error">Không thể phân tích danh thiếp do file danh thiếp không hợp lệ.</string>    
+    <string name="fail_reason_vcard_not_supported_error">Không thể ph.tích d.thiếp dù nó dường như thuộc đ.dạng h.lệ vì q.trình th.hiện h.hành không hỗ trợ</string>
+    <string name="fail_reason_no_vcard_file">Không t.thấy file d.thiếp trên thẻ SD</string>
+    <string name="fail_reason_no_vcard_entry">Không t.thấy mục d.thiếp h.lệ cho l.chọn của bạn</string>
+    <string name="fail_reason_failed_to_read_files">Không thể nhập một hoặc nhiều file (%s).</string>
+    <string name="fail_reason_unknown">Lỗi không x.định</string>
+    <string name="select_vcard_title">Chọn file d.thiếp</string>
+    <string name="select_vcard_message">Hãy chọn file d.thiếp để nhập</string>
+    <string name="progress_shower_message"><xliff:g id="action" example="Reading VCard">%1$s</xliff:g>\n<xliff:g id="filename" example="foo.vcf">%2$s</xliff:g></string>
+    <string name="reading_vcard_title">Đang đọc d.thiếp</string>
+    <string name="reading_vcard_message">Đang đọc (các) file d.thiếp</string>
+    <string name="importing_vcard_message">Đang nhập d.liệu d.thiếp</string>
+    <string name="reading_vcard_failed_title">Không thể đọc dữ liệu d.thiếp</string>
+    <string name="reading_vcard_contacts"><xliff:g id="current_number">%1$s</xliff:g> của <xliff:g id="total_number">%2$s</xliff:g> số l.lạc</string>
+    <string name="reading_vcard_files"><xliff:g id="current_number">%1$s</xliff:g> của <xliff:g id="total_number">%2$s</xliff:g> file</string>
+    <string name="confirm_export_title">X.nhận xuất</string>
+    <string name="confirm_export_message">"Bạn chắc chắn muốn xuất d.sách số l.lạc sang \"<xliff:g id="VCARD_FILENAME">%s</xliff:g>\"?"</string>
+    <string name="exporting_contact_failed_title">Không thể xuất d.liệu số l.lạc</string>
+    <string name="exporting_contact_failed_message">Không thể xuất d.liệu số l.lạc.\nNg.nhân lỗi: \"<xliff:g id="fail_reason">%s</xliff:g>\"</string>
+    <string name="fail_reason_no_exportable_contact">Không có số l.lạc cần xuất</string>
+    <string name="fail_reason_too_many_vcard">Quá nhiều file danh thiếp trên thẻ SD</string>
+    <string name="fail_reason_too_long_filename">Tên file yêu cầu quá dài (\"<xliff:g id="FILENAME">%s</xliff:g>\")</string>
+    <string name="exporting_contact_list_title">Đang xuất d.liệu số l.lạc</string>
+    <string name="exporting_contact_list_message">Đang xuất d.liệu số l.lạc sang \"<xliff:g id="file_name">%s</xliff:g>\"</string>
+    <string name="fail_reason_could_not_initialize_exporter">Không thể kh.động trình xuất: \"<xliff:g id="exact_reason">%s</xliff:g>\"</string>
+    <string name="fail_reason_error_occurred_during_export">Đã xảy ra lỗi trong khi xuất: \"<xliff:g id="EXACT_REASON">%s</xliff:g>\"</string>
+    <string name="composer_failed_to_get_database_infomation">Không thể nhận th.tin c.sở dữ liệu</string>
+    <string name="composer_has_no_exportable_contact">Không có số l.lạc cần xuất. Nếu bạn thực sự có d.bạ trên điện thoại, mọi số liên lạc có thể bị cấm xuất ra ngoài điện thoại bởi một số nhà cung cấp dữ liệu.</string>
+    <string name="composer_not_initialized">Tr.soạn d.thiếp đã được kh.động không đúng</string>
+    <string name="fail_reason_could_not_open_file">Không thể mở \"<xliff:g id="file_name">%s</xliff:g>\"</string>
+    <string name="exporting_contact_list_progress"><xliff:g id="current_number">%1$s</xliff:g> của <xliff:g id="total_number">%2$s</xliff:g> số l.lạc</string>
+    <string name="search_settings_description">Tên các số l.lạc của bạn</string>
+    <string name="add_2sec_pause">T.dừng thêm 2 giây</string>
+    <string name="add_wait">Đợi thêm</string>
+    <string name="call_disambig_title">Gọi dùng</string>
+    <string name="sms_disambig_title">SMS dùng </string>
+    <string name="make_primary">Ghi nhớ lựa chọn này</string>
+    <string name="quickcontact_missing_app">Không t.thấy ứ.dụng để xử lý th.tác này</string>
+    <string name="quickcontact_remember_choice">Ghi nhớ lựa chọn này</string>
+    <string name="quickcontact_missing_name">K.xác định</string>
+    <string name="menu_accounts">Tài khoản</string>
+    <string name="menu_import_export">Nhập/xuất</string>
+    <string name="dialog_import_export">Nhập/xuất danh bạ</string>
+    <string name="menu_share">Chia sẻ</string>
+    <string name="share_via">Ch.sẻ số l.lạc qua</string>
+    <string name="share_error">Không thể ch.sẻ số l.lạc này.</string>
+    <string name="nameLabelsGroup">Tên</string>
+    <string name="nicknameLabelsGroup">Bí danh</string>
+    <string name="organizationLabelsGroup">Tổ chức</string>
+    <string name="websiteLabelsGroup">Website</string>
+    <string name="eventLabelsGroup">Sự kiện</string>
+    <string name="type_short_home">H</string>
+    <string name="type_short_mobile">M</string>
+    <string name="type_short_work">W</string>
+    <string name="type_short_pager">P</string>
+    <string name="type_short_other">O</string>
+    <string name="edit_read_only">Số l.lạc này chỉ được phép đọc</string>
+    <string name="edit_secondary_collapse">Mục khác</string>
+    <string name="dialog_primary_name">Tên chính</string>
+    <string name="dialog_new_contact_account">Tạo số l.lạc trong tài khoản</string>
+    <string name="menu_sync_remove">Xóa nhóm đồng bộ</string>
+    <string name="dialog_sync_add">Thêm nhóm đ.bộ</string>
+    <string name="display_more_groups">Nhóm khác...</string>
+    <string name="display_ungrouped">Thêm mọi số l.lạc khác</string>
+    <string name="display_all_contacts">Mọi số l.lạc</string>
+    <string name="display_warn_remove_ungrouped">"Xóa \'<xliff:g id="GROUP">%s</xliff:g>\' khỏi nhóm đ.bộ cũng sẽ xóa mọi số l.lạc chưa có nhóm khỏi nhóm đ.bộ."</string>
+    <string name="account_phone">Chỉ cho ĐT (chưa đ.bộ)</string>
+    <string name="label_email_display_name">Tên hiển thị</string>
+    <string name="call_custom">Gọi số <xliff:g id="CUSTOM">%s</xliff:g></string>
+    <string name="call_home">Gọi số nhà</string>
+    <string name="call_mobile">Gọi số di động</string>
+    <string name="call_work">Gọi số cơ quan</string>
+    <string name="call_fax_work">Gọi số fax cơ quan</string>
+    <string name="call_fax_home">Gọi số fax nhà riêng</string>
+    <string name="call_pager">Gọi số máy n.tin</string>
+    <string name="call_other">Gọi số khác</string>
+    <string name="call_callback">Gọi số gọi lại</string>
+    <string name="call_car">Gọi số xe hơi</string>
+    <string name="call_company_main">Gọi số ĐT chính của c.ty</string>
+    <string name="call_isdn">Gọi số ISDN</string>
+    <string name="call_main">Gọi số chính</string>
+    <string name="call_other_fax">Gọi số fax</string>
+    <string name="call_radio">Gọi số radio</string>
+    <string name="call_telex">Gọi số telex</string>
+    <string name="call_tty_tdd">Gọi số TTY/TDD</string>
+    <string name="call_work_mobile">Gọi số DĐ cơ quan</string>
+    <string name="call_work_pager">Gọi số máy n.tin c.quan</string>
+    <string name="call_assistant">Gọi số <xliff:g id="ASSISTANT">%s</xliff:g></string>
+    <string name="call_mms">Gọi số MMS</string>
+    <string name="sms_custom">Gửi SMS đến số <xliff:g id="CUSTOM">%s</xliff:g></string>
+    <string name="sms_home">Gửi SMS đến số nhà riêng</string>
+    <string name="sms_mobile">Gửi SMS đến số DĐ</string>
+    <string name="sms_work">Gửi SMS đến số c.quan</string>
+    <string name="sms_fax_work">Gửi SMS đến số fax c.quan</string>
+    <string name="sms_fax_home">Gửi SMS đến số fax nhà riêng</string>
+    <string name="sms_pager">Gửi SMS đến số máy n.tin</string>
+    <string name="sms_other">Gửi SMS đến số khác</string>
+    <string name="sms_callback">Gửi SMS đến số gọi lại</string>
+    <string name="sms_car">Gửi SMS đến số xe hơi</string>
+    <string name="sms_company_main">Gửi SMS đến số chính của c.ty</string>
+    <string name="sms_isdn">Gửi SMS đến số ISDN</string>
+    <string name="sms_main">Gửi SMS đến số chính</string>
+    <string name="sms_other_fax">Gửi SMS đến số fax</string>
+    <string name="sms_radio">Gửi SMS đến số ĐT vô tuyến</string>
+    <string name="sms_telex">Gửi SMS đến số telex</string>
+    <string name="sms_tty_tdd">Gửi SMS đến số TTY/TDD</string>
+    <string name="sms_work_mobile">Gửi SMS đến số DĐ c.quan</string>
+    <string name="sms_work_pager">Gửi SMS đến máy n.tin c.quan</string>
+    <string name="sms_assistant">Gửi SMS đến số <xliff:g id="ASSISTANT">%s</xliff:g></string>
+    <string name="sms_mms">Gửi SMS đến số MMS</string>
+    <string name="email_home">Email đến đ.chỉ email nhà riêng</string>
+    <string name="email_mobile">Email đến đ.chỉ email DĐ</string>
+    <string name="email_work">Email đến đ.chỉ email c.quan</string>
+    <string name="email_other">Email</string>
+    <string name="email_custom">Email <xliff:g id="custom">%s</xliff:g></string>
+    <string name="email">Email</string>
+    <string name="map_home">Xem đ.chỉ nhà riêng</string>
+    <string name="map_work">Xem đ.chỉ cơ quan</string>
+    <string name="map_other">Xem địa chỉ</string>
+    <string name="map_custom">Xem đ.chỉ %S</string>
+    <string name="chat_aim">Chat dùng AIM</string>
+    <string name="chat_msn">Chat dùng Windows Live</string>
+    <string name="chat_yahoo">Chat dùng Yahoo</string>
+    <string name="chat_skype">Chat dùng Skype</string>
+    <string name="chat_qq">Chat dùng QQ</string>
+    <string name="chat_gtalk">Chat dùng Google Talk</string>
+    <string name="chat_icq">Chat dùng ICQ</string>
+    <string name="chat_jabber">Chat dùng Jabber</string>
+    <string name="chat">Chat</string>
+    <string name="postal_street">Đường</string>
+    <string name="postal_pobox">Hộp thư</string>
+    <string name="postal_neighborhood">Đ.chỉ hàng xóm</string>
+    <string name="postal_city">T.phố</string>
+    <string name="postal_region">Bang</string>
+    <string name="postal_postcode">Mã bưu điện</string>
+    <string name="postal_country">Quốc gia</string>
+    <string name="name_given">Tên thánh</string>
+    <string name="name_family">Họ</string>
+    <string name="name_prefix">Tên</string>
+    <string name="name_middle">Tên đệm</string>
+    <string name="name_suffix">Họ</string>
+    <string name="name_phonetic_given">Tên thánh ngữ âm</string>
+    <string name="name_phonetic_middle">Tên đệm ngữ âm</string>
+    <string name="name_phonetic_family">Họ ngữ âm</string>
+    <string name="account_type_format"><xliff:g id="SOURCE">%1$s</xliff:g> số l.lạc</string>
+    <string name="from_account_format">từ  <xliff:g id="SOURCE">%1$s</xliff:g></string>
+    <string name="use_photo_as_primary">Dùng ảnh này</string>
+    <string name="contact_read_only">Không thể sửa <xliff:g id="SOURCE">%1$s</xliff:g> th.tin số l.lạc trên thiết bị này.</string>
+    <string name="no_contact_details">Không có th.tin bổ sung cho số l.lạc này</string>
+    <string name="email_error">Bạn phải c.đặt ứ.dụng email hoặc định c.hình t.khoản của bạn!</string>
+    <string name="map_error">Bạn phải cài đặt ứ.dụng Google Map!</string>
+    <string name="activity_not_found_error">Không t.thấy ứ.dụng l.quan!</string>
+    <string name="display_options_sort_list_by">Xếp d.sách theo</string>
+    <string name="display_options_sort_by_given_name">Tên thánh</string>
+    <string name="display_options_sort_by_family_name">Họ</string>
+    <string name="display_options_view_names_as">Xem tên số l.lạc dạng</string>
+    <string name="display_options_view_given_name_first">Tên thánh trước</string>
+    <string name="display_options_view_family_name_first">Họ trước</string>
+    <string name="search_bar_hint">Tìm số liên lạc</string>
+    <string name="search_for_all_contacts">Tìm mọi số liên lạc</string>
+    <string name="take_photo">Chụp ảnh</string>
+    <string name="pick_photo">Chọn ả.chụp từ Bộ s.tập</string>
+    <string name="locale_change_in_progress">"D.sách số l.lạc đang được c.nhật để ph.ánh sự th.đổi ng.ngữ.\n\nHãy đợi…"</string>
+    <string name="upgrade_in_progress">"D.sách số l.lạc đang được c.nhật.\n\nHãy đợi…"</string>
+    <string name="upgrade_out_of_memory">"Danh bạ đang được nâng cấp.\n\nQuá trình nâng cấp cần khoảng <xliff:g id="SIZE_IN_MEGABYTES">%d</xliff:g> Mb bộ nhớ trên điện thoại.\n\nChọn một trong các tùy chọn sau:"</string>
+    <string name="upgrade_out_of_memory_uninstall">Gỡ bỏ c.đặt một số ứ.dụng</string>
+    <string name="upgrade_out_of_memory_retry">Thử nâng cập lại</string>
+    <string name="search_results_for">Kết quả t.kiếm cho: <xliff:g id="QUERY">%s</xliff:g></string>
+    <string name="search_results_searching">Đang tìm...</string>
+    <string name="load_wait">Đang tải</string>
+    <string name="phone">Điện thoại</string>
+    <string name="sim">SIM</string>
+    <string name="sim1">SIM1</string>
+    <string name="sim2">SIM2</string>
+    <string name="both_sims">Cả 2 SIM</string>
+    <string name="all_calls">Mọi c.gọi</string>
+    <string name="received_calls">Cuộc gọi đến</string>
+    <string name="outgoing_calls">Cuộc gọi đi</string>
+    <string name="missed_calls">Cuộc gọi nhỡ</string>
+    <string name="call_via_sim1">Gọi qua SIM1</string>
+    <string name="call_via_sim2">Gọi qua SIM2</string>
+    <string name="choose_sim_header">Chọn SIM</string>
+    <string name="choose_call_type_header">Chọn kiểu c.gọi</string>
+    <string name="show_phone_contacts_header">Danh bạ ĐT</string>
+    <string name="show_phone_contacts_body">Hiển thị danh bạ lưu trên ĐT</string>
+    <string name="show_sim_contacts_header">Danh bạ SIM</string>
+    <string name="show_sim_contacts_body">Hiển thị danh bạ lưu trên SIM</string>
+    <string name="show_sim1_contacts_header">Danh bạ SIM1</string>
+    <string name="show_sim1_contacts_body">Hiển thị danh bạ lưu trên SIM1</string>
+    <string name="show_sim2_contacts_header">Danh bạ SIM2</string>
+    <string name="show_sim2_contacts_body">Hiển thị danh bạ lưu trên SIM2</string>
+    <string name="emergencycall">Gọi khẩn cấp</string>
+    <string name="call_via">Gọi <xliff:g id="number">%s</xliff:g> bởi</string>
+    <string name="via">qua <xliff:g id="name">%s</xliff:g></string>
+    <string name="video_call">Gọi video</string>
+    <string name="call_via_vt">Gọi video</string>    
+    <string name="please_wait">"Hãy đợi..."</string>
+    
+    <!-- Text used for batch contact deletion -->
+    <string name="select_all">"Chọn tất cả"</string>
+    <string name="unselect_all">"Hủy chọn tất cả"</string>
+    <string name="delete_contacts_basic">"Xóa"</string>
+    <string name="batchContactDeleteConfirmation">"Bạn ch.chắn muốn xóa (các) mục số l.lạc đã chọn?"</string>
+    <string name="batchContactDeleteProgress">"Đang xóa (các) mục số l.lạc"</string>
+    <!-- Menu item to delete contacts mtk80909 -->
+    <string name="menu_delete">"Xóa số liên lạc"</string>
+    <string name="location_sim">     Danh bạ SIM</string>
+    <string name="location_sim1">     Danh bạ SIM1</string>
+    <string name="location_sim2">     Danh bạ SIM2</string>
+
+    <string name="error_power_off_message">Để t.hiện c.gọi, hãy tắt c.độ máy bay trước.</string>
+    <string name="imei_dialog_title">ID thiết bị</string>
+    <string name="imei_invalid_message">Không hợp lệ</string>
+    <string name="voice_mail_dialog_title">Chọn số thư thoại</string>
+    <string name="no_vm_number">Thiếu số thư thoại</string>
+    <string name="no_vm_number_msg">Chưa lưu số thư thoại trên thẻ SIM.</string>
+    <string name="add_vm_number_str">Thêm số</string>
+    <string name="adn_dialog_title">Danh bạ trên SIM</string>
+    <string name="pin_dialog_title">Chọn thẻ SIM</string>
+    <string name="menu_print">"In"</string>
+    <string name="printContact">"In file qua"</string>
+    <string name="no_way_to_print">"Không có sẵn ứng dụng để in (các) file."</string>
+
+    <!-- SNS strings -->
+    <string name="sns_flickr_profile">Hồ sơ flickr</string>
+    <string name="sns_facebook_profile">Hồ sơ facebook</string>
+    <string name="sns_twitter_profile">Hồ sơ twitter</string>
+
+    <string name="sns_renren">Renren</string>
+    <string name="sns_kaixin">Kaixin</string>
+    <string name="sns_kaixin_profile">Hồ sơ kaixin</string>
+    <string name="sns_renren_profile">Hồ sơ renren</string>
+    <string name="sns_update">Cập nhật</string>
+    <string name="sns_create">Tạo</string>
+    <string name="sns">Trang mạng xã hội</string>
+    <string name="snsLabelsGroup">Trang mạng xã hội</string>
+    <string name="edit_status">Điều gì lóe lên trong tâm trí bạn?</string>
+    <string name="none_sns_account_label">Bạn chưa đăng nhập vào bất kỳ tài khoản SNS nào.</string>
+    <string name="none_sns_account_label2">Bạn chưa đăng nhập bất kỳ tài khoản SNS nào, bạn có thể vào mục quản lý tài khoản SNS để đăng nhập.</string>
+    <string name="none_sns_account_btn">Các tài khoản SNS</string>
+    <string name="none_contact_account_label">Bạn có thể thêm thông tin liên lạc của mình vào đây.</string>
+    <string name="none_contact_account_btn">Sửa thông tin của bạn</string>
+    <string name="unbind_sns_account_label">Bạn chưa đăng nhập vào bất kỳ tài khoản SNS nào.</string>
+    <string name="no_event_details">Chưa có sự kiện cho địa chỉ liên lạc này</string>
+    <string name="contact_btn_content">Th.tin</string>
+    <string name="sns_btn_content">Sự kiện</string>
+    <string name="sns_account_unbind_label">Địa chỉ liên lạc này chưa kết nối với bất kỳ bạn bè SNS nào, hãy chọn mạng xã hội để kết nối.</string>
+    <string name="sns_account_bind_btn_label">Kết nối bạn bè SNS</string>
+    <string name="loadmore">Tải nhiều sự kiện hơn\u2026</string>
+    <string name="owner_none">Th.tin ng.dùng</string>
+    <string name="Contact_Info_Tab_Indicator">Th.tin</string>
+    <string name="Contact_Event_Tab_Indicator">Sự kiện</string>
+    <string name="event_loading">Đang tải\u2026</string>
+    <string name="No_more_event_to_load">Chưa có thêm sự kiện để tải</string>
+    <string name="Toast_Get_clientintent_exception">Dự định tải máy khách đã xảy ra ngoại lệ</string>
+    <string name="Toast_Client_not_installed">Lỗi mở máy khách: Chưa cài đặt máy khách</string>
+    <string name="Toast_Client_intent_null_pointer">Không có th.tin chi tiết</string>
+    
+    <string name="import_from_sns">Nhập từ tài khoản SNS</string>
+    <string name="Toast_Reason_no_valid_network">Mạng không có sẵn</string>
+    <!-- End SNS strings -->
+
+    <!--  Contacts copy feature -->
+    <string name="copy_phone_to_sim">Xuất sang SIM</string>
+    <string name="copy_phone_to_sim1">Xuất sang SIM1</string>
+    <string name="copy_phone_to_sim2">Xuất sang SIM2</string>
+    <string name="copy_sim1_to_sim2">Chép từ SIM1 sang SIM2</string>
+    <string name="copy_sim2_to_sim1">Chép từ SIM2 sang SIM1</string>
+    <string name="phone_has_no_contacts_with_phone_number">Không có số l.lạc nào có số ĐT trên điện thoại.</string>
+    <string name="sim_has_no_contacts_with_phone_number">Không có số l.lạc nào có số ĐT trên SIM.</string>
+    <string name="sim1_has_no_contacts_with_phone_number">Không có số l.lạc nào có số ĐT trên SIM1.</string>
+    <string name="sim2_has_no_contacts_with_phone_number">Không có số l.lạc nào có số ĐT trên SIM2.</string>
+    <string name="copy_procedure_over">Chép xong</string>
+    <string name="copied">Đã chép: </string>
+    <string name="uncopied">Chưa chép: </string>
+    <string name="start_copy">Bắt đầu chép</string>
+    <string name="copy_procedure">Đang chép danh bạ...</string>
+    <string name="sim_card_state_illegal">T.trạng SIM k.hợp lệ để chép</string>
+    <string name = "sharedUserLabel">"Ứng dụng Lõi Android"</string>
+    <string name = "label_sip_address">"Cuộc gọi qua internet"</string>
+
+    <!-- Text used for USIM contact -->
+    <string name="location_usim">     Danh bạ USIM</string>
+    <string name="location_usim1">     Danh bạ USIM1</string>
+    <string name="location_usim2">     Danh bạ USIM2</string>
+    
+    <string name="usim">USIM</string>   
+    <string name="usim1">USIM1</string>
+    <string name="usim2">USIM2</string>
+
+    <string name="show_usim_contacts_header">Danh bạ USIM</string>
+    <string name="show_usim_contacts_body">Hiển thị danh bạ lưu trên USIM</string>
+    <string name="show_usim1_contacts_header">Danh bạ USIM1</string>
+    <string name="show_usim1_contacts_body">Hiển thị danh bạ lưu trên USIM1</string>
+    <string name="show_usim2_contacts_header">Danh bạ USIM2</string>
+    <string name="show_usim2_contacts_body">Hiển thị danh bạ lưu trên USIM2</string>
+    <string name="usim_has_no_contacts_with_phone_number">Không có số l.lạc nào có số ĐT trên USIM.</string>
+    <string name="usim1_has_no_contacts_with_phone_number">Không có số l.lạc nào có số ĐT trên USIM1.</string>
+    <string name="usim2_has_no_contacts_with_phone_number">Không có số l.lạc nào có số ĐT trên USIM2.</string>
+    
+    <string name="copy_phone_to_usim">Xuất sang USIM</string>
+    <string name="copy_phone_to_usim1">Xuất sang USIM1</string>
+    <string name="copy_phone_to_usim2">Xuất sang USIM2</string>
+    <string name="copy_sim1_to_usim2">Chép từ SIM1 sang USIM2</string>
+    <string name="copy_usim2_to_sim1">Chép từ USIM2 sang SIM1</string>
+    <string name="copy_sim2_to_usim1">Chép từ SIM2 sang USIM1</string>
+    <string name="copy_usim2_to_usim1">Chép từ USIM2 sang USIM1</string>
+    <string name="copy_usim1_to_usim2">Chép từ USIM1 sang USIM2</string>
+    <string name="copy_usim1_to_sim2">Chép từ USIM1 sang SIM2</string>
+    <string name="import_from_usim">Nhập từ thẻ USIM</string>
+    <string name="import_from_usim1">Nhập từ thẻ USIM1</string>
+    <string name="import_from_usim2">Nhập từ thẻ USIM2</string>    
+    <string name="usim_card_state_illegal">T.trạng USIM k.hợp lệ để chép</string>
+
+    <!-- String for Contacts multi-choice -->
+    <string name="done">thêm</string>
+    <string name="cancel">Cancel</string>
+    <string name="sms_tips">Các mục vừa chọn vượt quá giới hạn tối đa</string>
+    <string name="status">Có thể chọn <xliff:g id="statusinfo" example="20">%1$s</xliff:g> mục</string>
+    <string name="status_default">Hãy chọn (các) người nhận</string>
+    <!-- added by xingping.zheng start -->
+    <string name="add_contact_dialog_existing">Hiện hành</string>
+    <string name="add_contact_dialog_new">Mới</string>
+    <string name="suggested">Đã gợi ý</string>
+    <string name="title_call_via">Gọi qua</string>
+    <!-- Speed Dial -->
+    <string name="menu_speed_dial">Gọi nhanh</string>
+	<string name="speed_dial_manage">Gọi nhanh</string>
+	<string name="add_speed_dial">Chạm để thêm vào gọi nhanh</string>
+	<string name="speed_dial_added">Đã thêm <xliff:g id="contact_name">%1$s</xliff:g> (<xliff:g id="phone_label">%2$s</xliff:g>) vào gọi nhanh <xliff:g id="key">%3$s</xliff:g></string>
+	<string name="remove_speed_dial">Xóa</string>
+	<string name="remove_sd_confirm_1">Bạn chắc chắn muốn xóa <xliff:g id="contact_name">%1$s</xliff:g> (<xliff:g id="phone_label">%2$s</xliff:g>) khỏi gọi nhanh <xliff:g id="key">%3$s</xliff:g>?</string>
+	<!-- Speed Dial phase II -->
+	<string name="speed_dial_view">Add to speed dial</string>
+	<string name="assign_to_speed_dial">Assign to speed dial</string>
+	<string name="sd_add">Thêm</string>
+	<string name="sd_cancel">Hủy</string>
+	<string name="assigned_key">Assigned key</string>
+	<string name="unassigned">Unassigned</string>
+	<string name="available">Available</string>
+    <string name="reselect_number">Số này đã được gán cho phím gọi nhanh, hãy chọn số khác.</string>
+    <string name="reselect_key">Phím gọi nhanh đã được gán cho một số, hãy chọn phím khác.</string>
+    <!-- String for call log search-->
+    <plurals name="searchFoundCalllogs">
+        <item quantity="one">1 nhật ký c.gọi</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> nhật ký c.gọi</item>
+    </plurals>
+    <string name="listFoundAllCalllogZero">Không t.thấy nhật ký c.gọi</string>
+    <string name="noMatchingCalllogs">Không t.thấy nhật ký c.gọi thích hợp.</string>
+    <string name="calllogList">Nhật ký c.gọi</string>
+    <string name="calllogHint">Tìm nhật ký c.gọi</string>
+    <string name="calllog_description">Cuộc gọi đến, đi và nhỡ</string>
+    
+        <!-- String for USIM-->
+    
+    <string name="mobile_numbers">Số điện thoại</string>
+    <string name="email_invalid">Không thể lưu email không hợp lệ</string>
+    <string name="share_contacts">Chia sẻ số liên lạc</string>
+    <string name="name_of_additional_numbers">Gán số</string>
+    
+ <string name="no_members_in_group">"Không có thành viên trong nhóm này.\nChạm nút Thêm thành viên để thêm các thành viên mới từ d.sách số liên lạc của bạn."</string>
+<string name="dialog_change_store_info">"Lưu vào %s"</string>
+<string name="remove_group_members_fail">"Không thể xóa thành viên nhóm."</string>
+<string name="imexport_bridge_phone">"Điện thoại"</string>
+<string name="imexport_title">"Nhập/xuất danh bạ"</string>
+<string name="addCustomGroup">"Thêm tên nhóm"</string>
+<string name="select_store_location_title">"Lưu vào"</string>
+<string name="remove_number_title">"Xóa"</string>
+<string name="menu_remove_association">"Xóa kết hợp SIM"</string>
+<string name="confirm_remove_number_dialog">"Bạn chắc chắn muốn xóa số %s?"</string>
+<string name="sipcall">"Internet"</string>
+<string name="groups">"Các nhóm"</string>
+<string name="move">"Di chuyển"</string>
+<string name="emergencycall_ext">"ECC"</string>
+<string name="send_group_email">"Gửi email nhóm"</string>
+<string name="no_valid_email_in_group">"Nhóm này không có số liên lạc với email."</string>
+<string name="dial_reminder_dialog_message">"SIM %1$s không có sẵn. Bạn muốn thực hiện cuộc gọi qua %2$s?"</string>
+<string name="save_group_success">"Lưu nhóm thành công."</string>
+<string name="copy_button_text">"Sao chép"</string>
+<string name="custom_groups">"Nhóm tùy thích"</string>
+<string name="del_group_alert">"Bạn chắc chắn muốn xóa nhóm này?"</string>
+<string name="move_group_members">"Chuyển thành viên"</string>
+<string name="group_name_too_long">"Tên nhóm quá dài."</string>
+<string name="next">"Kế tiếp"</string>
+<string name="groups_coworker">"Đồng nghiệp"</string>
+<string name="imexport_bridge_radiooff_lbutton">"Bật "</string>
+<string name="contacts_moving">"Chuyển số liên lạc"</string>
+<string name="show_sims_contacts_header">"Danh bạ các SIM"</string>
+<string name="groups_none">"Không có"</string>
+<string name="add_group_members">"Thêm thành viên"</string>
+<string name="default_groups">"Nhóm mặc định"</string>
+<string name="groups_friends">"Bạn bè"</string>
+<string name="calllog_today">"Hôm nay"</string>
+<string name="groups_family">"Gia đình"</string>
+<string name="confirm_remove_members">"Bạn chắc chắn muốn xóa các thành viên đã chọn?"</string>
+<string name="calllog_yesterday">"Hôm qua"</string>
+<string name="view_group">"Xem nhóm"</string>
+<string name="group_name">"Tên nhóm"</string>
+<string name="imexport_bridge_sd_card">"Thẻ SD"</string>
+<string name="del_groups_alert">"Bạn chắc chắn muốn xóa các nhóm này?"</string>
+<string name="saving_group">"Đang lưu nhóm\u2026"</string>
+<string name="src_and_dst">"Nguồn: %1$s, Đích: %2$s"</string>
+<string name="remove_association_message">"Bạn chắc chắn muốn xóa kết hợp SIM cho số này?"</string>
+<string name="back">"Trở về"</string>
+<string name="back_button_text">"Trở về"</string>
+<string name="store_location_title">"Lưu số liên lạc vào"</string>
+<string name="group_members">"Thành viên nhóm"</string>
+<string name="del_group">"Xóa nhóm"</string>
+<string name="groups_all">"Tất cả các nhóm"</string>
+<string name="select_group_or_sim">"Chọn nhóm hay thẻ SIM"</string>
+<string name="move_contacts_to">"Chuyển số liên lạc vào"</string>
+<string name="groups_vip">"VIP"</string>
+<string name="pickGroup">"Chọn (các) nhóm."</string>
+<string name="removing_group_members">"Đang xóa thành viên nhóm\u2026"</string>
+<string name="tips_source">"Chọn nguồn từ vị trí mà bạn muốn chép số liên lạc"</string>
+<string name="none">"Không có"</string>
+<string name="add_group">"Thêm nhóm"</string>
+<string name="calllog">"Nhật ký c.gọi"</string>
+<string name="search_in_all_group">"Tìm trong mọi nhóm"</string>
+<string name="group_name_exists">"Tên nhóm đã tồn tại."</string>
+<string name="fix_number_too_long">"Số cố định quá dài."</string>
+<string name="custom">"Tùy chỉnh"</string>
+<string name="ds_matched_results">" kết quả cần tìm"</string>
+<string name="noContactsHelpText6">"Nhập/xuất"</string>
+<string name="noContactsHelpText4">"Thêm số liên lạc mới để tạo số liên lạc mới từ đầu."</string>
+<string name="noContactsHelpText5">"Ngoài ra, bạn có thể nhấn phím menu và chạm Nhập/xuất để thực hiện các thao tác khác."</string>
+<string name="noContactsHelpText2">"Để số liên lạc, bạn có thể:"</string>
+<string name="remove_group_members">"Xóa mọi thành viên"</string>
+<string name="changeStoreInfoConfirmation">"Một vài mục số liên lạc có thể bị mất. Bạn chắc chắn muốn đổi %1$s sang %2$s?"</string>
+<string name="noContactsHelpText3">"Thêm số l.lạc mới"</string>
+<string name="no_match_contact">"Không thấy số liên lạc cần tìm"</string>
+<string name="sipcall_button">"SIP"</string>
+<string name="menu_remove_number">"Xóa số này"</string>
+<string name="warning_detail">"Kết hợp SIM sẽ nhập số liên lạc vào điện thoại. Bạn muốn tiếp tục kết hợp SIM? "</string>
+<string name="selectall">"Chọn tất cả"</string>
+<string name="deselectall">"Bỏ chọn tất cả"</string>
+<string name="no_valid_number_in_group">"Nhóm này không có số liên lạc với số ĐT hợp lệ."</string>
+<string name="groups_pick">"Chọn (các) nhóm"</string>
+<string name="tips_target">"Chọn đích từ vị trí mà bạn muốn chép số liên lạc"</string>
+<string name="show_sims_contacts_body">"Hiển thị số liên lạc lưu trên các SIM"</string>
+<string name="no_select_alert">"Chưa có mục nào được chọn."</string>
+<string name="new_group">"Nhóm mới"</string>
+<string name="call_detail_call_via">"Gọi %s qua"</string>
+<string name="noContactsHelpText1">"Bạn không có bất kỳ số liên lạc nào để xem."</string>
+<string name="send_group_sms">"Gửi SMS nhóm"</string>
+<string name="groups_schoolmate">"Bạn học"</string>
+<string name="sim_invalid_fix_number">"Không thể lưu số cố định k.hợp lệ."</string>
+<string name="sdcard">"Thẻ SD"</string>
+<string name="save_group_fail">"Không thể lưu nhóm."</string>
+<string name="no_simcard_title">"Không thể chép từ SIM"</string>
+<string name="remove_group_members_success">"Xóa thành viên nhóm thành công."</string>
+<string name="ds_add_to_contacts">"Thêm vào Danh bạ"</string>
+<string name="edit_group">"Sửa nhóm"</string>
+<string name="copy_from_sim_card">"Chép từ SIM"</string>
+<string name="del_group_members">"Xóa thành viên"</string>
+<string name="all_resources">"Mọi tài nguyên"</string>
+<string name="group">"Nhóm"</string>
+<string name="choose_resources_header">"Chọn tài nguyên"</string>
+<string name="menu_association">"Kết hợp thẻ SIM"</string>
+<string name="no_simcard_message">"Chưa tìm thấy SIM"</string>
+<string name="add_contact_dialog_message">"Thêm số %s vào liên lạc mới hay đã có?"</string>
+
+
+<string name="associatiated_SIM">"SIM đã kết hợp"</string>
+<string name="moving_group_members_fail">"Không thể chuyển các thành viên nhóm"</string>
+<string name="unassociated">"Chưa kết hợp"</string>
+<string name="removing_group_member">"Đang xóa các thành viên nhóm\u2026"</string>
+<string name="moving_group_members">"Đang chuyển các thành viên nhóm\u2026"</string>
+<string name="removing_group_members_fail">"Không thể xóa các thành viên nhóm"</string>
+<string name="associate_SIM">"Kết hợp SIM"</string>
+<string name="moving_group_members_sucess">"Chuyển thành công các thành viên nhóm"</string>
+<string name="removing_group_members_sucess">"Xóa thành công các thành viên nhóm"</string>
+
+<string name="reminder">Báo nhắc</string>
+
+    <string name="name_needed">"Cần có tên"</string>
+    <string name="email_address_null">"Không có địa chỉ email trong các thành viên nhóm!"</string>
+
+<string name="enable_sip_dialog_message">"Đã tắt gọi internet, bạn muốn bật?"</string>
+
+
+
+<string name="send_groupsms_no_number_2">"%1$s và %2$s không có số ĐT hợp lệ."</string>
+<string name="send_groupsms_no_number_1">"%1$s không có số ĐT hợp lệ."</string>
+<string name="send_groupsms_no_number_more">"Nhiều số liên lạc từ %1$s và %2$s không có số ĐT hợp lệ."</string>
+<string name="share_contact_via_sms">"Tin nhắn v.bản"</string>
+
+<string name="contact_name">Tên</string>
+    <string name="contact_tel">Điện thoại</string>
+    <string name="contact_email">Email</string>
+    <string name="contact_organization">Tổ chức</string>
+    <string name="contact_address">Địa chỉ</string>
+
+
+<string name="group_is_saving">"Nhóm đang lưu các thành viên vào nền sau ĐT, hãy đợi trong giây lát."</string>
+<string name="email_2g_invalid">"Không thể lưu email vào SIM 2G, hãy chọn SIM 3G để lưu."</string>
+<string name="turn_on_3g_service_message">"Dịch vụ 3G hiện đã tắt, bạn muốn bật?"</string>
+</resources>

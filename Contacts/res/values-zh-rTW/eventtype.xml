@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="kaixin1">已上傳相片</string>
+    <string name="kaixin2">已發布網誌</string>
+    <string name="kaixin3">已更新狀態</string>
+    <string name="kaixin1018">已記錄</string>
+    <string name="kaixin1088">張貼給我們</string>
+    <string name="kaixin1016">已投票</string>
+    <string name="renren21or23">已分享網誌</string>
+    <string name="renren32or36">已分享相片</string>
+    <string name="renren33">已分享相簿</string>
+    <string name="renren34or35">已更新個人檔案照片</string>
+    <string name="renren40">新增你為朋友</string>
+    <string name="renren41">正在追蹤你</string>
+    <string name="renren51or54">已分享連結</string>
+    <string name="fb80">已分享</string>
+    <string name="fb12">已建立事件</string>
+    <string name="twitter100">張貼短文</string>
+    <string name="twitter200">轉載</string>
+	<string name="renren10or11">狀態已更新</string>
+	<string name="renren20or22">部落格已發布</string>
+	<string name="renren30or31">照片已上載</string>
+	<string name="fb66">部落格已發布</string>
+	<string name="fb46">狀態已更新</string>
+	<string name="fb247">照片已上載</string>
+	<string name="fb100">照片已分享</string>
+	<string name="flickr100">照片已上載</string>
+</resources>

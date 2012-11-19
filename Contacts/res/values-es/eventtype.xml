@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="kaixin1">foto descargada</string>
+    <string name="kaixin2">blog publicado</string>
+    <string name="kaixin3">estado actualizado</string>
+    <string name="kaixin1018">grabado</string>
+    <string name="kaixin1088">expuesto para nosotros</string>
+    <string name="kaixin1016">votado</string>
+    <string name="renren21or23">blog compartido</string>
+    <string name="renren32or36">fotografía compartida</string>
+    <string name="renren33">álbum compartido</string>
+    <string name="renren34or35">imagen de perfila actualizadas </string>
+    <string name="renren40">agregado (usted) como amigo</string>
+    <string name="renren41">le está siguiendo</string>
+    <string name="renren51or54">Compartió un vínculo</string>
+    <string name="fb80">compartido</string>
+    <string name="fb12">creó un evento</string>
+    <string name="twitter100">tweet</string>
+    <string name="twitter200">retweet</string>
+    <string name="renren10or11">Estado actualizado</string>
+    <string name="renren20or22">Blog publicado</string>
+    <string name="renren30or31">Fotografía cargada</string>
+    <string name="fb66">Blog publicado</string>
+    <string name="fb46">Estado actualizado</string>
+    <string name="fb247">Fotografía cargada</string>
+    <string name="flickr100">Fotografía cargada</string>
+    <string name="fb100">Fotografía compartida</string>
+</resources>

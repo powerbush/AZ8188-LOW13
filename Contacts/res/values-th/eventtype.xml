@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="kaixin1">ภาพถ่ายที่อัพโหลด</string>
+    <string name="kaixin2">บล็อกที่ลงประกาศ</string>
+    <string name="kaixin3">สถานะที่อัพเดต</string>
+    <string name="kaixin1018">บันทึกแล้ว</string>
+    <string name="kaixin1088">ลงประกาศถึงเรา</string>
+    <string name="kaixin1016">โหวต</string>
+    <string name="renren21or23">บล็อกที่แบ่งปัน</string>
+    <string name="renren32or36">ภาพถ่ายที่แบ่งปัน</string>
+    <string name="renren33">อัลบั้มที่แบ่งปัน</string>
+    <string name="renren34or35">รูปภาพโปรไฟล์ที่อัพเดต </string>
+    <string name="renren40">เพิ่ม (คุณ) เป็นเพื่อน</string>
+    <string name="renren41"> กำลังติดตามคุณ</string>
+    <string name="renren51or54">แบ่งปันลิงค์</string>
+    <string name="fb80">แบ่งปัน</string>
+    <string name="fb12">สร้างเหตุการณ์</string>
+    <string name="twitter100">ทวีต</string>
+    <string name="twitter200">รีทวีต</string>
+    <string name="renren10or11">สถานะอัพเดตแล้ว</string>
+    <string name="renren20or22">ลงประกาศบล็อกแล้ว</string>
+    <string name="renren30or31">อัปโหลดภาพถ่ายแล้ว</string>
+    <string name="fb66">ลงประกาศบล็อกแล้ว</string>
+    <string name="fb46">สถานะอัพเดตแล้ว</string>
+    <string name="fb247">อัปโหลดภาพถ่ายแล้ว</string>
+    <string name="flickr100">อัปโหลดภาพถ่ายแล้ว</string>
+    <string name="fb100">แชร์ภาพถ่ายแล้ว</string>
+</resources>

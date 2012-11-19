@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.android:layout_below="@id/label"
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+>
+
+    <TextView 
+        android:id="@+id/label"
+        android:layout_width="match_parent"
+        android:layout_height="22dip"
+        android:textColor="#ffbfbfbf"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical"
+    	android:paddingLeft="5dp"
+    	android:paddingRight="7dp"
+    	android:background="@drawable/contact_calllog_dialerseach_result_bg"
+    />
+    
+	<RelativeLayout 
+	android:layout_below="@id/label"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+        android:layout_alignWithParentIfMissing="true"
+	>
+    <ImageView android:id="@+id/group_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="4dip"
+    />
+    <CheckBox android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="4dip"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+    />
+    <TextView android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/checkbox"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="6dip"
+        android:gravity="center_vertical"
+    />
+    <TextView android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/group_icon"
+        android:layout_toLeftOf="@id/count"
+        android:layout_marginRight="4dip"
+        android:layout_marginLeft="10dip"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center_vertical"
+    />
+     
+</RelativeLayout>
+</RelativeLayout>

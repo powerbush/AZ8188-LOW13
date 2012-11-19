@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/widget28" xmlns:android="http://schemas.android.com/apk/res/android"
+	android:background="@drawable/wgt_listview_item_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+	<LinearLayout android:id="@+id/widget47"
+		android:layout_width="wrap_content" android:layout_alignParentRight="true"
+		android:layout_height="wrap_content" android:layout_toRightOf="@+id/EventPicArea"
+		android:orientation="vertical" android:layout_marginRight="5dp" android:layout_marginLeft="3dp" android:layout_marginBottom="8dp" android:layout_marginTop="8dp">
+		<TextView android:layout_height="wrap_content"
+			android:id="@+id/EventTitleTV" android:textColor="#696b6e" android:layout_width="fill_parent" android:textSize="16sp">
+			</TextView>
+			<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/EventPublishTimeTV" android:textColor="#868585" android:textSize="12sp">
+			</TextView> 
+
+	</LinearLayout>
+	<FrameLayout android:layout_alignParentTop="true"
+		android:layout_alignParentLeft="true" android:id="@+id/EventPicArea" android:layout_height="70dp" android:layout_width="60dp">
+		<RelativeLayout android:layout_height="fill_parent"
+			android:layout_width="fill_parent">
+			<ImageView android:layout_width="50dp"
+
+				android:layout_height="50dp" android:id="@+id/EventFriendHeadPortrait"
+				android:layout_marginBottom="6dp" android:layout_marginTop="10dp" android:layout_marginLeft="5dp" android:src="@drawable/wgt_sns_normal_avatar">
+			</ImageView>
+			
+		</RelativeLayout>
+
+		<RelativeLayout android:id="@+id/widget45"
+			android:layout_width="fill_parent" android:layout_height="fill_parent">
+			<ImageView android:layout_alignParentBottom="true"
+				android:layout_alignParentRight="true" android:id="@+id/EventWebLog"
+				android:layout_height="16dp" android:layout_width="16dp" android:layout_marginBottom="5dp">
+			</ImageView>
+		</RelativeLayout>
+
+	</FrameLayout>
+
+</RelativeLayout>

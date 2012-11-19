@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="kaixin1">загруженное фото</string>
+    <string name="kaixin2">опубликованный блог</string>
+    <string name="kaixin3">обновленный статус</string>
+    <string name="kaixin1018">записано</string>
+    <string name="kaixin1088">написано нам</string>
+    <string name="kaixin1016">проголосовано</string>
+    <string name="renren21or23">общий блог</string>
+    <string name="renren32or36">общее фото</string>
+    <string name="renren33">общий альбом</string>
+    <string name="renren34or35">обновленное фото профиля</string>
+    <string name="renren40">добавил(а) вас в друзья</string>
+    <string name="renren41">следит за вашими событиями</string>
+    <string name="renren51or54">поделился ссылкой</string>
+    <string name="fb80">поделился</string>
+    <string name="fb12">создал событие</string>
+    <string name="twitter100">твит</string>
+    <string name="twitter200">ретвит</string>
+    <string name="renren10or11">Обновлен статус</string>
+    <string name="renren20or22">Опубликован блог</string>
+    <string name="renren30or31">Загружена фотография</string>
+    <string name="fb66">Опубликован блог</string>
+    <string name="fb46">Обновлен статус</string>
+    <string name="fb247">Загружена фотография</string>
+    <string name="flickr100">Загружена фотография</string>
+    <string name="fb100">Опубликована фотография</string>
+</resources>

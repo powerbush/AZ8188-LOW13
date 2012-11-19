@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2008 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+    <LinearLayout android:id="@+id/calllog_search_button_cluster"
+        android:layout_width="match_parent"
+        android:layout_height="42px"
+        android:orientation="horizontal"
+        android:background="@drawable/contacts_title_bg"
+    >
+        <Button android:id="@+id/btn_type_filter_all"
+            android:layout_width="52px"
+            android:layout_height="42px"
+            android:layout_marginLeft="10px"                        
+            android:singleLine="true"                         
+            android:background="@drawable/btn_calllog_all"            
+            android:text="@string/all_tab_label"            
+        />
+        <Button android:id="@+id/btn_type_filter_outgoing"
+            android:layout_width="52px"
+            android:layout_height="42px"                         
+            android:background="@drawable/btn_calllog_incoming"                          
+        />
+        <ImageView android:id="@+id/btn_type_filter_outgoing_icon"
+            android:layout_width="24px"
+            android:layout_height="24px" 
+            android:layout_marginTop="8dip"
+            android:layout_marginLeft="-40dip"                                  
+		    android:src="@drawable/call_log_incoming" 
+        />
+        <Button android:id="@+id/btn_type_filter_incoming"
+            android:layout_width="52px"
+            android:layout_height="42px"    
+            android:layout_marginLeft="15dip"                                                  
+            android:background="@drawable/btn_calllog_incoming"                      
+        />
+        <ImageView android:id="@+id/btn_type_filter_incoming_icon"
+            android:layout_width="24px"
+            android:layout_height="24px" 
+            android:layout_marginTop="8dip"
+            android:layout_marginLeft="-40dip"                              
+		    android:src="@drawable/call_log_outing" 
+        />
+        <Button android:id="@+id/btn_type_filter_missed"
+            android:layout_width="52px"
+            android:layout_height="42px"    
+            android:layout_marginLeft="15dip"                                       
+            android:background="@drawable/btn_calllog_missed"            
+        />
+        <ImageView android:id="@+id/btn_type_filter_missed_icon"
+            android:layout_width="24px"
+            android:layout_height="24px" 
+            android:layout_marginTop="8dip"
+            android:layout_marginLeft="-40dip"                           
+		    android:src="@drawable/call_log_missed" 
+        />
+        
+        <Button android:id="@+id/btn_sim_filter"
+            android:layout_width="42px"
+            android:layout_height="42px"                                    
+            android:layout_marginLeft="62dip"                                   
+            android:background="@drawable/btn_calllog_simstate"                                        
+        />
+        <ImageView android:id="@+id/btn_sim_filter_icon"
+            android:layout_width="24px"
+            android:layout_height="24px" 
+            android:layout_marginTop="9dip"
+            android:layout_marginLeft="-33dip"                          
+		    android:src="@drawable/btn_calllog_sim" 
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+    		android:id="@+id/calllog_search_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@*android:drawable/title_bar_medium"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            >
+
+        <TextView
+            android:id="@+id/calllog_search_results_for"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titleJoinContactDataWith"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:shadowColor="#BB000000"
+            android:shadowRadius="2.75"
+        />
+
+        <TextView
+            android:id="@+id/calllog_search_results_found"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-2dip"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+        />
+	</LinearLayout>
+	
+<FrameLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+    <ListView android:id="@android:id/list"
+        android:layout_width="match_parent" 
+        android:layout_height="match_parent"
+        android:scrollbarStyle="outsideOverlay"
+    />
+    
+    <TextView android:id="@android:id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/recentCalls_empty"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+    />
+</FrameLayout>
+</LinearLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2008 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- XML resource file for the "person info" area of the main
+     CallCard of the in-call UI, which includes the photo and
+     name/number TextViews. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/callCardPersonInfo"
+              android:orientation="horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="6px"
+              >
+
+    <!-- Photo, with elapsed time widget off to the side. -->
+        <!-- Photo, or else a generic placeholder image. -->
+        <!-- Contact photos are generally 96x96 (but may be smaller.)
+             The layout size of this ImageView is larger than that, though,
+             to account for the incall_photo_border background, which
+             adds a white border around the image (and a shadow around
+             the white border.) -->
+        <ImageView android:id="@+id/photo"
+                   android:layout_width="124px"
+                   android:layout_height="124px"
+                   android:background="@drawable/incall_photo_border_lg"
+                   android:contentDescription="@string/contactPhoto"
+                   android:scaleType="fitXY"
+                   />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/callCardPersonInfo"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="11px">
+
+        <TextView android:id="@+id/upperTitle"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:textSize="18sp"
+                  android:singleLine="true"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  />
+
+        
+
+    <!-- Name (or the phone number, if we don't have a name to display). -->
+    <TextView android:id="@+id/name"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textSize="18sp"
+              android:singleLine="true"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              />
+
+    <!-- Label (like "Mobile" or "Work", if present) and phone number, side by side -->
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content">
+        <TextView android:id="@+id/label"
+                  android:textAppearance="?android:attr/textAppearanceSmall"
+                  android:textSize="16sp"
+                  android:textColor="?android:attr/textColorSecondary"
+                  android:singleLine="true"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:paddingRight="6dip"
+                  />
+        <TextView android:id="@+id/phoneNumber"
+                  android:textAppearance="?android:attr/textAppearanceSmall"
+                  android:textSize="16sp"
+                  android:textColor="?android:attr/textColorSecondary"
+                  android:singleLine="true"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  />
+    </LinearLayout>
+
+    <!-- Elapsed time indication for a call in progress. -->
+        <TextView android:id="@+id/elapsedTime"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:textSize="15sp"
+                  android:textStyle="bold"
+                  android:singleLine="true"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  />
+
+    <!-- Call type indication: a special label and/or branding
+         for certain kinds of calls -->
+    <TextView android:id="@+id/callTypeLabel"
+              android:textAppearance="?android:attr/textAppearanceSmall"
+              android:textSize="16sp"
+              android:textColor="?android:attr/textColorSecondary"
+              android:maxLines="1"
+              android:ellipsize="end"
+              android:paddingLeft="10dip"
+              android:paddingRight="10dip"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              />
+
+    <!-- Social status -->
+    <TextView android:id="@+id/socialStatus"
+              android:textAppearance="?android:attr/textAppearanceSmall"
+              android:textSize="16sp"
+              android:textColor="?android:attr/textColorSecondary"
+              android:maxLines="2"
+              android:ellipsize="end"
+              android:paddingLeft="10dip"
+              android:paddingRight="10dip"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Disabled views -->
+    <item android:state_focused="true" android:state_enabled="false"
+        android:drawable="@drawable/phone_dial_bg_delete_btn_disable_focus" />
+    <item android:state_enabled="false"
+        android:drawable="@drawable/phone_dial_bg_delete_btn_disable" />
+        
+    <!-- Enabled views -->
+    <item android:state_pressed="true"
+        android:drawable="@drawable/phone_dial_bg_delete_btn_pressed" />
+    <item android:state_focused="true"
+        android:drawable="@drawable/phone_dial_bg_delete_btn_selected" />
+    <item
+        android:drawable="@drawable/phone_dial_bg_delete_btn_normal" />
+</selector>
+

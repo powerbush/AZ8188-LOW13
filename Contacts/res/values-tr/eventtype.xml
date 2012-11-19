@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="kaixin1">fotoğrafı karşıya yüklendi</string>
+    <string name="kaixin2">blog yayınladı</string>
+    <string name="kaixin3">durumu güncelledi</string>
+    <string name="kaixin1018">kaydedildi</string>
+    <string name="kaixin1088">bize gönderdi</string>
+    <string name="kaixin1016">oylandı</string>
+    <string name="renren21or23">blog paylaşıldı</string>
+    <string name="renren32or36">fotoğraf paylaşıldı</string>
+    <string name="renren33">albüm paylaşıldı</string>
+    <string name="renren34or35">profil resmi paylaşıldı</string>
+    <string name="renren40">(sizi) arkadaş olarak kaydetti</string>
+    <string name="renren41">sizi takip ediyor</string>
+    <string name="renren51or54">bağlantı paylaşıldı</string>
+    <string name="fb80">paylaşıldı</string>
+    <string name="fb12">olay oluşturuldu</string>
+    <string name="twitter100">tweetle</string>
+    <string name="twitter200">yeniden tweetle</string>
+    <string name="renren10or11">Durum güncellendi</string>
+    <string name="renren20or22">Blog yayınlandı</string>
+    <string name="renren30or31">Fotoğraf yüklendi</string>
+    <string name="fb66">Blog yayınlandı</string>
+    <string name="fb46">Durum güncellendi</string>
+    <string name="fb247">Fotoğraf yüklendi</string>
+    <string name="flickr100">Fotoğraf yüklendi</string>
+    <string name="fb100">Fotoğraf paylaşıldı</string>
+</resources>

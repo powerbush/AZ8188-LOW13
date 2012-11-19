@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+	<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/VTInCallCanvas"
+		android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:visibility="gone">		
+		<RelativeLayout android:id="@+id/RelativeLayout01" 
+			android:layout_width="320dip" 
+			android:layout_height="233dip">	
+			<SurfaceView android:id="@+id/VTHighVideo" 
+				android:layout_width="280dip" 
+				android:layout_height="192dip"
+				android:layout_centerInParent="true">
+			</SurfaceView>	
+			<ImageButton android:id="@+id/VTHighUp" 
+				android:layout_width="60dip"
+				android:layout_height="60dip"
+                android:layout_alignRight="@id/VTHighVideo"
+				android:layout_alignBottom="@id/VTHighVideo">
+			</ImageButton>				
+			<ImageButton android:id="@+id/VTHighDown" 
+				android:layout_width="60dip"
+                android:layout_height="60dip"
+				android:layout_alignLeft="@id/VTHighVideo"
+				android:layout_alignBottom="@id/VTHighVideo">
+			</ImageButton>				
+		</RelativeLayout>		
+		<RelativeLayout android:id="@+id/RelativeLayout11"
+			android:layout_width="320dip" 
+			android:layout_height="36dip">
+			<ImageView android:id="@+id/vtPhoneNumberIcon" 
+				android:layout_width="29dip" 
+				android:layout_height="23dip"
+				android:layout_alignParentLeft="true"
+				android:layout_marginLeft="12dip"
+				android:layout_centerVertical="true">
+			</ImageView>
+			<TextView android:id="@+id/vtPhoneNumber" 
+				android:layout_width="154dip"
+				android:layout_height="wrap_content"
+				android:textSize="20sp"
+				android:textColor="#DFDFDF"
+				android:layout_toRightOf="@id/vtPhoneNumberIcon"
+				android:layout_centerVertical="true">
+			</TextView>
+			<TextView android:id="@+id/vtElapsedTime" 
+				android:layout_alignParentRight="true"
+				android:layout_marginRight="12dip"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:textSize="20sp"
+				android:textColor="#DFDFDF"
+				android:layout_centerVertical="true">
+			</TextView>			
+			<ImageView android:id="@+id/vtElapsedTimeIcon" 
+				android:layout_width="23dip" 
+				android:layout_height="24dip"
+				android:layout_toLeftOf="@id/vtElapsedTime"
+				android:layout_centerVertical="true">
+			</ImageView>		
+		</RelativeLayout>
+		<RelativeLayout android:id="@+id/RelativeLayout10" 
+			android:layout_width="320dip" 
+			android:layout_height="126dip">
+			<RelativeLayout android:id="@+id/RelativeLayout03" 
+				android:layout_width="80dip" 
+				android:layout_height="147dip"
+				android:orientation="vertical"
+				android:layout_centerVertical="true"
+				android:layout_alignParentLeft="true">
+					<ImageButton android:id="@+id/VTTakePeerPhoto" 
+						android:layout_width="59dip"
+						android:layout_height="32dip"
+						android:layout_centerHorizontal="true"
+						android:layout_alignParentTop="true"
+						android:layout_marginTop="5dip">
+					</ImageButton>
+					<ImageButton android:id="@+id/VTSwitchCamera" 
+						android:layout_width="59dip" 
+						android:layout_height="32dip"
+						android:layout_centerHorizontal="true"
+						android:layout_below="@id/VTTakePeerPhoto"
+						android:layout_marginTop="11dip">
+					</ImageButton>
+					<ImageButton android:id="@+id/VTHideMe" 
+						android:layout_width="59dip" 
+						android:layout_height="32dip"
+						android:layout_centerHorizontal="true"
+						android:layout_below="@id/VTSwitchCamera"
+						android:layout_marginTop="11dip">
+					</ImageButton>				
+			</RelativeLayout>			
+			<RelativeLayout android:id="@+id/RelativeLayout02" 
+				android:layout_width="158dip" 
+				android:layout_height="120dip"
+				android:layout_centerInParent="true">				
+				<SurfaceView android:id="@+id/VTLowVideo" 
+					android:layout_width="150dip" 
+					android:layout_height="115dip"
+					android:layout_centerInParent="true">
+				</SurfaceView>
+				<ImageButton android:id="@+id/VTLowUp" 
+					android:layout_width="60dip"
+					android:layout_height="60dip"
+					android:layout_alignTop="@id/VTLowVideo"
+					android:layout_centerHorizontal="true">
+				</ImageButton>
+				<ImageButton android:id="@+id/VTLowDown" 
+					android:layout_width="60dip"
+					android:layout_height="60dip"
+					android:layout_alignBottom="@id/VTLowVideo"
+					android:layout_centerHorizontal="true">
+				</ImageButton>
+			</RelativeLayout>			
+			<RelativeLayout android:id="@+id/RelativeLayout06" 
+				android:layout_width="80dip" 
+				android:layout_height="130dip"
+				android:orientation="vertical"
+				android:layout_centerVertical="true"
+				android:layout_alignParentRight="true">				
+					<ImageButton android:id="@+id/VTMute" 
+						android:layout_width="59dip" 
+						android:layout_height="32dip"
+						android:layout_centerHorizontal="true"
+						android:layout_alignParentTop="true"
+						android:layout_marginTop="5dip">
+					</ImageButton>
+					<ImageButton android:id="@+id/VTSpeaker" 
+						android:layout_width="59dip" 
+						android:layout_height="32dip"
+						android:layout_centerHorizontal="true"
+						android:layout_below="@id/VTMute"
+						android:layout_marginTop="11dip">
+					</ImageButton>
+					<ImageButton android:id="@+id/VTHangUp" 
+						android:layout_width="59dip" 
+						android:layout_height="32dip"
+						android:layout_centerHorizontal="true"
+						android:layout_below="@id/VTSpeaker"
+						android:layout_marginTop="11dip">
+					</ImageButton>
+			</RelativeLayout>
+		</RelativeLayout>	
+	</LinearLayout>

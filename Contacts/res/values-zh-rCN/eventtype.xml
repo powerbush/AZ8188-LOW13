@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="kaixin1">上传了照片</string>
+    <string name="kaixin2">发表日志</string>
+    <string name="kaixin3">更新了状态</string>
+    <string name="kaixin1018">记录道</string>
+    <string name="kaixin1088">转贴给大家</string>
+    <string name="kaixin1016">参与了投票</string>
+    <string name="renren21or23">分享了日志</string>
+    <string name="renren32or36">分享了照片</string>
+    <string name="renren33">分享了相册</string>
+    <string name="renren34or35">更新了头像</string>
+    <string name="renren40">成为了好友</string>
+    <string name="renren41">成为了粉丝</string>
+    <string name="renren51or54">分享了链接</string>
+    <string name="fb80">分享了</string>
+    <string name="fb12">创建了活动</string>
+    <string name="twitter100">发布了</string>
+    <string name="twitter200">转发了</string>
+    <string name="renren10or11">更新了状态</string>
+		<string name="renren20or22">发表了日志</string>
+		<string name="renren30or31">上传了照片</string>
+		<string name="fb66">上传了日志</string>
+		<string name="fb46">更新了状态</string>
+		<string name="fb247">上传了照片</string>
+		<string name="fb100">分享了照片</string>
+		<string name="flickr100">上传的照片</string>
+</resources>

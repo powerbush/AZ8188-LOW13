@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_root_view"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    
+    <com.android.internal.widget.ContactHeaderWidget
+        android:id="@+id/contact_header_widget"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="1dip">
+	</LinearLayout>
+
+    <ScrollView android:id="@+id/outer_scroll"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:fillViewport="true">
+		<LinearLayout android:layout_height="wrap_content" 
+		    android:layout_width="fill_parent" 
+		    android:orientation="vertical">
+	        <LinearLayout
+		        android:id="@+id/edit_sns_account_panel" 
+		        android:layout_height="wrap_content" 
+		        android:orientation="vertical" 
+		        android:layout_width="fill_parent" 
+		        android:gravity="center"
+		        android:paddingTop="35dip">
+		        <TextView android:id="@+id/sns_label_note" 
+			        android:layout_width="fill_parent" 
+			        android:text="@string/none_sns_account_label" 
+			        android:gravity="center" 
+			        android:textSize="16dip" 
+			        android:layout_height="wrap_content">
+		        </TextView>
+		        <Button android:id="@+id/sns_account_manager" 
+			        android:layout_width="220dip" 
+			        android:layout_height="wrap_content" 
+			        android:text="@string/none_sns_account_btn"
+			        android:layout_marginBottom="10dip"
+			        android:layout_marginTop="10dip"
+			        android:paddingLeft="20dip"
+			        android:paddingRight="20dip">
+		        </Button>
+		        <LinearLayout
+			        android:layout_width="fill_parent"
+			        android:layout_height="1dip"
+			        android:background="#606060"
+			        android:layout_marginTop="25dip">
+		        </LinearLayout>
+	        </LinearLayout>
+
+	        <LinearLayout
+		        android:id="@+id/none_contact_view" 
+		        android:layout_height="wrap_content" 
+		        android:orientation="vertical" 
+		        android:layout_width="fill_parent" 
+		        android:gravity="center"
+		        android:paddingTop="35dip" >
+
+		        <TextView android:id="@+id/contact_label_note" 
+			        android:layout_width="fill_parent" 
+			        android:text="@string/none_contact_account_label" 
+			        android:gravity="center" 
+			        android:textSize="16dip" 
+			        android:layout_height="wrap_content">
+		        </TextView>
+
+		        <Button android:id="@+id/contact_account_manager" 
+			        android:layout_width="220dip" 
+			        android:layout_height="wrap_content" 
+			        android:text="@string/none_contact_account_btn"
+			        android:layout_marginBottom="10dip"
+			        android:layout_marginTop="10dip"
+			        android:paddingLeft="20dip"
+			        android:paddingRight="20dip">
+		        </Button>
+	        </LinearLayout>
+	    </LinearLayout>
+    </ScrollView>
+
+	<TabHost
+		android:id="@+id/tab_root" android:layout_width="match_parent"
+		android:layout_height="match_parent">
+	
+		<LinearLayout android:layout_width="match_parent"
+			android:orientation="vertical" android:layout_height="match_parent">
+			<TabWidget android:id="@android:id/tabs"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" 
+			 	android:layout_weight="0"/>
+			<FrameLayout android:id="@android:id/tabcontent"
+				android:layout_width="match_parent"
+				android:layout_height="0dip"
+				android:layout_weight="1">
+				<!-- tab profile -->
+				<LinearLayout android:id="@+id/tab_profile"
+        			android:layout_width="match_parent" 
+        			android:layout_height="wrap_content" 
+        			android:orientation="vertical">
+					
+	
+					<LinearLayout android:id="@+id/outerscroll"
+						android:layout_width="fill_parent"
+						android:layout_height="fill_parent">
+						<LinearLayout
+							android:id="@+id/outer"
+							android:orientation="vertical"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content">
+							<ListView android:id="@+id/owner_contact"
+								android:layout_width="fill_parent"
+								android:layout_height="wrap_content"
+							/>
+							<LinearLayout
+								android:layout_width="fill_parent"
+								android:layout_height="1dip"
+								android:background="#d8dada">
+							</LinearLayout>
+							
+
+							<ScrollView android:id="@+id/none_contact_info_view"
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:fillViewport="true">
+								<TextView android:id="@+id/emptyText"
+									android:layout_width="match_parent"
+									android:layout_height="wrap_content"
+									android:text="@string/no_contact_details"
+									android:textSize="20sp"
+									android:textColor="?android:attr/textColorSecondary"
+									android:paddingLeft="10dip"
+									android:paddingRight="10dip"
+									android:paddingTop="10dip"
+									android:lineSpacingMultiplier="0.92"
+								/>
+							</ScrollView>
+						</LinearLayout>
+					</LinearLayout>
+				</LinearLayout>
+				<!-- tab profile end -->
+				<!-- tab event list -->
+				<LinearLayout android:id="@+id/tab_event"
+       				android:layout_width="match_parent" 
+					android:layout_height="wrap_content" 
+					android:orientation="vertical">
+       				<RelativeLayout
+						android:id="@+id/card_update_status"
+						android:orientation="vertical"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:background="#848284"
+						android:gravity="center" >
+				
+						<ImageButton android:id="@+id/sns_update"
+							android:src="@drawable/ic_popup_contact_owner_upload" 
+							android:layout_alignParentRight="true" 
+							android:layout_height="wrap_content" 
+							android:layout_width="wrap_content"
+							android:background="@drawable/contact_sns_status_icon"
+							android:layout_centerVertical="true" 
+							android:layout_centerInParent="true" 
+							android:layout_centerHorizontal="true"
+							android:layout_marginLeft="2dip" 
+							android:layout_marginRight="5dip">
+						</ImageButton>
+						<ImageButton android:id="@+id/sns_photo" 
+							android:src="@drawable/ic_popup_contact_owner_camera" 
+							android:layout_toLeftOf="@id/sns_update"
+							android:layout_height="wrap_content" 
+							android:layout_width="wrap_content"
+							android:background="@drawable/contact_sns_status_icon"
+							android:layout_centerVertical="true" 
+							android:layout_centerInParent="true" 
+							android:layout_centerHorizontal="true"
+							android:layout_marginLeft="5dip" 
+							android:layout_marginRight="3dip">
+						</ImageButton>
+						<TextView android:layout_width="wrap_content"
+							android:layout_height="36dip"
+							android:layout_toLeftOf="@id/sns_photo"
+							android:id="@+id/sns_status"
+							android:layout_alignParentLeft="true"
+							android:layout_centerVertical="true" 
+							android:layout_centerInParent="true" 
+							android:layout_centerHorizontal="true"
+							android:hint="@string/edit_status"
+							android:singleLine="true"
+							android:background="@drawable/contact_sns_status"
+							android:focusable="true">
+						</TextView>
+					</RelativeLayout>
+					<ListView android:id="@+id/sns_event_data"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:background="@drawable/title_bar_shadow"
+						android:visibility="invisible" />
+
+						<LinearLayout
+						android:id="@+id/edit_sns_account_panel_2" 
+						android:layout_height="wrap_content" 
+						android:orientation="vertical" 
+						android:layout_width="fill_parent" 
+						android:gravity="center"
+						android:paddingTop="10dip">
+						<TextView android:id="@+id/sns_label_note_2" 
+							android:layout_width="fill_parent" 
+							android:text="@string/none_sns_account_label" 
+							android:gravity="center" 
+							android:textSize="16dip" 
+							android:layout_height="wrap_content">
+						</TextView>
+						<Button android:id="@+id/sns_account_manager_2" 
+							android:layout_width="220dip" 
+							android:layout_height="wrap_content" 
+							android:text="@string/none_sns_account_btn"
+							android:layout_marginBottom="10dip"
+							android:layout_marginTop="10dip"
+							android:paddingLeft="20dip"
+							android:paddingRight="20dip">
+						</Button>
+						
+					</LinearLayout>
+
+	
+					<ScrollView android:id="@+id/sns_event_empty"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:fillViewport="true">
+						<TextView android:id="@+id/emptyText"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:text="@string/no_event_details"
+							android:textSize="20sp"
+							android:textColor="?android:attr/textColorSecondary"
+							android:paddingLeft="10dip"
+							android:paddingRight="10dip"
+							android:paddingTop="10dip"
+							android:lineSpacingMultiplier="0.92"/>
+    				</ScrollView>
+    			</LinearLayout>
+				<!-- tab event list end -->
+    		</FrameLayout>
+		</LinearLayout>
+    </TabHost>
+</LinearLayout>
+

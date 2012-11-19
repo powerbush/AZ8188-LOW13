@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- Horizontal row of buttons (Voicemail + DialButton + Delete.) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dial1AndDial2AndDialpad"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:paddingTop="4dp"
+    android:paddingBottom="7dp"
+    android:orientation="vertical">
+
+	<LinearLayout 
+	    android:id="@+id/dialSimLayout"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical">
+	    <ImageButton android:id="@+id/dialsim1Button"
+	        android:layout_width="71dip"
+	        android:layout_height="65dip"
+	        android:state_enabled="false"
+	        android:layout_marginBottom="4dip"
+	        android:background="@drawable/btn_call_dual_sim"
+	        android:src="@drawable/call_sim1_icon" />
+	
+	    <ImageButton android:id="@+id/dialsim2Button" 
+	        android:layout_width="71dip" 
+	        android:layout_height="65dip" 
+	        android:state_enabled="false" 
+	        android:layout_marginBottom="4dip"
+	        android:background="@drawable/btn_call_dual_sim" 
+	        android:src="@drawable/call_sim2_icon" />
+    </LinearLayout>
+    
+    <LinearLayout 
+	    android:id="@+id/dialEccLayout"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content">
+	    <ImageButton android:id="@+id/dialButtonEcc"
+	        android:layout_width="71dip"
+	        android:layout_height="134dip"
+	        android:layout_marginBottom="4dip"
+	        android:state_enabled="true"
+	        android:background="@drawable/btn_dial_ecc"
+	        android:src ="@drawable/ecc_call_icon" />
+    </LinearLayout>
+    
+    <ImageButton android:id="@+id/dialpadButton"
+        android:layout_width="71dip"
+        android:layout_height="42dip"
+        android:state_enabled="false"
+        android:background="@drawable/btn_hide_dialpad"
+        android:src="@drawable/hide_dial_pad_icon" />
+
+</LinearLayout>
+

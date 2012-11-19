@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="kaixin1">hat Freund hochgeladen</string>
+    <string name="kaixin2">hat Blog veröffentlicht</string>
+    <string name="kaixin3">hat Status aktualisiert</string>
+    <string name="kaixin1018">hat aufgezeichnet</string>
+    <string name="kaixin1088">hat bei uns gepostet</string>
+    <string name="kaixin1016">hat gewählt</string>
+    <string name="renren21or23">hat Blog geteilt</string>
+    <string name="renren32or36">hat Foto geteilt</string>
+    <string name="renren33">hat Album geteilt</string>
+    <string name="renren34or35">hat Profilfoto aktualisiert</string>
+    <string name="renren40">hat (Sie) als Freund hinzugefügt</string>
+    <string name="renren41">folgt Ihnen</string>
+    <string name="renren51or54">hat einen Link freigegeben</string>
+    <string name="fb80">hat freigegeben</string>
+    <string name="fb12">hat ein Ereignis erstellt</string>
+    <string name="twitter100">twittern</string>
+    <string name="twitter200">zurücktwittern</string>
+    <string name="renren10or11">Status aktualisiert</string>
+    <string name="renren20or22">Blog veröffentlicht</string>
+    <string name="renren30or31">Foto hochgeladen</string>
+    <string name="fb66">Blog veröffentlicht</string>
+    <string name="fb46">Status aktualisiert</string>
+    <string name="fb247">Foto hochgeladen</string>
+    <string name="flickr100">Foto hochgeladen</string>
+    <string name="fb100">Foto freigegeben</string>
+</resources>

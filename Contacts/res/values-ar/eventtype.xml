@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><resources>
+    <string name="kaixin1">الصورة التي تم تحميلها</string>
+    <string name="kaixin2">مدونة تم نشرها</string>
+    <string name="kaixin3">الحالة المحدثة</string>
+    <string name="kaixin1018">تم التسجيل</string>
+    <string name="kaixin1088">تم الإرسال إلينا</string>
+    <string name="kaixin1016">تم التصويت</string>
+    <string name="renren21or23">مشاركة مدونة</string>
+    <string name="renren32or36">مشاركة صورة</string>
+    <string name="renren33">مشاركة ألبوم</string>
+    <string name="renren34or35">صورة الملف المحدثة</string>
+    <string name="renren40">أضاف(ك) كصديق</string>
+    <string name="renren41">يتبعك</string>
+    <string name="renren51or54">مشاركة رابط</string>
+    <string name="fb80">تمت المشاركة</string>
+    <string name="fb12">تم إنشاء حدث</string>
+    <string name="twitter100">مشاركة</string>
+    <string name="twitter200">إعادة المشاركة</string>
+    
+		<string name="renren10or11">تعديل الحالة</string>
+		<string name="renren20or22">نشر المدونة</string>
+		<string name="renren30or31">صورة تم تحميلها</string>
+		<string name="fb66">نشر المدونة</string>
+		<string name="fb46">تعديل الحالة</string>
+		<string name="fb247">صورة تم تحميلها</string>
+		<string name="flickr100">صورة تم تحميلها</string>
+		<string name="fb100">صورة تمت مشاركتها</string>
+</resources>

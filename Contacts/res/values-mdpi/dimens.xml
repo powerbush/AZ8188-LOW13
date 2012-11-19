@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="call_detail_list_item_action_height">60px</dimen>
+    <dimen name="call_detail_list_item_action_margin_right">12px</dimen>
+    <dimen name="call_detail_list_item_action_margin_left">10px</dimen>
+<!--    <dimen name="call_detail_list_item_action_text_size0">20px</dimen>-->
+    
+<!--    <dimen name="call_detail_list_item_header_text_size">16sp</dimen>-->
+    <dimen name="call_detail_list_item_header_margin_left">10px</dimen>
+    <dimen name="call_detail_list_item_header_margin_right">15px</dimen>
+    <dimen name="call_detail_list_item_header_margin_internal">8px</dimen>
+    <dimen name="call_detail_list_item_header_height">30px</dimen>
+
+    <dimen name="call_detail_list_item_info_margin_left">43px</dimen>
+    <dimen name="call_detail_list_item_info_margin_right">20px</dimen>
+<!--    <dimen name="call_detail_list_item_info_text_size">14px</dimen>-->
+    <dimen name="call_detail_list_item_info_height">30px</dimen>
+
+<!--    <dimen name="call_detail_header_text_size0">20px</dimen>-->
+    <dimen name="call_detail_header_text_size1">14px</dimen>
+    <dimen name="call_detail_header_text_size2">9sp</dimen>
+    <dimen name="call_detail_header_margin_internal">10px</dimen>
+    <dimen name="sim_icon">39px</dimen>
+
+    <dimen name="blade_list_indicator_height">13dip</dimen>
+    <dimen name="blade_list_indicator_width">14dip</dimen>
+    <dimen name="blade_list_sectionFontSize">14sp</dimen>
+
+</resources>

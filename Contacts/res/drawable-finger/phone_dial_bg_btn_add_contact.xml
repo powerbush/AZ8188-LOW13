@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Disabled views -->
+    <item android:state_focused="true" android:state_enabled="false"
+        android:drawable="@drawable/phone_dial_num_bg_add_contact_btn" />
+    <item android:state_enabled="false"
+        android:drawable="@drawable/phone_dial_num_bg_add_contact_btn" />
+        
+    <!-- Enabled views -->
+    <item android:state_pressed="true"
+        android:drawable="@drawable/phone_dial_bg_num_pressed" />
+    <item android:state_focused="true"
+        android:drawable="@drawable/phone_dial_bg_num_focus" />
+    <item
+        android:drawable="@drawable/phone_dial_num_bg_add_contact_btn" />
+</selector>
+

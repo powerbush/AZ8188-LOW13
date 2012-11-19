@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!--    android:layout_height="?android:attr/listPreferredItemHeight"-->
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical">
+
+<!--android:background="@color/calllog_list_item_head_background_color"-->
+    <TextView android:id="@+id/calllog_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/calllog_list_item_head_height"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/white"
+        android:textColor="@android:color/black"
+        android:textSize="20dip"
+        android:singleLine="true" 
+        android:paddingLeft="@dimen/calllog_list_item_head_padding_left"/>
+
+    <RelativeLayout android:layout_below="@id/calllog_head" 
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/calllog_list_item_without_head_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/calllog_list_item_left_margin"
+        android:layout_alignWithParentIfMissing="true">
+
+<!--        <ImageView android:id="@+id/calllog_photo"-->
+<!--            android:layout_alignParentLeft="true" -->
+<!--            android:layout_width="@dimen/calllog_list_item_photo_width"-->
+<!--            android:layout_height="@dimen/calllog_list_item_photo_height"-->
+<!--            android:layout_marginTop="@dimen/calllog_list_item_photo_top_margin"-->
+<!--            android:scaleType="centerInside"-->
+<!--            android:layout_below="@id/calllog_head"-->
+<!--            android:layout_alignWithParentIfMissing="true"-->
+<!--            android:src="@drawable/contacts_unknow_image" />-->
+	    <android.widget.QuickContactBadge 
+	            android:id="@+id/calllog_photo"
+	            android:layout_width="50dip"
+	            android:layout_height="match_parent"
+	            style="?android:attr/quickContactBadgeStyleWindowMedium"
+	            android:layout_marginTop="5dip"
+	            android:layout_marginBottom="5dip"
+	            android:layout_below="@id/calllog_head"
+	    />
+
+                <TextView android:id="@+id/calllog_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="@dimen/calllog_list_item_name_max_width_single"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/calllog_list_item_name_left_margin"
+                    android:layout_marginTop="@dimen/calllog_list_item_name_top_margin_single"
+                    android:layout_below="@id/calllog_head"
+                    android:textSize="30dip"
+                    android:textColor="@color/calllog_list_item_name_font_color"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical" />
+                    
+                <TextView android:id="@+id/calllog_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/calllog_head"
+                    android:layout_alignBaseline="@id/calllog_name"
+                    android:layout_marginTop="@dimen/calllog_list_item_name_top_margin_single"
+                    android:layout_marginRight="@dimen/calllog_list_item_time_right_margin"
+                    android:textSize="@dimen/calllog_list_item_time_font_size"
+                    android:textColor="@color/calllog_list_item_time_font_color"
+                    android:singleLine="true" />  
+                     
+<!--android:layout_width="@dimen/calllog_list_item_calltype_width"-->
+<!--android:layout_marginTop="@dimen/calllog_list_item_label_calltype_padding"-->
+<!--android:src="@drawable/phone_dial_btn_expand_icon"-->
+<!--android:layout_below="@id/calllog_label"-->
+                <ImageView android:id="@+id/calllog_type"
+                    android:scaleType="centerInside"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/calllog_list_item_calltype_height"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/calllog_name"
+                    android:layout_marginBottom="@dimen/calllog_list_item_calltype_bottom_margin_single"
+                    android:layout_marginLeft="@dimen/calllog_list_item_label_left_margin"/>
+                    
+                <TextView android:id="@+id/calllog_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="@dimen/calllog_list_item_number_max_length"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/calllog_list_item_name_label_padding"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginBottom="@dimen/calllog_list_item_calltype_bottom_margin_single"
+                    android:layout_below="@id/calllog_name"
+                    android:layout_toRightOf="@id/calllog_type"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:textSize="@dimen/calllog_list_item_label_font_size"
+                    android:textColor="@color/calllog_list_item_label_font_color"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"/>
+
+                <TextView android:id="@+id/calllog_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/calllog_list_item_name_label_padding"
+                    android:layout_marginLeft="@dimen/calllog_list_item_label_number_padding"
+                    android:layout_marginBottom="@dimen/calllog_list_item_calltype_bottom_margin_single"
+                    android:layout_below="@id/calllog_name"
+                    android:layout_toRightOf="@id/calllog_label"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:textSize="0dip"
+                    android:textColor="@color/calllog_list_item_number_font_color"
+                    android:maxWidth="@dimen/calllog_list_item_number_max_length"
+                    android:gravity="center_vertical" 
+			
+/>
+
+<!--android:src="@drawable/contact_calllog_dialerseach_right_detail"-->
+        <com.android.contacts.ui.widget.DontPressWithParentImageView
+            android:id="@+id/calllog_detail"
+            android:layout_width="@dimen/calllog_list_item_detail_width"
+            android:layout_height="@dimen/calllog_list_item_detail_height"
+            android:scaleType="centerInside"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/calllog_head"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_marginRight="@dimen/calllog_list_item_detail_right_margin"
+            android:layout_marginTop="@dimen/calllog_list_item_detail_top_margin"
+            android:src="@drawable/phone_dial_btn_expand_icon"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

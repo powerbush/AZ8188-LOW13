@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_root_view"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <com.android.internal.widget.ContactHeaderWidget
+        android:id="@+id/contact_header_widget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="1dip"
+		android:background="#00000000">
+	</LinearLayout>
+	
+	<TabHost
+		android:id="@+id/tab_root" android:layout_width="match_parent"
+		android:layout_height="match_parent">
+	
+	<LinearLayout android:layout_width="match_parent"
+		android:orientation="vertical" android:layout_height="match_parent">
+		<TabWidget android:id="@android:id/tabs"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" 
+			 android:layout_weight="0"/>
+		<FrameLayout android:id="@android:id/tabcontent"
+			android:layout_width="match_parent"
+			android:layout_height="0dip"
+			android:layout_weight="1">
+	
+	<LinearLayout android:id="@+id/tab_contact"
+    	android:orientation="vertical"
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent">
+    	
+    <ListView android:id="@+id/contact_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    />
+    <!--android:background="@drawable/title_bar_shadow"-->
+    <ScrollView android:id="@android:id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+    >
+        <TextView android:id="@+id/emptyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_contact_details"
+            android:textSize="16sp"
+            android:textColor="?android:attr/textColorSecondary"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="10dip"
+            android:lineSpacingMultiplier="0.92"
+        />
+    </ScrollView>
+    </LinearLayout>
+    
+    <LinearLayout android:id="@+id/tab_sns"
+        android:layout_width="match_parent" 
+        android:layout_height="match_parent" 
+        android:orientation="vertical">
+       
+    <ListView android:id="@+id/sns_event_data"
+	    	android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:visibility="invisible"
+	    />
+	    <!-- android:background="@drawable/title_bar_shadow"-->
+	<LinearLayout
+		android:id="@+id/owner_none_layout" 
+		android:layout_height="match_parent" 
+		android:orientation="vertical" 
+		android:layout_width="match_parent" 
+		android:gravity="center|center_vertical|center_horizontal"
+	>
+		<TextView android:id="@+id/sns_label_note_contact" 
+			android:layout_width="match_parent" 
+			android:text="@string/none_sns_account_label2" 
+			android:gravity="center" 
+			android:textSize="16dip" 
+			android:layout_height="wrap_content"
+			android:paddingBottom="16dip">
+		</TextView>
+		<Button android:id="@+id/sns_account_manager_contact" 
+			android:layout_width="220dip" 
+			android:layout_height="40dip" 
+			android:text="@string/none_sns_account_btn">
+		</Button>
+	</LinearLayout>
+	
+	<LinearLayout
+		android:id="@+id/sns_contact_unbind_panel" 
+		android:layout_height="match_parent" 
+		android:orientation="vertical" 
+		android:layout_width="match_parent" 
+		android:gravity="center|center_vertical|center_horizontal"
+	>
+		<TextView android:id="@+id/sns_label_note_contact" 
+			android:layout_width="match_parent" 
+			android:text="@string/sns_account_unbind_label" 
+			android:gravity="center" 
+			android:textSize="16dip" 
+			android:layout_height="wrap_content"
+			android:paddingBottom="16dip">
+		</TextView>
+		<Button android:id="@+id/sns_account_bind_btn" 
+			android:layout_width="220dip" 
+			android:layout_height="40dip" 
+			android:text="@string/sns_account_bind_btn_label">
+		</Button>
+	</LinearLayout>
+	
+	<ScrollView android:id="@+id/sns_event_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+    >
+        <TextView android:id="@+id/emptyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_event_details"
+            android:textSize="20sp"
+            android:textColor="?android:attr/textColorSecondary"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="10dip"
+            android:lineSpacingMultiplier="0.92"
+        />
+    </ScrollView>
+    
+    </LinearLayout>
+    </FrameLayout>
+	</LinearLayout>
+    </TabHost>
+            
+</LinearLayout>
+

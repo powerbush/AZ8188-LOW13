@@ -1,0 +1,38 @@
+<RelativeLayout android:layout_width="match_parent" 
+                android:layout_height="@dimen/call_detail_list_item_header_height" 
+                xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <ImageView android:id="@+id/icon" 
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentLeft="true"
+               android:layout_centerVertical="true"
+               android:layout_marginLeft="@dimen/call_detail_list_item_header_margin_left"
+               android:layout_marginRight="@dimen/call_detail_list_item_header_margin_internal"/>
+    
+    <TextView android:id="@+id/date" 
+              android:layout_width="wrap_content" 
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true" 
+              android:layout_alignParentRight="true"
+              android:maxWidth="160dip"
+              android:ellipsize="marquee"
+              android:singleLine="true"
+              android:layout_marginRight="@dimen/call_detail_list_item_header_margin_right"
+              android:textColor="#4C4E4E"
+              android:textSize="@dimen/call_detail_list_item_header_text_size"/>
+    
+    <TextView android:id="@+id/type" 
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true" 
+              android:layout_toRightOf="@id/icon"
+              android:layout_toLeftOf="@id/date"
+              android:layout_marginRight="10dip"
+              android:textColor="#4C4E4E"
+              android:singleLine="true"
+              android:ellipsize="marquee"
+              android:textSize="@dimen/call_detail_list_item_header_text_size"/>
+
+
+</RelativeLayout>

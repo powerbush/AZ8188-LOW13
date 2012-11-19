@@ -1,0 +1,15 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+	android:oneshot="false" android:fillBefore="true">
+	<item android:drawable="@drawable/btn_sns_widget_hl_0"
+		android:duration="100" />
+	<item android:drawable="@drawable/btn_sns_widget_hl_1"
+		android:duration="100" />
+	<item android:drawable="@drawable/btn_sns_widget_hl_2"
+		android:duration="100" />
+	<item android:drawable="@drawable/btn_sns_widget_hl_3"
+		android:duration="100" />
+	<item android:drawable="@drawable/btn_sns_widget_hl_4"
+		android:duration="100" />
+	<item android:drawable="@drawable/btn_sns_widget_hl_5"
+		android:duration="100" />
+</animation-list>

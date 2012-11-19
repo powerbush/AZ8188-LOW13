@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><resources>
+    <string name="kaixin1">अपलोड फोटो</string>
+    <string name="kaixin2">प्रकाशित ब्‍लॉग</string>
+    <string name="kaixin3">अपडेट स्‍टेटस </string>
+    <string name="kaixin1018">रिकार्ड किया गया</string>
+    <string name="kaixin1088">हमें पोस्‍ट की गई</string>
+    <string name="kaixin1016">मत दिया</string>
+    <string name="renren21or23">साझा ब्‍लॉग</string>
+    <string name="renren32or36">साझा फोटो</string>
+    <string name="renren33">साझा अलबम</string>
+    <string name="renren34or35">प्रोफाइल तस्‍वीर अपडेट की गई</string>
+    <string name="renren40">मित्र के तौर पर (आपको) जोड़ा गया</string>
+    <string name="renren41">यह आपको फॉलो कर रहा है</string>
+    <string name="renren51or54">एक लिंक साझा किया</string>
+    <string name="fb80">साझा किया </string>
+    <string name="fb12">एक इवेंट बनाया गया</string>
+    <string name="twitter100">ट्विट करें</string>
+    <string name="twitter200">रिट्वीट करें</string>
+    
+		<string name="renren10or11">स्‍टेटस अपडेट किया गया</string>
+		<string name="renren20or22">ब्‍लॉग प्रकाशित हुआ</string>
+		<string name="renren30or31">फोटो अपलोड की गई</string>
+		<string name="fb66">ब्‍लॉग प्रकाशित हुआ</string>
+		<string name="fb46">स्‍टेटस अपडेट किया गया</string>
+		<string name="fb247">फोटो अपलोड की गई</string>
+		<string name="flickr100">फोटो अपलोड की गई</string>
+		<string name="fb100">फोटो साझा की गई</string>
+</resources>

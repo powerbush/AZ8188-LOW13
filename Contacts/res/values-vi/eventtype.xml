@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="kaixin1">đã tải lên ảnh chụp</string>
+    <string name="kaixin2">đã đăng tải lên blog</string>
+    <string name="kaixin3">đã c.nhật t.trạng</string>
+    <string name="kaixin1018">đã ghi lại</string>
+    <string name="kaixin1088">đã gửi cho chúng tôi</string>
+    <string name="kaixin1016">đã bình chọn</string>
+    <string name="renren21or23">đã chia sẻ blog</string>
+    <string name="renren32or36">đã chia sẻ ảnh chụp</string>
+    <string name="renren33">đã chia sẻ album</string>
+    <string name="renren34or35">đã cập nhật hình hồ sơ </string>
+    <string name="renren40">đã thêm (bạn) như bạn bè</string>
+    <string name="renren41">đang theo dõi bạn</string>
+    <string name="renren51or54">đã chia sẻ đường link</string>
+    <string name="fb80">đã chia sẻ</string>
+    <string name="fb12">đã tạo sự kiện</string>
+    <string name="twitter100">tin nhắn</string>
+    <string name="twitter200">tin nhắn gửi lại</string>
+    <string name="renren10or11">Đã c.nhật t.trạng</string>
+    <string name="renren20or22">Đã công bố blog</string>
+    <string name="renren30or31">Đã tải lên ảnh chụp</string>
+    <string name="fb66">Đã công bố blog</string>
+    <string name="fb46">Đã c.nhật t.trạng</string>
+    <string name="fb247">Đã tải lên ảnh chụp</string>
+    <string name="flickr100">Đã tải lên ảnh chụp</string>
+    <string name="fb100">Đã ch.sẻ ảnh chụp</string>
+</resources>

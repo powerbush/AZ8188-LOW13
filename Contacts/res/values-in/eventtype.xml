@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="kaixin1">meng-upload foto</string>
+    <string name="kaixin2">mempublikasikan blog</string>
+    <string name="kaixin3">memperbarui status</string>
+    <string name="kaixin1018">mereka</string>
+    <string name="kaixin1088">memposting kepada kami</string>
+    <string name="kaixin1016">memberikan suara</string>
+    <string name="renren21or23">membagikan blog</string>
+    <string name="renren32or36">berbagi foto</string>
+    <string name="renren33">berbagi album</string>
+    <string name="renren34or35">memperbarui foto profil</string>
+    <string name="renren40">telah menambahkan (Anda) sebagai teman</string>
+    <string name="renren41">mengikuti Anda</string>
+    <string name="renren51or54">membagikan link</string>
+    <string name="fb80">membagikan</string>
+    <string name="fb12">membuat acara</string>
+    <string name="twitter100">tweet</string>
+    <string name="twitter200">tweet ulang</string>
+    <string name="renren10or11">Status diperbarui</string>
+    <string name="renren20or22">Blog dipublikasikan</string>
+    <string name="renren30or31">Foto di-upload</string>
+    <string name="fb66">Blog dipublikasikan</string>
+    <string name="fb46">Status diperbarui</string>
+    <string name="fb247">Foto di-upload</string>
+    <string name="flickr100">Foto di-upload</string>
+    <string name="fb100">Photo dibagi</string>
+</resources>

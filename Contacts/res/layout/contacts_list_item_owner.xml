@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+        android:paddingLeft="4dip"
+    >
+
+        <ImageView android:id="@+id/photo"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dip"
+            style="@*android:style/Widget.QuickContactBadge.WindowMedium"/>
+
+		<RelativeLayout android:id="@+id/sns_pad"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+            android:layout_toRightOf="@id/photo"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dip"
+            android:gravity="center_vertical">
+			
+		<ImageView android:id="@+id/sns_icon"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+		android:paddingTop="6dip" 
+		android:layout_marginRight="5dip"/>
+
+        <TextView android:id="@+id/sns_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dip"
+            android:layout_toRightOf="@id/sns_icon"
+
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold"
+        />
+		
+		</RelativeLayout>	
+        <TextView android:id="@+id/name"
+            android:layout_toRightOf="@id/photo"
+            android:layout_alignParentTop="true"
+            android:layout_above="@id/sns_pad"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical|left"
+            android:textAppearance="?android:attr/textAppearanceLarge" 
+            android:layout_alignWithParentIfMissing="true" 
+            android:layout_height="wrap_content" 
+            android:layout_width="wrap_content" 
+            android:text="@string/sns_renren"/>
+
+		
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="52dip"
+    android:focusable="false" >
+
+    <com.android.contacts.ui.widget.DontPressWithParentImageView 
+		android:id="@+id/sd_more"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:layout_marginTop="8dip"
+		android:layout_marginLeft="3dip"
+		android:layout_marginRight="14dip"
+		style="@style/MoreButton"
+	/>
+
+    <TextView android:id="@+id/sd_label"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:singleLine="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/sd_more"
+        android:paddingBottom="4dip"
+        android:paddingRight="2dip"
+        android:paddingLeft="14dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_alignParentTop="true"
+  	/>
+
+    <TextView android:id="@+id/sd_number"
+        android:textStyle="normal"
+        android:textSize="16sp"
+        android:singleLine="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/sd_more"
+        android:paddingBottom="4dip"
+        android:paddingRight="2dip"
+        android:paddingLeft="14dip"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

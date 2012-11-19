@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<ScrollView android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:layout_weight="1"
+		android:layout_marginLeft="4dip" android:padding="5dip">
+
+		<LinearLayout android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:orientation="vertical"
+			android:layout_marginRight="5dip">
+			<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:orientation="horizontal">
+				<ImageView android:id="@+id/header_icon"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_centerVertical="true" android:src="@drawable/ic_launcher_contacts" />
+				<TextView android:id="@+id/location_sim"
+					android:layout_width="match_parent" android:layout_height="fill_parent"
+					android:textSize="20dip" android:gravity="center_vertical" />
+			</LinearLayout>
+
+				<TextView android:id="@+id/contact_name"
+					android:layout_width="match_parent" android:layout_height="wrap_content"
+					android:text="@string/name" android:textAppearance="?android:attr/textAppearanceLarge"
+					android:ellipsize="marquee"/>
+				<EditText android:id="@+id/edit_contact_name"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:textAppearance="?android:attr/textAppearanceLarge"
+					android:singleLine="true" />
+
+				<TextView android:id="@+id/phone_numbers" android:layout_width="match_parent"
+					android:layout_height="wrap_content" android:text="@string/mobile_numbers"
+					android:textAppearance="?android:attr/textAppearanceLarge"
+					android:singleLine="true" android:ellipsize="marquee"/>
+				<EditText android:id="@+id/edit_phone_numbers"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:inputType="phone" android:textAppearance="?android:attr/textAppearanceLarge"
+					android:singleLine="true" />
+
+				<TextView android:id="@+id/email" android:layout_width="match_parent"
+					android:layout_height="wrap_content" android:text="@string/email"
+					android:textAppearance="?android:attr/textAppearanceLarge"
+					android:singleLine="true" android:ellipsize="marquee"/>
+				<EditText android:id="@+id/edit_email"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:textAppearance="?android:attr/textAppearanceLarge"
+					android:inputType="textEmailAddress"
+					android:singleLine="true" />
+				<!-- Button android:id="@+id/edit_label" android:layout_width="100dip"
+					android:layout_height="wrap_content" android:visibility="visible"
+					android:gravity="left|center_vertical" android:text="@string/name_of_additional_numbers"/-->
+
+                <TextView android:id="@+id/additional_number" android:layout_width="match_parent"
+					android:layout_height="wrap_content" android:text="@string/name_of_additional_numbers"
+					android:textAppearance="?android:attr/textAppearanceLarge"
+					android:singleLine="true" android:ellipsize="marquee"/>
+				<EditText android:id="@+id/edit_additional_numbers"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:inputType="phone" android:textAppearance="?android:attr/textAppearanceLarge"
+					android:singleLine="true" />
+
+		</LinearLayout>
+	</ScrollView>
+	<LinearLayout android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		style="@android:style/ButtonBar">
+
+		<Button android:id="@+id/btn_sim1_done" android:layout_width="0dip"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:text="@string/menu_done" />
+
+		<Button android:id="@+id/btn_revert" android:layout_width="0dip"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:text="@string/menu_doNotSave" />
+
+	</LinearLayout>
+	<!-- TextView android:id="@+id/phone_numbers"
+		android:layout_width="fill_parent" android:layout_height="5dip" /-->
+
+
+</LinearLayout>

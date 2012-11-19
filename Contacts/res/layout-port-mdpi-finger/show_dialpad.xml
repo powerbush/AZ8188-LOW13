@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- Horizontal row of buttons (Voicemail + DialButton + Delete.) -->
+<!-- android:layout_gravity="center_horizontal" android:paddingBottom="7dp" the backgroud pic has padding about 2dp -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:id="@+id/showDialpad"
+			android:layout_width="match_parent" 
+			android:layout_height="50dip"
+			android:layout_alignParentLeft="true"
+		    android:layout_alignParentRight = "true"		 					
+			android:padding="4dip"
+			android:layout_gravity="bottom"
+			android:background="@drawable/phone_dial_bg_input_area"
+			android:orientation="horizontal" >
+		    
+		<com.android.contacts.ui.widget.TextView android:id="@+id/digitsHide"
+	    	android:layout_width="254dip"
+			android:layout_height="42dip"
+			android:gravity="center_vertical|center"
+			android:maxLines="1"
+			android:scrollHorizontally="true"
+			android:textSize="30sp"
+			android:includeFontPadding="false"
+			android:paddingBottom="2dip"
+        	android:textColor="#FF4E4E4E"   
+			android:enabled="false"
+			android:layout_weight="0"
+			android:layout_marginRight="4dip" 			
+			android:background="@drawable/phone_dial_bg_textfield" />	
+		
+		<ImageButton android:id="@+id/showDialpadButton"
+		    android:layout_width="52dip"
+		    android:layout_height="42dip"
+			android:gravity="center_vertical|center"     	
+		    android:src="@drawable/phone_dial_btn_show_dialpad"
+		    android:background="@drawable/phone_dial_bg_btn_delete_num_button"/>
+
+</LinearLayout>
+
