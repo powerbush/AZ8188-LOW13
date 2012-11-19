@@ -21,7 +21,7 @@ import com.android.mms.block.BlockSettingActivity;
 import com.android.mms.data.Conversation;
 import android.net.Uri;
 import android.database.Cursor;
-
+import android.graphics.Color; 
 
 
 public class ConversationMainList extends ListActivity {
@@ -36,11 +36,12 @@ public class ConversationMainList extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.conversation_main_list1);
 	setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         
         ArrayList<HashMap<String, Object>> list = new ArrayList<HashMap<String,Object>>();
         HashMap<String, Object> map1 = new HashMap<String, Object>();
         HashMap<String, Object> map2 = new HashMap<String, Object>();
-        HashMap<String, Object> map3 = new HashMap<String, Object>();
+        //HashMap<String, Object> map3 = new HashMap<String, Object>();
         
         //一个map对象对应一条数据
         map1.put("user_name", getString(R.string.user_newmms));
@@ -49,12 +50,12 @@ public class ConversationMainList extends ListActivity {
         map2.put("user_name", getString(R.string.user_mms1));
         map2.put("user_icon", R.drawable.mms1);
         
-        map3.put("user_name", getString(R.string.user_mms2));
-        map3.put("user_icon", R.drawable.mms2);
+        //map3.put("user_name", getString(R.string.user_mms2));
+        //map3.put("user_icon", R.drawable.mms2);
         
         list.add(map1);
         list.add(map2);
-        list.add(map3);
+        //list.add(map3);
         
         /*
          * 参数一 Context
@@ -71,6 +72,9 @@ public class ConversationMainList extends ListActivity {
         		
         //这是Adapter setListAdapter()此方法来自ListActivity
         setListAdapter(listAdapter);
+
+	ListView lv = getListView();
+	lv.setCacheColorHint(0);  //设置拖动列表的时候防止出现黑色背景  
        
     }
     
@@ -96,7 +100,7 @@ public class ConversationMainList extends ListActivity {
 			getThreadId();
 			intent = new Intent(this, ComposeMessageActivity.class);
            		intent.setData(Conversation.getUri(threadId));
-                intent.putExtra("is_forbid_slide",true); //liao
+			intent.putExtra("is_forbid_slide",true); //liao
     			startActivity(intent);
     			break;
     	}
@@ -129,7 +133,7 @@ public class ConversationMainList extends ListActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // TODO Auto-generated method stub
-        menu.add(1,1,1,"Setting").setIcon(android.R.drawable.ic_menu_set_as);
+        menu.add(1,1,1,R.string.menu_preferences).setIcon(android.R.drawable.ic_menu_preferences);
         return super.onCreateOptionsMenu(menu);
     }
     

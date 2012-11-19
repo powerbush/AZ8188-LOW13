@@ -2615,9 +2615,8 @@ public class ComposeMessageActivity extends Activity
                 }
             }
         }, 10);
-        
         // show SMS indicator
-        //mStatusBarManager.hideSIMIndicator(mComponentName);
+        mStatusBarManager.hideSIMIndicator(mComponentName);
         mStatusBarManager.showSIMIndicator(mComponentName, Settings.System.SMS_SIM_SETTING);
     }
 
@@ -5637,6 +5636,7 @@ public class ComposeMessageActivity extends Activity
 					if(phn.equals(mPhoneNumForMms)){
 						break;
 					}
+                    
 				}while(smsCursor.moveToNext());   
 			}
 		}

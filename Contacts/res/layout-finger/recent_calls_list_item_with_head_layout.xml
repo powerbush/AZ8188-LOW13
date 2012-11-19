@@ -31,7 +31,7 @@
         android:layout_alignParentRight="true"
         android:background="@android:color/white"
         android:textColor="@android:color/black"
-        android:textSize="20dip"
+        android:textSize="30dip"
         android:textStyle="normal"
         android:singleLine="true" 
         android:paddingLeft="@dimen/calllog_list_item_head_padding_left"/>
@@ -42,6 +42,8 @@
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:layout_marginLeft="@dimen/calllog_list_item_left_margin"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:layout_alignWithParentIfMissing="true">
 
 <!--        <ImageView android:id="@+id/calllog_photo"-->
@@ -56,7 +58,7 @@
 
 	    <android.widget.QuickContactBadge 
 	            android:id="@+id/calllog_photo"
-	            android:layout_width="50dip"
+	            android:layout_width="75dip"
 	            android:layout_height="match_parent"
 	            style="?android:attr/quickContactBadgeStyleWindowMedium"
 	            android:layout_marginTop="5dip"

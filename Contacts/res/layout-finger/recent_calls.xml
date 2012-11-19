@@ -36,6 +36,7 @@
             android:layout_width="52px"
             android:layout_height="42px"                         
             android:background="@drawable/btn_calllog_incoming"                          
+            android:text="@string/type_outgoing"
         />
         <ImageView android:id="@+id/btn_type_filter_outgoing_icon"
             android:layout_width="24px"
@@ -43,12 +44,14 @@
             android:layout_marginTop="8dip"
             android:layout_marginLeft="-40dip"                                  
 		    android:src="@drawable/call_log_incoming" 
+            android:visibility="gone"
         />
         <Button android:id="@+id/btn_type_filter_incoming"
             android:layout_width="52px"
             android:layout_height="42px"    
-            android:layout_marginLeft="15dip"                                                  
+            android:layout_marginLeft="0dip"                                                  
             android:background="@drawable/btn_calllog_incoming"                      
+            android:text="@string/type_incoming"
         />
         <ImageView android:id="@+id/btn_type_filter_incoming_icon"
             android:layout_width="24px"
@@ -56,12 +59,14 @@
             android:layout_marginTop="8dip"
             android:layout_marginLeft="-40dip"                              
 		    android:src="@drawable/call_log_outing" 
+            android:visibility="gone"
         />
         <Button android:id="@+id/btn_type_filter_missed"
             android:layout_width="52px"
             android:layout_height="42px"    
-            android:layout_marginLeft="15dip"                                       
+            android:layout_marginLeft="0dip"                                       
             android:background="@drawable/btn_calllog_missed"            
+            android:text="@string/type_missed"
         />
         <ImageView android:id="@+id/btn_type_filter_missed_icon"
             android:layout_width="24px"
@@ -69,12 +74,13 @@
             android:layout_marginTop="8dip"
             android:layout_marginLeft="-40dip"                           
 		    android:src="@drawable/call_log_missed" 
+            android:visibility="gone"
         />
         
         <Button android:id="@+id/btn_sim_filter"
             android:layout_width="42px"
             android:layout_height="42px"                                    
-            android:layout_marginLeft="62dip"                                   
+            android:layout_marginLeft="46dip"                                   
             android:background="@drawable/btn_calllog_simstate"                                        
         />
         <ImageView android:id="@+id/btn_sim_filter_icon"

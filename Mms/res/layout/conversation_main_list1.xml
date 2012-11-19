@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:background="#ffeeeeee"
+    android:background="@drawable/mms_background"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
+    <!-- android:colorBackgroundCacheHint="#00000000"  背景缓存色透明，避免拖动全鹿--> 
   <LinearLayout
   		android:id="@+id/listLinearLayout"
   		android:layout_height="wrap_content"
@@ -16,7 +17,7 @@
   			android:id="@id/android:list" 
   			android:layout_width="fill_parent" 
   			android:layout_height="wrap_content" 
-  			android:drawSelectorOnTop="true"
+  			android:drawSelectorOnTop="false"
   			android:scrollbars="vertical"/>
   			<!-- android:drawSelectOnTop="false"此属性用来设置listview上的背景颜色会不会挡住（覆盖）内容
   				如果这是为false就表示不会覆盖掉 ，这个大家拿例子测试一下效果就明白了

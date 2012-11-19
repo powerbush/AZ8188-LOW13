@@ -36,5 +36,6 @@
         android:layout_height="wrap_content"
         android:background="@*android:drawable/divider_horizontal_dark_opaque"
         android:visibility="gone"
+        
     />
 </LinearLayout>

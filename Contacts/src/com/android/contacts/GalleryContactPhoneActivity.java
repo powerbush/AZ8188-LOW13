@@ -27,7 +27,6 @@ public class GalleryContactPhoneActivity extends Activity {
     private GalleryAdapter adapter;
     private Gallery list;
     private ArrayList<GalleryContactEntry> gaentry;
-    
 	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
@@ -43,7 +42,7 @@ public class GalleryContactPhoneActivity extends Activity {
     	list=(Gallery) findViewById(R.id.gallery_contact_phone);
     	list.setAdapter(adapter);
     	
-    	list.setClickable(false);
+
     }
     @Override
     protected void onResume() {
@@ -59,14 +58,14 @@ public class GalleryContactPhoneActivity extends Activity {
     	if(resultCode==RESULT_OK){
             try{
                 //via liaobz 取完照片返回默认由图库传回.如果异常 改为取相机方式(需后续优化)
-                Uri uri=data.getData();
+                Uri uri=data.getData();//获得图片的uri 
                 ContentResolver cResolver=getContentResolver();
                 String [] proj={MediaStore.Images.Media.DATA};
                 Cursor sorCursor=managedQuery(uri, proj, null, null, null);
                 
                 int column_index = sorCursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
                 sorCursor.moveToFirst();
-                String pathString=sorCursor.getString(column_index);
+                String pathString=sorCursor.getString(column_index);//根据索引值获取图片路径
                 Bitmap bmp=BitmapFactory.decodeFile(pathString);
                 Log.i("life", ""+bmp+pathString);
                 adapter.upData(requestCode,pathString);
@@ -97,7 +96,6 @@ public class GalleryContactPhoneActivity extends Activity {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}*/
-    		
     		
     	}else{
     		Toast.makeText(this, getString(R.string.contact_phone_please_select_image), Toast.LENGTH_SHORT).show();

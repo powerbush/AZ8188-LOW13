@@ -62,7 +62,7 @@
             android:paddingTop="5dip"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="#ff000000"
-            android:textSize="18dip" 
+            android:textSize="54dip" 
             android:layout_gravity="left"/>
          <ViewStub
                 android:id="@+id/mms_downloading_view_stub"

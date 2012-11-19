@@ -6,14 +6,11 @@ import com.android.mms.block.BlockListData;
 import com.android.mms.R;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.content.pm.ActivityInfo;
@@ -36,10 +33,10 @@ public class BlockListActivity extends Activity{
 	private Button bloclBtnSetting;
 	@Override
 		protected void onCreate(Bundle savedInstanceState) {
-			requestWindowFeature(Window.FEATURE_CUSTOM_TITLE); // æ³¨æ„é¡ºåº    
+			requestWindowFeature(Window.FEATURE_CUSTOM_TITLE); // ×¢ÒâË³Ğò    
 			super.onCreate(savedInstanceState);
 			setContentView(R.layout.block_list_view);
-			getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE,R.layout.block_title);  // Ã—Â¢Ã’Ã¢Ã‹Â³ÃÃ²  
+			getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE,R.layout.block_title);  // ×¢ÒâË³Ğò  
 			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 			setupView();
 		}
@@ -65,7 +62,7 @@ public class BlockListActivity extends Activity{
 					dialog.setView(v)
 					.setPositiveButton(getString(R.string.blockconfirm),new DialogInterface.OnClickListener() {
 						@Override
-						public void onClick(DialogInterface dialoginterface, int i) {//Â½Â«ÃŠÃ½Â¾ÃÂ±Â£Â´Ã¦ÂµÂ½ÃŠÃ½Â¾ÃÂ¿Ã¢Ã€Ã¯
+						public void onClick(DialogInterface dialoginterface, int i) {//½«Êı¾İ±£´æµ½Êı¾İ¿âÀï
 							Editor pr=prs.edit();
 							pr.putString("text_input_phone_pr", contact_phone.getText().toString());
 							pr.commit();
@@ -76,7 +73,7 @@ public class BlockListActivity extends Activity{
 						public void onClick(DialogInterface dialoginterface, int i) {
 							dialoginterface.dismiss();
 					}});
-					/*Â½Â«Â¶Ã”Â»Â°Â¿Ã²ÃÃ”ÃŠÂ¾Ã”ÃšÃ†ÃÂµÃ„Ã‰ÃÂ²Â¿*/
+					/*½«¶Ô»°¿òÏÔÊ¾ÔÚÆÁµÄÉÏ²¿*/
 					AlertDialog Dialog=dialog.create();
 					Window window = Dialog.getWindow();     
 					window.setGravity(Gravity.TOP);   
@@ -92,25 +89,4 @@ public class BlockListActivity extends Activity{
 			BlockListAdapter adapter= new BlockListAdapter(this, smslist);
 			listview.setAdapter(adapter);
 		}
-
-	
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// TODO Auto-generated method stub
-	   	menu.add(1,1,1,"Setting").setIcon(android.R.drawable.ic_menu_set_as);
-		return super.onCreateOptionsMenu(menu);
-	}
-	
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// TODO Auto-generated method stub
-		Intent intent  = new Intent();
-		switch (item.getItemId()) {
-		case 1:
-			intent.setClass(this, BlockSettingActivity.class);
-			break;
-		}
-		startActivity(intent);
-		return super.onOptionsItemSelected(item);
-	}
 }

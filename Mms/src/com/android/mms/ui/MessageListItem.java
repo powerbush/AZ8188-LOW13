@@ -146,7 +146,7 @@ public class MessageListItem extends LinearLayout implements
     static final int MSG_LIST_EDIT_MMS   = 1;
     static final int MSG_LIST_EDIT_SMS   = 2;
     static final int ITEM_CLICK          = 5;
-    static final int ITEM_MARGIN         = 50;
+    static final int ITEM_MARGIN         = 15;
     private View mMsgListItem;
     private View mMmsView;
     private LinearLayout mMsgListItemLayout;
