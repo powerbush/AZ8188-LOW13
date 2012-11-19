@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import android.app.ListActivity;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.content.pm.ActivityInfo;
@@ -12,6 +15,7 @@ import android.widget.SimpleAdapter;
 import android.content.Intent;
 import com.android.mms.R;
 //import com.android.mms.block.BlockListActivity;
+import com.android.mms.block.BlockSettingActivity;
 import com.android.mms.data.Conversation;
 import android.net.Uri;
 import android.database.Cursor;
@@ -109,6 +113,27 @@ public class ConversationMainList extends ListActivity {
 			}
 		}
 		cur.close();
+    }
+
+    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // TODO Auto-generated method stub
+        menu.add(1,1,1,"Setting").setIcon(android.R.drawable.ic_menu_set_as);
+        return super.onCreateOptionsMenu(menu);
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // TODO Auto-generated method stub
+        Intent intent  = new Intent();
+        switch (item.getItemId()) {
+        case 1:
+            intent.setClass(this, BlockSettingActivity.class);
+            break;
+        }
+        startActivity(intent);
+        return super.onOptionsItemSelected(item);
     }
 
 }

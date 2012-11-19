@@ -106,11 +106,14 @@
                   android:configChanges="orientation|keyboardHidden">        
         </activity>
 
-	<!--by lai
+  <!--by lai
         <activity android:name=".block.BlockListActivity"
-        	  android:theme="@style/userdefined">        
+            android:theme="@style/userdefined">        
         </activity>
 -->        
+        <activity android:name=".block.BlockSettingActivity"
+            android:theme="@style/userdefined">        
+        </activity>   
          <activity android:name=".ui.CBMessageListActivity"
                   android:theme="@/android:style/Theme.NoTitleBar"
                   android:configChanges="orientation|keyboardHidden"

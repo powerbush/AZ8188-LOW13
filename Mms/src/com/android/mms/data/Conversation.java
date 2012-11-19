@@ -46,8 +46,10 @@ import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
+import android.preference.PreferenceManager;
 import android.provider.Telephony.WapPush;
 import android.provider.Telephony.Mms;
 import android.provider.Telephony.MmsSms;
@@ -59,6 +61,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.android.mms.block.BlockSettingActivity;
 import com.android.mms.LogTag;
 import com.android.mms.MmsConfig;
 import com.android.mms.R;
@@ -331,26 +334,39 @@ public class Conversation {
     public static boolean MmsCheckPhoneNum=false; //by lai
 	
     public static Conversation from(Context context, Cursor cursor) {
-        // First look in the cache for the Conversation and return that one. That way, all the
-        // people that are looking at the cached copy will get updated when fillFromCursor() is
-        // called with this cursor.
-        long threadId = cursor.getLong(ID);   //cursor.getString(0);获取第一列的值,第一列的索引从0开始//cursor.getString(1);//获取第二列的值//cursor.getInt(2);//获取第三列的值
-        if (threadId > 0) {
-            Conversation conv = Cache.get(threadId);
-            if (conv != null) {
-		    /*-------------------------by lai----------------------------*/	
-		    String[] PhoneNums = conv.mRecipients.getNumbers();
-		    String PhoneNum = PhoneNums[PhoneNums.length-1];
-		    if(PhoneNum.equals("18665658390")){
-			MmsCheckPhoneNum = true;
-		    }else{
-		        MmsCheckPhoneNum = false;
-		    }
-		    /*-------------------------by lai----------------------------*/	
-	            fillFromCursor(context, conv, cursor, false);   // update the existing conv in-place
-	            return conv;
-            }
-        }
+
+		/*-------------------------by liao----------------------------*/
+		SharedPreferences preferences;//=PreferenceManager.getDefaultSharedPreferences(BlockSettingActivity.this);
+		preferences = context.getSharedPreferences("MmsPhoneNum",
+				Context.MODE_PRIVATE);
+		String MmsPhoneNum = preferences.getString("phone_num", "");
+		/*-------------------------by liao----------------------------*/
+
+		// First look in the cache for the Conversation and return that one. That way, all the
+		// people that are looking at the cached copy will get updated when fillFromCursor() is
+		// called with this cursor.
+		long threadId = cursor.getLong(ID); // cursor.getString(0);获取第一列的值,第一列的索引从0开始//cursor.getString(1);//获取第二列的值//cursor.getInt(2);//获取第三列的值
+		if (threadId > 0) {
+			Conversation conv = Cache.get(threadId);
+			if (conv != null) {
+				/*-------------------------by lai----------------------------*/
+				String[] PhoneNums = conv.mRecipients.getNumbers();
+				String PhoneNum = PhoneNums[PhoneNums.length - 1];
+				if ("" == MmsPhoneNum || null == MmsPhoneNum) { 		// liao
+					MmsCheckPhoneNum = false; 							//
+				} else if (PhoneNum.equals(MmsPhoneNum) 				//
+						|| PhoneNum.equals("+86" + MmsPhoneNum)) { 		// liao
+					MmsCheckPhoneNum = true;
+				} else {
+					MmsCheckPhoneNum = false;
+				}
+				/*-------------------------by lai----------------------------*/
+				fillFromCursor(context, conv, cursor, false); // update the
+																// existing conv
+																// in-place
+				return conv;
+			}
+		}
         Conversation conv = new Conversation(context, cursor, false);
         try {
             Cache.put(conv);

@@ -21,6 +21,445 @@ public final class R {
     }
     public static final class attr {
     }
+    public static final class color {
+        /** 蜜色 
+         */
+        public static final int aliceblue=0x7f06002d;
+        /** 亚麻色 
+         */
+        public static final int antiquewhite=0x7f060023;
+        /** 中灰兰色 
+         */
+        public static final int aqua=0x7f060083;
+        /** 粟色 
+         */
+        public static final int aquamarine=0x7f060064;
+        /** 沙褐色 
+         */
+        public static final int azure=0x7f06002b;
+        /** 烟白色 
+         */
+        public static final int beige=0x7f060028;
+        /** 浅玫瑰色 
+         */
+        public static final int bisque=0x7f06000e;
+        /** 海军色 
+         */
+        public static final int black=0x7f060092;
+        /** 番木色 
+         */
+        public static final int blanchedalmond=0x7f06000c;
+        /** 暗绿色 
+         */
+        public static final int blue=0x7f06008e;
+        /** 暗红色 
+         */
+        public static final int blueviolet=0x7f06005c;
+        /** 暗灰色 
+         */
+        public static final int brown=0x7f060051;
+        /** 亮青色 
+         */
+        public static final int burlywood=0x7f060035;
+        /** 菊兰色 
+         */
+        public static final int cadetblue=0x7f060072;
+        /** 碧绿色 
+         */
+        public static final int chartreuse=0x7f060065;
+        /** 茶色 
+         */
+        public static final int chocolate=0x7f060040;
+        /** 暗桔黄色 
+         */
+        public static final int coral=0x7f060018;
+        /** 中绿色 
+         */
+        public static final int cornflowerblue=0x7f060071;
+        /** 柠檬绸色 
+         */
+        public static final int cornsilk=0x7f060008;
+        /** 淡灰色 
+         */
+        public static final int crimson=0x7f060038;
+        /** 浅绿色 
+         */
+        public static final int cyan=0x7f060084;
+        /** 中兰色 
+         */
+        public static final int darkblue=0x7f060090;
+        /** 深天蓝色 
+         */
+        public static final int darkcyan=0x7f06008a;
+        /** 中粉紫色 
+         */
+        public static final int darkgoldenrod=0x7f060048;
+        /** 亮蓝色 
+         */
+        public static final int darkgray=0x7f06004f;
+        /** 绿色 
+         */
+        public static final int darkgreen=0x7f06008d;
+        /** 暗灰色 
+         */
+        public static final int darkgrey=0x7f060050;
+        /** 银色 
+         */
+        public static final int darkkhaki=0x7f060045;
+        /** 重褐色 
+         */
+        public static final int darkmagenta=0x7f06005a;
+        /** 军兰色 
+         */
+        public static final int darkolivegreen=0x7f060073;
+        /** 亮肉色 
+         */
+        public static final int darkorange=0x7f060017;
+        /** 赭色 
+         */
+        public static final int darkorchid=0x7f060053;
+        /** 暗洋红 
+         */
+        public static final int darkred=0x7f06005b;
+        /** 紫罗兰色 
+         */
+        public static final int darksalmon=0x7f060032;
+        /** 亮绿色 
+         */
+        public static final int darkseagreen=0x7f060058;
+        /** 中绿宝石 
+         */
+        public static final int darkslateblue=0x7f060076;
+        /** 橙绿色 
+         */
+        public static final int darkslategray=0x7f06007c;
+        /** 暗瓦灰色 
+         */
+        public static final int darkslategrey=0x7f06007d;
+        /** 中春绿色 
+         */
+        public static final int darkturquoise=0x7f060088;
+        /** 苍绿色 
+         */
+        public static final int darkviolet=0x7f060055;
+        /** 红橙色 
+         */
+        public static final int deeppink=0x7f06001c;
+        /** 暗宝石绿 
+         */
+        public static final int deepskyblue=0x7f060089;
+        /** 石蓝色 
+         */
+        public static final int dimgray=0x7f06006e;
+        /** 暗灰色 
+         */
+        public static final int dimgrey=0x7f06006f;
+        /** 亮海蓝色 
+         */
+        public static final int dodgerblue=0x7f060081;
+        /** 暗金黄色 
+         */
+        public static final int firebrick=0x7f060049;
+        /** 雪白色 
+         */
+        public static final int floralwhite=0x7f060006;
+        /** 海绿色 
+         */
+        public static final int forestgreen=0x7f06007f;
+        /** 深粉红色 
+         */
+        public static final int fuchsia=0x7f06001d;
+        /** 洋李色 
+         */
+        public static final int gainsboro=0x7f060037;
+        /** 鲜肉色 
+         */
+        public static final int ghostwhite=0x7f060025;
+        /** 桃色 
+         */
+        public static final int gold=0x7f060012;
+        /** 苍紫罗兰色 
+         */
+        public static final int goldenrod=0x7f06003a;
+        /** 天蓝色 
+         */
+        public static final int gray=0x7f06005f;
+        /** 水鸭色 
+         */
+        public static final int green=0x7f06008c;
+        /** 苍宝石绿 
+         */
+        public static final int greenyellow=0x7f06004d;
+        /** 灰色 
+         */
+        public static final int grey=0x7f060060;
+        /** 天蓝色 
+         */
+        public static final int honeydew=0x7f06002c;
+        /** 珊瑚色 
+         */
+        public static final int hotpink=0x7f060019;
+        /** 秘鲁色 
+         */
+        public static final int indianred=0x7f060042;
+        /** 暗橄榄绿 
+         */
+        public static final int indigo=0x7f060074;
+        /** 白色 
+         */
+        public static final int ivory=0x7f060002;
+        /** 艾利斯兰 
+         */
+        public static final int khaki=0x7f06002e;
+        /** 暗肉色 
+         */
+        public static final int lavender=0x7f060033;
+        /** 海贝色 
+         */
+        public static final int lavenderblush=0x7f06000a;
+        /** 黄绿色 
+         */
+        public static final int lawngreen=0x7f060066;
+        /** 花白色 
+         */
+        public static final int lemonchiffon=0x7f060007;
+        /** 黄绿色 
+         */
+        public static final int lightblue=0x7f06004e;
+        /** 黄褐色 
+         */
+        public static final int lightcoral=0x7f06002f;
+        /** 淡紫色 
+         */
+        public static final int lightcyan=0x7f060034;
+        /** 老花色 
+         */
+        public static final int lightgoldenrodyellow=0x7f060021;
+        /** 蓟色 
+         */
+        public static final int lightgray=0x7f06003d;
+        /** 中紫色 
+         */
+        public static final int lightgreen=0x7f060057;
+        /** 亮灰色 
+         */
+        public static final int lightgrey=0x7f06003e;
+        /** 粉红色 
+         */
+        public static final int lightpink=0x7f060014;
+        /** 橙色 
+         */
+        public static final int lightsalmon=0x7f060016;
+        /** 森林绿 
+         */
+        public static final int lightseagreen=0x7f060080;
+        /** 紫罗兰蓝色 
+         */
+        public static final int lightskyblue=0x7f06005d;
+        /** 中暗蓝色 
+         */
+        public static final int lightslategray=0x7f060068;
+        /** 亮蓝灰 
+         */
+        public static final int lightslategrey=0x7f060069;
+        /** 粉蓝色 
+         */
+        public static final int lightsteelblue=0x7f06004b;
+        /** 象牙色 
+         */
+        public static final int lightyellow=0x7f060003;
+        /** 春绿色 
+         */
+        public static final int lime=0x7f060086;
+        /** 中海蓝 
+         */
+        public static final int limegreen=0x7f06007b;
+        /** 亮金黄色 
+         */
+        public static final int linen=0x7f060022;
+        /** 紫红色 
+         */
+        public static final int magenta=0x7f06001e;
+        /** 紫色 
+         */
+        public static final int maroon=0x7f060063;
+        /** 暗灰色 
+         */
+        public static final int mediumaquamarine=0x7f060070;
+        /** 蓝色 
+         */
+        public static final int mediumblue=0x7f06008f;
+        /** 褐玫瑰红 
+         */
+        public static final int mediumorchid=0x7f060047;
+        /** 暗紫罗兰色 
+         */
+        public static final int mediumpurple=0x7f060056;
+        /** 青绿色 
+         */
+        public static final int mediumseagreen=0x7f06007a;
+        /** 草绿色 
+         */
+        public static final int mediumslateblue=0x7f060067;
+        /** 酸橙色 
+         */
+        public static final int mediumspringgreen=0x7f060087;
+        /** 靛青色 
+         */
+        public static final int mediumturquoise=0x7f060075;
+        /** 印第安红 
+         */
+        public static final int mediumvioletred=0x7f060043;
+        /** 闪兰色 
+         */
+        public static final int midnightblue=0x7f060082;
+        /** 幽灵白 
+         */
+        public static final int mintcream=0x7f060026;
+        /** 白杏色 
+         */
+        public static final int mistyrose=0x7f06000d;
+        /** 桔黄色 
+         */
+        public static final int moccasin=0x7f06000f;
+        /** 鹿皮色 
+         */
+        public static final int navajowhite=0x7f060010;
+        /** 暗蓝色 
+         */
+        public static final int navy=0x7f060091;
+        /** 红色 
+         */
+        public static final int oldlace=0x7f060020;
+        /** 灰色 
+         */
+        public static final int olive=0x7f060061;
+        /** 灰石色 
+         */
+        public static final int olivedrab=0x7f06006c;
+        /** 亮粉红色 
+         */
+        public static final int orange=0x7f060015;
+        /** 西红柿色 
+         */
+        public static final int orangered=0x7f06001b;
+        /** 金麒麟色 
+         */
+        public static final int orchid=0x7f06003b;
+        /** 亮珊瑚色 
+         */
+        public static final int palegoldenrod=0x7f060030;
+        /** 暗紫色 
+         */
+        public static final int palegreen=0x7f060054;
+        /** 亮钢兰色 
+         */
+        public static final int paleturquoise=0x7f06004c;
+        /** 暗深红色 
+         */
+        public static final int palevioletred=0x7f060039;
+        /** 淡紫红 
+         */
+        public static final int papayawhip=0x7f06000b;
+        /** 纳瓦白 
+         */
+        public static final int peachpuff=0x7f060011;
+        /** 巧可力色 
+         */
+        public static final int peru=0x7f060041;
+        /** 金色 
+         */
+        public static final int pink=0x7f060013;
+        /** 实木色 
+         */
+        public static final int plum=0x7f060036;
+        /** 火砖色 
+         */
+        public static final int powderblue=0x7f06004a;
+        /** 橄榄色 
+         */
+        public static final int purple=0x7f060062;
+        /** 红紫色 
+         */
+        public static final int red=0x7f06001f;
+        /** 暗黄褐色 
+         */
+        public static final int rosybrown=0x7f060046;
+        /** 钢兰色 
+         */
+        public static final int royalblue=0x7f060078;
+        /** 暗海兰色 
+         */
+        public static final int saddlebrown=0x7f060059;
+        /** 古董白 
+         */
+        public static final int salmon=0x7f060024;
+        /** 浅黄色 
+         */
+        public static final int sandybrown=0x7f06002a;
+        /** 暗瓦灰色 
+         */
+        public static final int seagreen=0x7f06007e;
+        /** 米绸色 
+         */
+        public static final int seashell=0x7f060009;
+        /** 褐色 
+         */
+        public static final int sienna=0x7f060052;
+        /** 中紫罗兰 色 
+         */
+        public static final int silver=0x7f060044;
+        /** 亮天蓝色 
+         */
+        public static final int skyblue=0x7f06005e;
+        /** 深绿褐色 
+         */
+        public static final int slateblue=0x7f06006d;
+        /** 亮蓝灰 
+         */
+        public static final int slategray=0x7f06006a;
+        /** 灰石色 
+         */
+        public static final int slategrey=0x7f06006b;
+        /** 黄色 
+         */
+        public static final int snow=0x7f060005;
+        /** 青色 
+         */
+        public static final int springgreen=0x7f060085;
+        /** 暗灰蓝色 
+         */
+        public static final int steelblue=0x7f060077;
+        /** 亮灰色 
+         */
+        public static final int tan=0x7f06003f;
+        /** 暗青色 
+         */
+        public static final int teal=0x7f06008b;
+        /** 淡紫色 
+         */
+        public static final int thistle=0x7f06003c;
+        /** 热粉红色 
+         */
+        public static final int tomato=0x7f06001a;
+        public static final int transparent=0x7f060000;
+        /** 皇家蓝 
+         */
+        public static final int turquoise=0x7f060079;
+        /** 苍麒麟色 
+         */
+        public static final int violet=0x7f060031;
+        /** 米色 
+         */
+        public static final int wheat=0x7f060029;
+        public static final int white=0x7f060001;
+        /** 薄荷色 
+         */
+        public static final int whitesmoke=0x7f060027;
+        /** 亮黄色 
+         */
+        public static final int yellow=0x7f060004;
+    }
     public static final class drawable {
         public static final int bk=0x7f020000;
         public static final int contact=0x7f020001;
@@ -35,77 +474,75 @@ public final class R {
         public static final int ic_tab_songs_white=0x7f02000a;
         public static final int icon=0x7f02000b;
         public static final int inputsms=0x7f02000c;
-        public static final int msn=0x7f02000d;
-        public static final int sms=0x7f02000e;
+        public static final int list_view_bg=0x7f02000d;
+        public static final int msn=0x7f02000e;
+        public static final int sms=0x7f02000f;
     }
     public static final class id {
-        public static final int addressId=0x7f080024;
-        public static final int addressId2=0x7f080013;
-        public static final int addressTitleId=0x7f080023;
-        public static final int addressTitleId2=0x7f080012;
-        public static final int birthdayId=0x7f080027;
-        public static final int birthdayId2=0x7f080015;
-        public static final int birthdayTitleId=0x7f080026;
-        public static final int birthdayTitleId2=0x7f080014;
-        public static final int body_content_sms=0x7f08002f;
-        public static final int childTo=0x7f080000;
-        public static final int contact_name_2=0x7f080008;
-        public static final int contact_phone_2=0x7f08000a;
-        public static final int contact_phone_but_down=0x7f080005;
-        public static final int contact_phone_but_up=0x7f080004;
-        public static final int datePicker_preference=0x7f080006;
-        public static final int deleteDataButtonId=0x7f08003d;
-        public static final int dialerButtonId=0x7f08003a;
-        public static final int editDataButtonId=0x7f08003c;
-        public static final int finishId=0x7f080028;
-        public static final int finishId2=0x7f080016;
-        public static final int flish_button=0x7f080042;
-        public static final int flish_button_contact=0x7f080002;
-        public static final int groupTo=0x7f080017;
-        public static final int icon=0x7f08002b;
-        public static final int imagebutton_contact_phone=0x7f080038;
-        public static final int imagebutton_my_contact=0x7f080036;
-        public static final int imagebutton_my_information=0x7f080034;
-        public static final int info_title=0x7f080041;
-        public static final int info_title_contact=0x7f080001;
-        public static final int itemTempId=0x7f08002a;
-        public static final int linear1=0x7f080019;
-        public static final int linear2=0x7f08001c;
-        public static final int linear3=0x7f08001f;
-        public static final int linear4=0x7f080022;
-        public static final int linear5=0x7f080025;
-        public static final int listLinearLayout=0x7f08003e;
-        public static final int list_contact_db=0x7f080003;
-        public static final int listview_contact_sms=0x7f080033;
-        public static final int nameId=0x7f08001b;
-        public static final int nameId2=0x7f08000d;
-        public static final int nameTitleId=0x7f08001a;
-        public static final int nameTitleId2=0x7f08000c;
-        public static final int name_contact_db=0x7f08002c;
-        public static final int phome_contact_sms=0x7f08002e;
-        public static final int phone_content_db=0x7f08002d;
-        public static final int qqId=0x7f080021;
-        public static final int qqId2=0x7f080011;
-        public static final int qqTitleId=0x7f080020;
-        public static final int qqTitleId2=0x7f080010;
-        public static final int queryButtonId=0x7f080040;
-        public static final int queryEditId=0x7f08003f;
-        public static final int resetId=0x7f080029;
-        public static final int sendSmsButtonId=0x7f08003b;
-        public static final int telephoneId=0x7f08001e;
-        public static final int telephoneId2=0x7f08000f;
-        public static final int telephoneTitleId=0x7f08001d;
-        public static final int telephoneTitleId2=0x7f08000e;
-        public static final int text_contact_name=0x7f080007;
-        public static final int text_contact_phone=0x7f080009;
-        public static final int text_input_phone=0x7f080031;
-        public static final int text_my_contact=0x7f080037;
-        public static final int text_my_contact_phone=0x7f080039;
-        public static final int text_my_info=0x7f080035;
-        public static final int text_phone=0x7f080030;
-        public static final int text_phone_ok=0x7f080032;
-        public static final int titleId=0x7f080018;
-        public static final int titleId2=0x7f08000b;
+        public static final int addressId=0x7f090024;
+        public static final int addressId2=0x7f090013;
+        public static final int addressTitleId=0x7f090023;
+        public static final int addressTitleId2=0x7f090012;
+        public static final int birthdayId=0x7f090027;
+        public static final int birthdayId2=0x7f090015;
+        public static final int birthdayTitleId=0x7f090026;
+        public static final int birthdayTitleId2=0x7f090014;
+        public static final int body_content_sms=0x7f09002f;
+        public static final int childTo=0x7f090000;
+        public static final int contact_name_2=0x7f090008;
+        public static final int contact_phone_2=0x7f09000a;
+        public static final int contact_phone_but_down=0x7f090005;
+        public static final int contact_phone_but_up=0x7f090004;
+        public static final int datePicker_preference=0x7f090006;
+        public static final int deleteDataButtonId=0x7f09003a;
+        public static final int dialerButtonId=0x7f090037;
+        public static final int editDataButtonId=0x7f090039;
+        public static final int finishId=0x7f090028;
+        public static final int finishId2=0x7f090016;
+        public static final int flish_button=0x7f09003f;
+        public static final int flish_button_contact=0x7f090002;
+        public static final int groupTo=0x7f090017;
+        public static final int icon=0x7f09002b;
+        public static final int info_title=0x7f09003e;
+        public static final int info_title_contact=0x7f090001;
+        public static final int itemTempId=0x7f09002a;
+        public static final int linear1=0x7f090019;
+        public static final int linear2=0x7f09001c;
+        public static final int linear3=0x7f09001f;
+        public static final int linear4=0x7f090022;
+        public static final int linear5=0x7f090025;
+        public static final int listLinearLayout=0x7f09003b;
+        public static final int listView=0x7f090034;
+        public static final int list_contact_db=0x7f090003;
+        public static final int listview_contact_sms=0x7f090033;
+        public static final int nameId=0x7f09001b;
+        public static final int nameId2=0x7f09000d;
+        public static final int nameTitleId=0x7f09001a;
+        public static final int nameTitleId2=0x7f09000c;
+        public static final int name_contact_db=0x7f09002c;
+        public static final int phome_contact_sms=0x7f09002e;
+        public static final int phone_content_db=0x7f09002d;
+        public static final int qqId=0x7f090021;
+        public static final int qqId2=0x7f090011;
+        public static final int qqTitleId=0x7f090020;
+        public static final int qqTitleId2=0x7f090010;
+        public static final int queryButtonId=0x7f09003d;
+        public static final int queryEditId=0x7f09003c;
+        public static final int resetId=0x7f090029;
+        public static final int sendSmsButtonId=0x7f090038;
+        public static final int telephoneId=0x7f09001e;
+        public static final int telephoneId2=0x7f09000f;
+        public static final int telephoneTitleId=0x7f09001d;
+        public static final int telephoneTitleId2=0x7f09000e;
+        public static final int text_contact_name=0x7f090007;
+        public static final int text_contact_phone=0x7f090009;
+        public static final int text_input_phone=0x7f090031;
+        public static final int text_phone=0x7f090030;
+        public static final int text_phone_ok=0x7f090032;
+        public static final int titleId=0x7f090018;
+        public static final int titleId2=0x7f09000b;
+        public static final int user_icon=0x7f090035;
+        public static final int user_name=0x7f090036;
     }
     public static final class layout {
         public static final int child=0x7f030000;
@@ -124,102 +561,104 @@ public final class R {
         public static final int listviewitem=0x7f03000d;
         public static final int listviewmain=0x7f03000e;
         public static final int main=0x7f03000f;
-        public static final int phone=0x7f030010;
-        public static final int phone2=0x7f030011;
-        public static final int query=0x7f030012;
-        public static final int title=0x7f030013;
+        public static final int main_item=0x7f030010;
+        public static final int phone=0x7f030011;
+        public static final int phone2=0x7f030012;
+        public static final int query=0x7f030013;
+        public static final int title=0x7f030014;
+        public static final int title_contact_phone_up=0x7f030015;
     }
     public static final class string {
-        public static final int AType=0x7f060048;
-        public static final int Add=0x7f060046;
-        public static final int Armyman=0x7f060041;
-        public static final int AzCertificateNumNotice=0x7f06002e;
-        public static final int AzCertificateTypeNotice=0x7f06002d;
-        public static final int AzConstitutionNotice=0x7f060032;
-        public static final int AzContactUpErr=0x7f060034;
-        public static final int AzDataTypNotice=0x7f060030;
-        public static final int AzDiseaseTpyeNotice=0x7f060031;
-        public static final int AzHeadContact=0x7f060037;
-        public static final int AzHeadContactDel=0x7f060039;
-        public static final int AzHeadContactDelAll=0x7f060038;
-        public static final int AzHeadContactdial=0x7f06003a;
-        public static final int AzImeiNum=0x7f060033;
-        public static final int AzInfoExitNotice=0x7f060029;
-        public static final int AzInfoUpErr=0x7f060028;
-        public static final int AzInfoUpOK=0x7f060027;
-        public static final int AzInformationNotice=0x7f060026;
-        public static final int AzInformationNoticeErr=0x7f060035;
-        public static final int AzInformationNoticeOk=0x7f060036;
-        public static final int AzInsuranceTpyeNotice=0x7f06002f;
-        public static final int AzNameNotice=0x7f06002c;
-        public static final int AzUpdataIng=0x7f06002b;
-        public static final int AzWaiting=0x7f06002a;
-        public static final int BType=0x7f060049;
-        public static final int Boy=0x7f06003d;
-        public static final int CType=0x7f06004a;
-        public static final int DType=0x7f06004b;
-        public static final int Decrease=0x7f060047;
-        public static final int Driver=0x7f060042;
-        public static final int EType=0x7f06004c;
-        public static final int FType=0x7f06004d;
-        public static final int False=0x7f06003c;
-        public static final int GType=0x7f06004e;
-        public static final int Girl=0x7f06003e;
-        public static final int HType=0x7f06004f;
-        public static final int IType=0x7f060050;
-        public static final int IdCard=0x7f06003f;
-        public static final int NewInfo=0x7f060044;
-        public static final int Other=0x7f060043;
-        public static final int Passport=0x7f060040;
-        public static final int PersonEmergencyContact=0x7f060053;
-        public static final int PersonInfo=0x7f060055;
-        public static final int PersonLocation=0x7f060052;
-        public static final int PersonTongXunLu=0x7f060054;
-        public static final int Succe=0x7f06003b;
-        public static final int UpData=0x7f060045;
-        public static final int apnDeleteData=0x7f06001d;
-        public static final int apnDialerPhone=0x7f06001a;
-        public static final int apnEditData=0x7f06001c;
-        public static final int apnQQis=0x7f060018;
-        public static final int apnSendSMS=0x7f06001b;
-        public static final int apnadress=0x7f06000c;
-        public static final int apnadressis=0x7f06000d;
-        public static final int apnbirthday=0x7f06000e;
-        public static final int apnbirthdayis=0x7f06000f;
-        public static final int apncontent=0x7f060013;
-        public static final int apndownloadphb=0x7f060021;
-        public static final int apneditdata=0x7f06001e;
-        public static final int apnfinish=0x7f060010;
-        public static final int apninputemgercontactinfor=0x7f060017;
-        public static final int apninputname=0x7f060007;
-        public static final int apninputphonenum=0x7f060019;
-        public static final int apninputtestphbnum=0x7f060022;
-        public static final int apnmeihua=0x7f060016;
-        public static final int apnname=0x7f060005;
-        public static final int apnnamesec=0x7f060006;
-        public static final int apnnumber=0x7f06000a;
-        public static final int apnpersoniforinput=0x7f060014;
-        public static final int apnpersoniforinputok=0x7f060015;
-        public static final int apnphmanage=0x7f06001f;
-        public static final int apnphonenum=0x7f060008;
-        public static final int apnqqnumb=0x7f06000b;
-        public static final int apnredo=0x7f060011;
-        public static final int apnsearch=0x7f060012;
-        public static final int apnspace=0x7f060023;
-        public static final int apntelenumb=0x7f060009;
-        public static final int apnuploadphb=0x7f060020;
-        public static final int app_name=0x7f060000;
-        public static final int azcancel=0x7f060025;
-        public static final int azconfirm=0x7f060024;
-        public static final int emergencycontact=0x7f060001;
-        public static final int emergencycontactinput=0x7f060003;
-        public static final int emergencycontent=0x7f060002;
-        public static final int nodata=0x7f060004;
-        public static final int phbdelete=0x7f060051;
+        public static final int AType=0x7f070048;
+        public static final int Add=0x7f070046;
+        public static final int Armyman=0x7f070041;
+        public static final int AzCertificateNumNotice=0x7f07002e;
+        public static final int AzCertificateTypeNotice=0x7f07002d;
+        public static final int AzConstitutionNotice=0x7f070032;
+        public static final int AzContactUpErr=0x7f070034;
+        public static final int AzDataTypNotice=0x7f070030;
+        public static final int AzDiseaseTpyeNotice=0x7f070031;
+        public static final int AzHeadContact=0x7f070037;
+        public static final int AzHeadContactDel=0x7f070039;
+        public static final int AzHeadContactDelAll=0x7f070038;
+        public static final int AzHeadContactdial=0x7f07003a;
+        public static final int AzImeiNum=0x7f070033;
+        public static final int AzInfoExitNotice=0x7f070029;
+        public static final int AzInfoUpErr=0x7f070028;
+        public static final int AzInfoUpOK=0x7f070027;
+        public static final int AzInformationNotice=0x7f070026;
+        public static final int AzInformationNoticeErr=0x7f070035;
+        public static final int AzInformationNoticeOk=0x7f070036;
+        public static final int AzInsuranceTpyeNotice=0x7f07002f;
+        public static final int AzNameNotice=0x7f07002c;
+        public static final int AzUpdataIng=0x7f07002b;
+        public static final int AzWaiting=0x7f07002a;
+        public static final int BType=0x7f070049;
+        public static final int Boy=0x7f07003d;
+        public static final int CType=0x7f07004a;
+        public static final int DType=0x7f07004b;
+        public static final int Decrease=0x7f070047;
+        public static final int Driver=0x7f070042;
+        public static final int EType=0x7f07004c;
+        public static final int FType=0x7f07004d;
+        public static final int False=0x7f07003c;
+        public static final int GType=0x7f07004e;
+        public static final int Girl=0x7f07003e;
+        public static final int HType=0x7f07004f;
+        public static final int IType=0x7f070050;
+        public static final int IdCard=0x7f07003f;
+        public static final int NewInfo=0x7f070044;
+        public static final int Other=0x7f070043;
+        public static final int Passport=0x7f070040;
+        public static final int PersonEmergencyContact=0x7f070053;
+        public static final int PersonInfo=0x7f070055;
+        public static final int PersonLocation=0x7f070052;
+        public static final int PersonTongXunLu=0x7f070054;
+        public static final int Succe=0x7f07003b;
+        public static final int UpData=0x7f070045;
+        public static final int apnDeleteData=0x7f07001d;
+        public static final int apnDialerPhone=0x7f07001a;
+        public static final int apnEditData=0x7f07001c;
+        public static final int apnQQis=0x7f070018;
+        public static final int apnSendSMS=0x7f07001b;
+        public static final int apnadress=0x7f07000c;
+        public static final int apnadressis=0x7f07000d;
+        public static final int apnbirthday=0x7f07000e;
+        public static final int apnbirthdayis=0x7f07000f;
+        public static final int apncontent=0x7f070013;
+        public static final int apndownloadphb=0x7f070021;
+        public static final int apneditdata=0x7f07001e;
+        public static final int apnfinish=0x7f070010;
+        public static final int apninputemgercontactinfor=0x7f070017;
+        public static final int apninputname=0x7f070007;
+        public static final int apninputphonenum=0x7f070019;
+        public static final int apninputtestphbnum=0x7f070022;
+        public static final int apnmeihua=0x7f070016;
+        public static final int apnname=0x7f070005;
+        public static final int apnnamesec=0x7f070006;
+        public static final int apnnumber=0x7f07000a;
+        public static final int apnpersoniforinput=0x7f070014;
+        public static final int apnpersoniforinputok=0x7f070015;
+        public static final int apnphmanage=0x7f07001f;
+        public static final int apnphonenum=0x7f070008;
+        public static final int apnqqnumb=0x7f07000b;
+        public static final int apnredo=0x7f070011;
+        public static final int apnsearch=0x7f070012;
+        public static final int apnspace=0x7f070023;
+        public static final int apntelenumb=0x7f070009;
+        public static final int apnuploadphb=0x7f070020;
+        public static final int app_name=0x7f070000;
+        public static final int azcancel=0x7f070025;
+        public static final int azconfirm=0x7f070024;
+        public static final int emergencycontact=0x7f070001;
+        public static final int emergencycontactinput=0x7f070003;
+        public static final int emergencycontent=0x7f070002;
+        public static final int nodata=0x7f070004;
+        public static final int phbdelete=0x7f070051;
     }
     public static final class style {
-        public static final int CustomWindowTitleBackground=0x7f070000;
-        public static final int userdefined=0x7f070001;
+        public static final int CustomWindowTitleBackground=0x7f080000;
+        public static final int userdefined=0x7f080001;
     }
     public static final class xml {
         public static final int settings=0x7f040000;

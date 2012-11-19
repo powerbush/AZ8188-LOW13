@@ -58,11 +58,13 @@
 		
 		<!--紧急联系人录入  -->
 		<activity android:name="com.az.EmergencyPhoneNum.EmergencyphbMainActivity"
+				  android:theme="@style/userdefined"
 				  android:launchMode="singleTop"
 				  android:windowSoftInputMode = "adjustResize"/>
 				  
 		<!--电话本录僿 -->		  
-		<activity android:name="com.az.ContactsUpdata.ContactPhoneUp"></activity>
+		<activity android:name="com.az.ContactsUpdata.ContactPhoneUp"
+			android:theme="@style/userdefined"></activity>
 		
     </application>
   

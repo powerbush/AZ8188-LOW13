@@ -5,7 +5,6 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
@@ -17,59 +16,38 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 
-import com.az.ContactsUpdata.ContactPhoneUp;
-import com.az.EmergencyPhoneNum.Emergencyphbentry.emergencyphb;
-
-import com.az.Main.MainActivity;
-import com.az.PersonInfo.SettingActivity;
-import com.az.TimingUpGps.SetAlarmTimeService;
-
-import android.R.plurals;
-import android.view.Gravity;
-import com.az.Main.R;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.app.Service;
-import android.app.TabActivity;
-import android.content.ContentResolver;
 import android.content.ContentValues;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.content.res.Resources;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.telephony.TelephonyManager;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.ContextMenu;
+import android.view.ContextMenu.ContextMenuInfo;
+import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ContextMenu.ContextMenuInfo;
 import android.view.View.OnClickListener;
 import android.view.View.OnCreateContextMenuListener;
 import android.view.Window;
-import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.AdapterView;
 import android.widget.AdapterView.AdapterContextMenuInfo;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TabHost;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import com.az.EmergencyPhoneNum.Emergencyphbentry.emergencyphb;
+import com.az.Main.R;
 
 public class EmergencyphbMainActivity extends Activity {
 	/** Called when the activity is first created. */
@@ -97,7 +75,7 @@ public class EmergencyphbMainActivity extends Activity {
 		handler = new Handler() {
 			@Override
 			public void handleMessage(Message msg) {
-				// TODO Auto-generated method stub
+
 				switch (msg.what) {
 				case 1:
 					UploadphbOk();
@@ -129,7 +107,7 @@ public class EmergencyphbMainActivity extends Activity {
 							@Override
 							public void onClick(
 									DialogInterface dialoginterface, int i) {
-								// TODO Auto-generated method stub
+								
 								dialoginterface.dismiss();
 							}
 						}).show();
@@ -174,6 +152,7 @@ public class EmergencyphbMainActivity extends Activity {
 		listview = (ListView) findViewById(R.id.list_contact_db);
 		adapter = new EmergencyphbAdapter(this, phblist);
 		listview.setAdapter(adapter);
+		listview.setCacheColorHint(0);
 
 		listview.setOnCreateContextMenuListener(new OnCreateContextMenuListener() {
 
@@ -274,7 +253,6 @@ public class EmergencyphbMainActivity extends Activity {
 									public void onClick(
 											DialogInterface dialoginterface,
 											int i) {
-										// TODO Auto-generated method stub
 										String name = contact_name.getText()
 												.toString();
 										String phone = contact_phone.getText()
@@ -391,11 +369,6 @@ public class EmergencyphbMainActivity extends Activity {
 																	}
 
 																} catch (ClientProtocolException e) {
-
-																	// TODO
-																	// Auto-generated
-																	// catch
-																	// block
 																	e.printStackTrace();
 																} catch (HttpHostConnectException e) {
 																	Message msg = Message
@@ -403,22 +376,11 @@ public class EmergencyphbMainActivity extends Activity {
 																	msg.what = 2;
 																	handler.sendMessage(msg);
 																} catch (IOException e) {
-																	// TODO
-																	// Auto-generated
-																	// catch
-																	// block
 																	e.printStackTrace();
 																} catch (Exception e) {
-																	// TODO
-																	// Auto-generated
-																	// catch
-																	// block
 																	e.printStackTrace();
 																}
 															} catch (UnsupportedEncodingException e) {
-																// TODO
-																// Auto-generated
-																// catch block
 																e.printStackTrace();
 															}
 
@@ -440,7 +402,6 @@ public class EmergencyphbMainActivity extends Activity {
 									public void onClick(
 											DialogInterface dialoginterface,
 											int i) {
-										// TODO Auto-generated method stub
 										dialoginterface.dismiss();
 									}
 								});

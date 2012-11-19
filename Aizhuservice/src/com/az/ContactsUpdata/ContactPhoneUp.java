@@ -43,6 +43,7 @@ import android.provider.ContactsContract.Contacts;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
@@ -55,8 +56,10 @@ public class ContactPhoneUp extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+		requestWindowFeature(Window.FEATURE_CUSTOM_TITLE); // ×¢ÒâË³Ðò    
 		setContentView(R.layout.contact_phone);
 		super.onCreate(savedInstanceState);
+        getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE,R.layout.title_contact_phone_up); 
 		handler=new Handler(){
 			@Override
 			public void handleMessage(Message msg) {

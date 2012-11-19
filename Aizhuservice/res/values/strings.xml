@@ -3,7 +3,7 @@
     <string name="app_name">关爱行服务</string>
     <string name="emergencycontact">紧急联系人</string>
     <string name="emergencycontent">紧急信息</string>
-    <string name="emergencycontactinput">联系人录入</string>
+    <string name="emergencycontactinput">添加</string>
     <string name="nodata">没有数据</string>
     <string name="apnname">姓名：</string>
     <string name="apnnamesec">名字</string>
@@ -21,7 +21,7 @@
     <string name="apnsearch">查询</string>
     <string name="apncontent">内容</string>
     <string name="apnpersoniforinput">个人信息录入</string>
-    <string name="apnpersoniforinputok">录入完成</string>
+    <string name="apnpersoniforinputok">完成</string>
     <string name="apnmeihua">梅花三弄</string>
     <string name="apninputemgercontactinfor">完成</string>
     <string name="apnQQis">QQ: </string>
@@ -87,11 +87,11 @@
     <string name="PersonTongXunLu">http://210.51.7.193/io/PersonTongXunLu.aspx</string>
     <string name="PersonInfo">http://210.51.7.193/io/PersonInfo.aspx</string>
     <style name="CustomWindowTitleBackground"> 
-    <item name="android:background">#565656</item>
-		</style>
+    	<item name="android:background">#00375B</item>
+	</style>
     <style name="userdefined" parent="@android:style/Theme.Light"> 
-    	<item name="android:windowTitleSize">50sp</item> 
+    	<item name="android:windowTitleSize">60sp</item> 
     	<item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item>
     	<item name="android:textSize">22sp</item>
-		</style>
+	</style>
 </resources>

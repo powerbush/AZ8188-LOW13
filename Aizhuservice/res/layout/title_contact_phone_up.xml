@@ -6,22 +6,12 @@
     android:layout_height="60dp">
 
     <TextView 
-		android:id="@+id/info_title"
 		android:layout_width="wrap_content" 
 		android:layout_height="wrap_content" 
 		android:layout_centerVertical="true"
 		android:paddingLeft="5dp"
 		android:textSize = "30sp"
 		android:textColor="@color/white"
-		android:text="@string/apnpersoniforinput"/>
-    <Button 
-    	android:id="@+id/flish_button"
-    	android:layout_width="wrap_content" 
-    	android:layout_height="wrap_content"  
-    	android:textSize = "28sp"
-    	android:textColor="#009900"
-    	android:layout_alignParentBottom="true"
-    	android:layout_alignParentRight="true"
-    	android:text="@string/apnpersoniforinputok"/>
+		android:text="@string/apnphmanage"/>
 </RelativeLayout>
 

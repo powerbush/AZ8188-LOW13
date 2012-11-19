@@ -55,17 +55,23 @@ public class GalleryContactPhoneActivity extends Activity {
     	super.onActivityResult(requestCode, resultCode, data);
     	
     	if(resultCode==RESULT_OK){
-    		Uri uri=data.getData();
-    		ContentResolver cResolver=getContentResolver();
-    		String [] proj={MediaStore.Images.Media.DATA};
-    		Cursor sorCursor=managedQuery(uri, proj, null, null, null);
-    		
-    		int column_index = sorCursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-    		sorCursor.moveToFirst();
-    		String pathString=sorCursor.getString(column_index);
-    		Bitmap bmp=BitmapFactory.decodeFile(pathString);
-    		Log.i("life", ""+bmp+pathString);
-    		adapter.upData(requestCode,pathString);
+            try{
+                //via liaobz 取完照片返回默认由图库传回.如果异常 改为取相机方式(需后续优化)
+                Uri uri=data.getData();
+                ContentResolver cResolver=getContentResolver();
+                String [] proj={MediaStore.Images.Media.DATA};
+                Cursor sorCursor=managedQuery(uri, proj, null, null, null);
+                
+                int column_index = sorCursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+                sorCursor.moveToFirst();
+                String pathString=sorCursor.getString(column_index);
+                Bitmap bmp=BitmapFactory.decodeFile(pathString);
+                Log.i("life", ""+bmp+pathString);
+                adapter.upData(requestCode,pathString);
+            } catch(Exception e) {
+                adapter.upData(requestCode,"/sdcard/test.jpg");
+
+            }
     		
 			/*try {
 				Bitmap bmp = BitmapFactory.decodeStream(cResolver.openInputStream(uri));

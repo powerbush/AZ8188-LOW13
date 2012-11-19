@@ -72,12 +72,6 @@ public class AlarmService extends Service {
 				InfoParamss.add(new BasicNameValuePair("Address", addr));
 				InfoParamss.add(new BasicNameValuePair("IsEmergency", "1"));
 
-				// Log.i("info by liao", "longitude=" + Longitude);
-				// Log.i("info by liao", "latitude=" + Latitude);
-				// Log.i("info by liao", "imei_key=" + imei);
-				// Log.i("info by liao", "Address=" + addr);
-				// Log.i("info by liao", "longitude=" + Longitude);
-
 				new NetInterface().SendInfoToNet(LoginURIString, InfoParamss);
 
 				// stopSelf();

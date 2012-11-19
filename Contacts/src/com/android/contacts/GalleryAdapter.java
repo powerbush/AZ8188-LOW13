@@ -1,5 +1,6 @@
 package com.android.contacts;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import android.R.integer;
@@ -11,6 +12,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.net.Uri;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.provider.MediaStore;
@@ -19,6 +21,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -61,7 +64,9 @@ public class GalleryAdapter extends BaseAdapter{
 		phone_contact_imageView=(ImageView) v.findViewById(R.id.phone_contact_image);
 		
 		final GalleryContactEntry gcEntry=galleryContactEntries.get(i);
+
 		name.setText(gcEntry.getContactName());
+		/* by liao 取消文字点击事件 添加按钮
 		name.setOnClickListener(new android.view.View.OnClickListener() {
 			
 			@Override
@@ -75,9 +80,9 @@ public class GalleryAdapter extends BaseAdapter{
 				
 				context.startActivity(intentnameIntent);
 			}
-		});
+		});*/
 		phoneTextView.setText(gcEntry.getContactPhone());
-		
+		/* by liao 取消文字点击事件 添加按钮
 		phoneTextView.setOnClickListener(new android.view.View.OnClickListener(){
 
 			@Override
@@ -92,6 +97,22 @@ public class GalleryAdapter extends BaseAdapter{
 				context.startActivity(intentnameIntent);
 			}
 			
+		});*/
+		//by liao 取消文字点击事件 添加按钮
+		((Button)v.findViewById(R.id.phone_contact_edit_btn)).setOnClickListener(new android.view.View.OnClickListener() {
+			
+			@Override
+			public void onClick(View view) {
+				// TODO Auto-generated method stub
+				Intent intentnameIntent=new Intent(context,PhoneEditActivity.class);
+				
+				//需要加入当前页面参数过去。
+				intentnameIntent.putExtra("name", gcEntry.getContactName());
+				intentnameIntent.putExtra("phone", gcEntry.getContactPhone());
+				
+				context.startActivity(intentnameIntent);
+			}
+
 		});
 		phone_contact_imageView.setOnClickListener(new android.view.View.OnClickListener(){
 
@@ -117,7 +138,8 @@ public class GalleryAdapter extends BaseAdapter{
 						}else{
 
 							Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-
+							//by liao 传入照片输出地址
+							intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File("/sdcard/test.jpg")));
 							((Activity) context).startActivityForResult(intent, gcEntry.getImageId());
 
 						}
