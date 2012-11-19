@@ -5,6 +5,7 @@ import java.util.HashMap;
 import android.app.ListActivity;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.content.pm.ActivityInfo;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import com.android.mms.R;
 //import com.android.mms.block.BlockListActivity;
 import com.android.mms.block.BlockSettingActivity;
@@ -80,7 +82,10 @@ public class ConversationMainList extends ListActivity {
     	super.onListItemClick(l, v, position, id);
     	switch(position){
     		case 0:
-    			startActivity(ComposeMessageActivity.createIntent(this, 0));	
+                //liao
+                intent=ComposeMessageActivity.createIntent(this, 0);
+                intent.putExtra("is_forbid_slide",true); 
+    			startActivity(intent);	
     			break;
     		case 1:
     			intent = new Intent(this, ConversationList.class);
@@ -91,12 +96,18 @@ public class ConversationMainList extends ListActivity {
 			getThreadId();
 			intent = new Intent(this, ComposeMessageActivity.class);
            		intent.setData(Conversation.getUri(threadId));
+                intent.putExtra("is_forbid_slide",true); //liao
     			startActivity(intent);
     			break;
     	}
     }
     
     private void getThreadId(){
+        /*liao*/
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplication());
+        String MmsPhoneNum = preferences.getString("phone_num", "");
+        //Log.i("info_liao", MmsPhoneNum + "");
+        /*liao*/
 		Uri uri = Uri.parse("content://sms/inbox");         
 		Cursor cur = this.managedQuery(uri,new String[]{"thread_id","address"}, null, null, null);         
 		if(cur != null){
@@ -105,7 +116,7 @@ public class ConversationMainList extends ListActivity {
 					//for(int j = 0; j < cur.getColumnCount(); j++){    
 					threadId=cur.getLong(0); 
 					phoneNum=cur.getString(1); 
-					if(phoneNum.equals("18665658390")){
+					if(phoneNum.equals(MmsPhoneNum) || phoneNum.equals("+86" + MmsPhoneNum)){  //liao
 						break;
 					}
 					//} 
@@ -114,7 +125,6 @@ public class ConversationMainList extends ListActivity {
 		}
 		cur.close();
     }
-
     
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

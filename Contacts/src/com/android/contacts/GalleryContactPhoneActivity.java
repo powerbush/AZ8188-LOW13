@@ -1,5 +1,6 @@
 package com.android.contacts;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
@@ -11,6 +12,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
@@ -41,7 +43,7 @@ public class GalleryContactPhoneActivity extends Activity {
     	list=(Gallery) findViewById(R.id.gallery_contact_phone);
     	list.setAdapter(adapter);
     	
-    	
+    	list.setClickable(false);
     }
     @Override
     protected void onResume() {
@@ -69,8 +71,13 @@ public class GalleryContactPhoneActivity extends Activity {
                 Log.i("life", ""+bmp+pathString);
                 adapter.upData(requestCode,pathString);
             } catch(Exception e) {
-                adapter.upData(requestCode,"/sdcard/test.jpg");
+                adapter.upData(requestCode, Environment.getExternalStorageDirectory() + "/temp.jpg");
+                try{
+                    File file=new File(Environment.getExternalStorageDirectory() + "/temp.jpg");
+                    file.delete();
+                } catch(Exception ex) {
 
+                }
             }
     		
 			/*try {

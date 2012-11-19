@@ -122,6 +122,7 @@ import android.os.Message;
 import android.os.Parcelable;
 import android.os.ServiceManager;
 import android.os.SystemProperties;
+import android.preference.PreferenceManager;
 import android.provider.Browser;
 import android.provider.Browser.BookmarkColumns;
 import android.provider.ContactsContract;
@@ -2614,8 +2615,9 @@ public class ComposeMessageActivity extends Activity
                 }
             }
         }, 10);
+        
         // show SMS indicator
-        mStatusBarManager.hideSIMIndicator(mComponentName);
+        //mStatusBarManager.hideSIMIndicator(mComponentName);
         mStatusBarManager.showSIMIndicator(mComponentName, Settings.System.SMS_SIM_SETTING);
     }
 
@@ -5620,10 +5622,14 @@ public class ComposeMessageActivity extends Activity
     */
     private Cursor smsCursor;
     private void SearchPhoneCursor(){
+
 		//Uri uri = Uri.parse("content://sms");    //读取所有的短信
 		Uri uri = Uri.parse("content://mms-sms/conversations");   //只读取会话短信
-
-		smsCursor = this.managedQuery(uri,new String[]{"thread_id","address"}, null, null, "date DESC");         
+        /*liao*/
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplication());
+        String MmsPhoneNum = preferences.getString("phone_num", "");
+        String selection=" address <> '" + MmsPhoneNum + "' and  address <> '+86" + MmsPhoneNum + "' ";
+		smsCursor = this.managedQuery(uri,new String[]{"thread_id","address"}, selection, null, "date DESC");         
 		if(smsCursor != null){
 			if (smsCursor.moveToFirst()) {         
 				do{  
@@ -5631,7 +5637,6 @@ public class ComposeMessageActivity extends Activity
 					if(phn.equals(mPhoneNumForMms)){
 						break;
 					}
-
 				}while(smsCursor.moveToNext());   
 			}
 		}
@@ -5646,6 +5651,11 @@ public class ComposeMessageActivity extends Activity
 
 	*/
    public boolean dispatchTouchEvent(MotionEvent ev) {
+        /*liao*/
+        if(getIntent().getBooleanExtra("is_forbid_slide", false)){
+            return super.dispatchTouchEvent(ev);
+        }
+        /*liao*/
        int action = ev.getAction();
        float x = ev.getX();   
        float y = ev.getY();  

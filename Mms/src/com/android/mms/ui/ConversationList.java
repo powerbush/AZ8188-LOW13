@@ -328,7 +328,7 @@ public class ConversationList extends ListActivity
         // show SMS indicator
         Handler mShowIndicatorHandler = new Handler();
         final ComponentName name = getComponentName();
-        mStatusBarManager.hideSIMIndicator(name);
+        //mStatusBarManager.hideSIMIndicator(name);
         mStatusBarManager.showSIMIndicator(name, Settings.System.SMS_SIM_SETTING);
     }
 

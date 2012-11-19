@@ -61,7 +61,6 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.android.mms.block.BlockSettingActivity;
 import com.android.mms.LogTag;
 import com.android.mms.MmsConfig;
 import com.android.mms.R;
@@ -336,9 +335,7 @@ public class Conversation {
     public static Conversation from(Context context, Cursor cursor) {
 
 		/*-------------------------by liao----------------------------*/
-		SharedPreferences preferences;//=PreferenceManager.getDefaultSharedPreferences(BlockSettingActivity.this);
-		preferences = context.getSharedPreferences("MmsPhoneNum",
-				Context.MODE_PRIVATE);
+		SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
 		String MmsPhoneNum = preferences.getString("phone_num", "");
 		/*-------------------------by liao----------------------------*/
 

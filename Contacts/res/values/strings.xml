@@ -1672,5 +1672,7 @@
 <string name="contact_phone_please_select_image">请重新选取图片</string>
     <string name="contact_phone_photo_album">相册</string>
     <string name="contact_phone_photo_camera">相机</string>
-    <string name="contact_phone_select_image">选取图片</string>
+    <string name="contact_phone_take_photo">拍照</string>
+    <string name="contact_phone_select_image">选择照片</string>
+    <string name="contact_phone_delete_image">删除照片</string>
 </resources>
