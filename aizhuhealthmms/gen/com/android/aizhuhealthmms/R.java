@@ -18,6 +18,8 @@ public final class R {
         public static final int dialog_top=0x7f020004;
         public static final int health_mms_bg=0x7f020005;
         public static final int icon=0x7f020006;
+        public static final int msn=0x7f020007;
+        public static final int sms=0x7f020008;
     }
     public static final class id {
         public static final int body_content_sms=0x7f060005;
