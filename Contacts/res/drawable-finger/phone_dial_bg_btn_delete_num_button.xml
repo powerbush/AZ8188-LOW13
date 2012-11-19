@@ -5,6 +5,7 @@
         android:drawable="@drawable/phone_dial_bg_delete_btn_normal" />
     <item android:state_enabled="false"
         android:drawable="@drawable/phone_dial_bg_delete_btn_normal" />
+    
         
     <!-- Enabled views -->
     <item android:state_pressed="true"
