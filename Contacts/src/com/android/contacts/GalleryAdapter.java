@@ -104,7 +104,7 @@ public class GalleryAdapter extends BaseAdapter{
 			
 		});*/
 		//by liao 取消文字点击事件 添加按钮
-		((ImageView)v.findViewById(R.id.phone_contact_edit_btn)).setOnClickListener(new android.view.View.OnClickListener() {
+		((Button)v.findViewById(R.id.phone_contact_edit_btn)).setOnClickListener(new android.view.View.OnClickListener() {
 			
 			@Override
 			public void onClick(View view) {
@@ -119,7 +119,7 @@ public class GalleryAdapter extends BaseAdapter{
 			}
 
 		});
-		((ImageView)v.findViewById(R.id.phone_contact_call_btn)).setOnClickListener(new android.view.View.OnClickListener() {
+		((Button)v.findViewById(R.id.phone_contact_call_btn)).setOnClickListener(new android.view.View.OnClickListener() {
 			
 			@Override
 			public void onClick(View view) {

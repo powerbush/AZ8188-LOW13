@@ -592,6 +592,7 @@ public class ContactListItemView extends ViewGroup {
             mNameTextView.setEllipsize(TruncateAt.MARQUEE);
             mNameTextView.setTextAppearance(mContext, android.R.style.TextAppearance_Large);
             mNameTextView.setGravity(Gravity.CENTER_VERTICAL);
+            mNameTextView.setTextSize(54);
             addView(mNameTextView);
         }
         return mNameTextView;

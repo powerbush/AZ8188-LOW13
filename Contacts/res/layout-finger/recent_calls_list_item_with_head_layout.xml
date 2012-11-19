@@ -75,7 +75,7 @@
                     android:layout_marginTop="@dimen/calllog_list_item_name_top_margin"
                     android:layout_below="@id/calllog_head"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="30dip"
+                    android:textSize="45dip"
                     android:textColor="@color/calllog_list_item_name_font_color"
                     android:singleLine="true"
                     android:ellipsize="marquee"

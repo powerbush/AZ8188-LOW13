@@ -732,9 +732,9 @@ public class ContactsListActivity extends ListActivity implements View.OnCreateC
 	private LinearLayout mBottomView;
 
 	private Button mGroupBtn;
-	private ImageButton mSearchButton;
-	private ImageButton mAddNewContactBtn;
-	private ImageButton mListGalleryBtnButton;
+	private Button mSearchButton;
+	private Button mAddNewContactBtn;
+	private Button mListGalleryBtnButton;
 	private ViewGroup groupView;
 	private TextView favTitle;
 //	private Button btnEmptyCopySim;
@@ -1855,9 +1855,9 @@ public class ContactsListActivity extends ListActivity implements View.OnCreateC
             getListView().setLayoutParams(params);
             
             mGroupBtn = (Button) findViewById(R.id.group_button);
-            mSearchButton = (ImageButton) findViewById(R.id.search_contact);
-            mAddNewContactBtn = (ImageButton) findViewById(R.id.add_new_contact);
-		mListGalleryBtnButton=(ImageButton) findViewById(R.id.contact_list_gallery_but);
+            mSearchButton = (Button) findViewById(R.id.search_contact_btn);
+            mAddNewContactBtn = (Button) findViewById(R.id.add_new_contact_btn);
+            mListGalleryBtnButton=(Button) findViewById(R.id.contact_list_gallery_btn);
             if (mGroupBtn != null) {
                 mGroupBtn.setOnClickListener(this);
             }
@@ -2167,16 +2167,16 @@ public class ContactsListActivity extends ListActivity implements View.OnCreateC
                 showGroupsDialog();
                 break;
             }
-            case R.id.search_contact: {
+            case R.id.search_contact_btn: {
                 onSearchRequested();
                 break;
             }
-		case R.id.contact_list_gallery_but: {
+		case R.id.contact_list_gallery_btn: {
             	Intent intentGallery=new Intent			 			(this,GalleryContactPhoneActivity.class);
             	startActivity(intentGallery);
             	break;
             }
-            case R.id.add_new_contact: 
+            case R.id.add_new_contact_btn: 
 //            case R.id.btn_new_contact:
             	{
             	Log.i(TAG,"%%%%%%%%% add_new_contact: mShouldClickPlusButton is " + mShouldClickPlusButton);
