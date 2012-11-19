@@ -252,8 +252,8 @@ public class ContactListItemView extends ViewGroup {
 
         ensurePhotoViewSize();
 
-        height = Math.max(height, mPhotoViewHeight);
-        height = Math.max(height, mPreferredHeight);
+        height = Math.max(height, mPhotoViewHeight)+10;
+        height = Math.max(height, mPreferredHeight)+10;
 
         if (mHeaderVisible) {
             ensureHeaderBackground();
@@ -505,6 +505,8 @@ public class ContactListItemView extends ViewGroup {
             mPhotoViewHeight = a.getLayoutDimension(
                     android.R.styleable.ViewGroup_Layout_layout_height,
                     ViewGroup.LayoutParams.WRAP_CONTENT);
+            mPhotoViewWidth+=10;
+            mPhotoViewHeight+=10;
             a.recycle();
         }
     }
@@ -592,7 +594,7 @@ public class ContactListItemView extends ViewGroup {
             mNameTextView.setEllipsize(TruncateAt.MARQUEE);
             mNameTextView.setTextAppearance(mContext, android.R.style.TextAppearance_Large);
             mNameTextView.setGravity(Gravity.CENTER_VERTICAL);
-            mNameTextView.setTextSize(54);
+            mNameTextView.setTextSize(45);
             addView(mNameTextView);
         }
         return mNameTextView;

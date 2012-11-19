@@ -67,6 +67,7 @@
                 <action android:name="android.intent.action.sim.SIM_FILES_CHANGED" />
                 <action android:name="android.intent.action.sim.SIM_FILES_CHANGED_2" />
                 <action android:name="android.intent.action.ACTION_PHONE_RESTART" />
+                
             </intent-filter>
         </receiver>
         <service android:name="StartSIMService" />
@@ -687,14 +688,19 @@
                 <intent-filter>
                 <action android:name="android.intent.action.SEND"/>
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="text/x-vcard" />                
+                <data android:mimeType="text/x-vcard" />
                 <data android:scheme="content"/> 
                 <!--<data android:mimeType="vnd.android.cursor.item/contact" android:host="com.android.contacts" /> -->
             </intent-filter>  
    </activity>
-     <activity android:name=".GalleryContactPhoneActivity"></activity>
+     <activity 
+          android:name=".GalleryContactPhoneActivity">
+     </activity>
     	<activity android:name=".PhoneEditActivity"></activity>
     	
+    	<activity android:name=".GalleryEmergencyPhoneActivity"></activity>
+    	
+   
     
     </application>
 </manifest>

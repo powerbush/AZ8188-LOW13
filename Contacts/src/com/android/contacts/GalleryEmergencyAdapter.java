@@ -30,12 +30,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class GalleryAdapter extends BaseAdapter{
+public class GalleryEmergencyAdapter extends BaseAdapter{
 	private Context context;
 	private ArrayList<GalleryContactEntry> galleryContactEntries;
 	private LayoutInflater inflater;
 	public ImageView phone_contact_imageView;
-	public GalleryAdapter(Context context,ArrayList<GalleryContactEntry> ga){
+	public GalleryEmergencyAdapter(Context context,ArrayList<GalleryContactEntry> ga){
 		this.context=context;
 		this.galleryContactEntries=ga;
 		inflater=LayoutInflater.from(context);
@@ -71,39 +71,9 @@ public class GalleryAdapter extends BaseAdapter{
 		final GalleryContactEntry gcEntry=galleryContactEntries.get(i);
 
 		name.setText(gcEntry.getContactName());
-		/* by liao 取消文字点击事件 添加按钮
-		name.setOnClickListener(new android.view.View.OnClickListener() {
-			
-			@Override
-			public void onClick(View view) {
-				// TODO Auto-generated method stub
-				Intent intentnameIntent=new Intent(context,PhoneEditActivity.class);
-				
-				//需要加入当前页面参数过去。
-				intentnameIntent.putExtra("name", gcEntry.getContactName());
-				intentnameIntent.putExtra("phone", gcEntry.getContactPhone());
-				
-				context.startActivity(intentnameIntent);
-			}
-		});*/
 		phoneTextView.setText(gcEntry.getContactPhone());
-		/* by liao 取消文字点击事件 添加按钮
-		phoneTextView.setOnClickListener(new android.view.View.OnClickListener(){
-
-			@Override
-			public void onClick(View view) {
-				// TODO Auto-generated method stub
-				Intent intentnameIntent=new Intent(context,PhoneEditActivity.class);
-				
-				//需要加入当前页面参数过去。
-				intentnameIntent.putExtra("name", gcEntry.getContactName());
-				intentnameIntent.putExtra("phone", gcEntry.getContactPhone());
-				
-				context.startActivity(intentnameIntent);
-			}
-			
-		});*/
-		//by liao 取消文字点击事件 添加按钮
+		
+		/*
 		((Button)v.findViewById(R.id.phone_contact_edit_btn)).setOnClickListener(new android.view.View.OnClickListener() {
 			
 			@Override
@@ -119,6 +89,8 @@ public class GalleryAdapter extends BaseAdapter{
 			}
 
 		});
+		*/
+		((Button)v.findViewById(R.id.phone_contact_edit_btn)).setVisibility(View.GONE);
 		((Button)v.findViewById(R.id.phone_contact_call_btn)).setOnClickListener(new android.view.View.OnClickListener() {
 			
 			@Override
@@ -153,31 +125,26 @@ public class GalleryAdapter extends BaseAdapter{
 							((Activity) context).startActivityForResult(Intent.createChooser(intent, context.getString(R.string.contact_phone_select_image)), gcEntry.getImageId());
 
 						}else{
-							//via liaobz 删除照片
-		 					//phone_contact_imageView.setImageResource(R.drawable.contact_phone_image_1);
+							
 							SQLiteDatabase db=context.openOrCreateDatabase("contactphoto.db", context.MODE_PRIVATE, null);
-		 					db.execSQL("delete from contacttbl where contact_id = " + gcEntry.getImageId());
+		 					db.execSQL("delete from emergencyinfo where contact_id = " + gcEntry.getImageId());
 		 					db.close();
 		 					notifyDataSetChanged();
 						}
-
-
 					}}).create().show();
-
-
-
 				return false;
 
 			}
 			
 		});
 		SQLiteDatabase db=context.openOrCreateDatabase("contactphoto.db", context.MODE_PRIVATE, null);
-		 db.execSQL("create table if not exists contacttbl(" +
+		 db.execSQL("create table if not exists emergencyinfo(" +
 	        		"_id integer primary key autoincrement," +
 	        		"contact_id text not null," +
 	        		"image blob not null" +
 	        		")");
-		Cursor cursor=db.rawQuery("select * from contacttbl where contact_id="+gcEntry.getImageId(), null);
+
+		Cursor cursor=db.rawQuery("select * from emergencyinfo where contact_id="+gcEntry.getImageId(), null);
 		if(cursor!=null){
 			while(cursor.moveToNext()){
 				//String pathString=cursor.getString(cursor.getColumnIndex("path_image"));
@@ -195,11 +162,13 @@ public class GalleryAdapter extends BaseAdapter{
 	public void upData(int i,String path){
 		ContentValues contentValues = new ContentValues(); 
 		SQLiteDatabase db=context.openOrCreateDatabase("contactphoto.db", context.MODE_PRIVATE, null);
-		db.execSQL("create table if not exists contacttbl(" +
+		db.execSQL("create table if not exists emergencyinfo(" +
 					"_id integer primary key autoincrement," +
 					"contact_id text not null," +
 					"image blob not null" +
 					")");
+
+		
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
 		new BitmapFactory().decodeFile(path).compress(CompressFormat.JPEG, 100, out);
 		try {
@@ -212,7 +181,7 @@ public class GalleryAdapter extends BaseAdapter{
 		contentValues.put("contact_id",String.valueOf(i));
 		contentValues.put("image",out.toByteArray());
 		db.execSQL("delete from emergencyinfo where contact_id = " + String.valueOf(i));
-		db.insert("contacttbl", null, contentValues);
+		db.insert("emergencyinfo", null, contentValues);
 		db.close();
 	}
 }

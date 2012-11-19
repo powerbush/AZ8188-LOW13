@@ -302,11 +302,15 @@ public class DialtactsActivity extends TabActivity implements TabHost.OnTabChang
                 .setIndicator(view)
                 .setContent(intent), false);
     }
-
+    
     private void setupFavoritesTab() {
-        Intent intent = new Intent(UI.LIST_STREQUENT_ACTION);
-        intent.setClass(this, ContactsListActivity.class);
-        StickyTabs.setTab(intent, TAB_INDEX_FAVORITES);
+        //Intent intent = new Intent(UI.LIST_STREQUENT_ACTION);
+        //intent.setClass(this, ContactsListActivity.class);
+    	
+    	//Intent intent=new Intent(DialtactsActivity.this, GalleryContactPhoneActivity.class);
+    	Intent intent=new Intent(DialtactsActivity.this, GalleryEmergencyPhoneActivity.class);
+        
+    	StickyTabs.setTab(intent, TAB_INDEX_FAVORITES);
         View view = inflater.inflate(R.layout.tab_short, null);
         ImageView tabImage =(ImageView)view.findViewById(R.id.tab_icon);
         tabImage.setImageResource(R.drawable.ic_tab_starred);
