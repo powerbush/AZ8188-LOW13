@@ -144,6 +144,7 @@ public class GalleryAdapter extends BaseAdapter{
 						if(i== 0 ){
 							Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 							//by liao ¥´»Î’’∆¨ ‰≥ˆµÿ÷∑ getDataDirectory ()
+							
 							intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(Environment.getExternalStorageDirectory() + "/temp.jpg")));
 							((Activity) context).startActivityForResult(intent, gcEntry.getImageId());
 						}else if(i==1){
@@ -155,7 +156,7 @@ public class GalleryAdapter extends BaseAdapter{
 						}else{
 							//via liaobz …æ≥˝’’∆¨
 		 					//phone_contact_imageView.setImageResource(R.drawable.contact_phone_image_1);
-							SQLiteDatabase db=context.openOrCreateDatabase("contactphoto.db", context.MODE_PRIVATE, null);
+							SQLiteDatabase db=context.openOrCreateDatabase("contactphoto.db", Context.MODE_WORLD_WRITEABLE + Context.MODE_WORLD_READABLE, null);
 		 					db.execSQL("delete from contacttbl where contact_id = " + gcEntry.getImageId());
 		 					db.close();
 		 					notifyDataSetChanged();
@@ -171,7 +172,7 @@ public class GalleryAdapter extends BaseAdapter{
 			}
 			
 		});
-		SQLiteDatabase db=context.openOrCreateDatabase("contactphoto.db", context.MODE_PRIVATE, null);
+		SQLiteDatabase db=context.openOrCreateDatabase("contactphoto.db", Context.MODE_WORLD_WRITEABLE + Context.MODE_WORLD_READABLE, null);
 		 db.execSQL("create table if not exists contacttbl(" +
 	        		"_id integer primary key autoincrement," +
 	        		"contact_id text not null," +
@@ -183,7 +184,6 @@ public class GalleryAdapter extends BaseAdapter{
 				//String pathString=cursor.getString(cursor.getColumnIndex("path_image"));
 				//phone_contact_imageView.setImageBitmap(BitmapFactory.decodeFile(pathString));
 				byte[] imageBytes=cursor.getBlob(cursor.getColumnIndex("image"));
-				//Log.i("log_via_liao", "" + imageBytes);
 				phone_contact_imageView.setImageBitmap(BitmapFactory.decodeByteArray(imageBytes,0,imageBytes.length));
 			}
 		}
@@ -194,7 +194,7 @@ public class GalleryAdapter extends BaseAdapter{
 	
 	public void upData(int i,String path){
 		ContentValues contentValues = new ContentValues(); 
-		SQLiteDatabase db=context.openOrCreateDatabase("contactphoto.db", context.MODE_PRIVATE, null);
+		SQLiteDatabase db=context.openOrCreateDatabase("contactphoto.db", Context.MODE_WORLD_WRITEABLE + Context.MODE_WORLD_READABLE, null);
 		db.execSQL("create table if not exists contacttbl(" +
 					"_id integer primary key autoincrement," +
 					"contact_id text not null," +
@@ -211,7 +211,7 @@ public class GalleryAdapter extends BaseAdapter{
 
 		contentValues.put("contact_id",String.valueOf(i));
 		contentValues.put("image",out.toByteArray());
-		db.execSQL("delete from emergencyinfo where contact_id = " + String.valueOf(i));
+		db.execSQL("delete from contacttbl where contact_id = " + String.valueOf(i));
 		db.insert("contacttbl", null, contentValues);
 		db.close();
 	}

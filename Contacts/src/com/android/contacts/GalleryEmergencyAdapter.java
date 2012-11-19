@@ -126,7 +126,7 @@ public class GalleryEmergencyAdapter extends BaseAdapter{
 
 						}else{
 							
-							SQLiteDatabase db=context.openOrCreateDatabase("contactphoto.db", context.MODE_PRIVATE, null);
+							SQLiteDatabase db=context.openOrCreateDatabase("contactphoto.db", Context.MODE_WORLD_WRITEABLE + Context.MODE_WORLD_READABLE, null);
 		 					db.execSQL("delete from emergencyinfo where contact_id = " + gcEntry.getImageId());
 		 					db.close();
 		 					notifyDataSetChanged();
@@ -137,7 +137,7 @@ public class GalleryEmergencyAdapter extends BaseAdapter{
 			}
 			
 		});
-		SQLiteDatabase db=context.openOrCreateDatabase("contactphoto.db", context.MODE_PRIVATE, null);
+		SQLiteDatabase db=context.openOrCreateDatabase("contactphoto.db", Context.MODE_WORLD_WRITEABLE + Context.MODE_WORLD_READABLE, null);
 		 db.execSQL("create table if not exists emergencyinfo(" +
 	        		"_id integer primary key autoincrement," +
 	        		"contact_id text not null," +
@@ -161,7 +161,7 @@ public class GalleryEmergencyAdapter extends BaseAdapter{
 	
 	public void upData(int i,String path){
 		ContentValues contentValues = new ContentValues(); 
-		SQLiteDatabase db=context.openOrCreateDatabase("contactphoto.db", context.MODE_PRIVATE, null);
+		SQLiteDatabase db=context.openOrCreateDatabase("contactphoto.db", Context.MODE_WORLD_WRITEABLE + Context.MODE_WORLD_READABLE, null);
 		db.execSQL("create table if not exists emergencyinfo(" +
 					"_id integer primary key autoincrement," +
 					"contact_id text not null," +

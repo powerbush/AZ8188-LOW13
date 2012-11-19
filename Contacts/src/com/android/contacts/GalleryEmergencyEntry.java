@@ -50,29 +50,33 @@ public class GalleryEmergencyEntry {
 	    }
 	    */
 		
-	    SQLiteDatabase db = context.openOrCreateDatabase(databaseFilename,Context.MODE_WORLD_WRITEABLE + Context.MODE_WORLD_READABLE,null);
-	    Log.i("gancuirong", "db======databaseFilename"+db);
-		
 	    ArrayList<GalleryContactEntry> phones = new ArrayList<GalleryContactEntry>();
-		//Cursor cursor = db.query("database01",new String[]{"nameId","nameFlag","name"},"nameId='phoneId'",null,null,null,null);
-		Cursor cursor=db.query("emerphb", new String[]{"_id","name","phonenum","photo"}, null, null, null, null, null);
-		Log.i("gancuirong", cursor+"cursor=============");
-		if(cursor!=null){
-			while(cursor.moveToNext()){
-				GalleryContactEntry phoneContactEntry = new GalleryContactEntry();
-//				phoneContactEntry.setContactPhone(cursor.getString(cursor.getColumnIndex("nameId")));//联系人的电话号码
-//				phoneContactEntry.setImageId(Integer.valueOf(phoneContactEntry.getContactPhone().substring(2)));//唯一标识 
-//				phoneContactEntry.setContactName(cursor.getString(cursor.getColumnIndex("nameFlag")));//联系人的名字
-				
-				phoneContactEntry.setImageId(cursor.getInt(cursor.getColumnIndex("_id")));
-				phoneContactEntry.setContactPhone(cursor.getString(cursor.getColumnIndex("phonenum")));
-				phoneContactEntry.setContactName(cursor.getString(cursor.getColumnIndex("name")));
-				
-				phones.add(phoneContactEntry);
-			}
-			cursor.close();
-		}		
-		db.close();
+	    try{
+		
+			SQLiteDatabase db = context.openOrCreateDatabase(databaseFilename,Context.MODE_WORLD_WRITEABLE + Context.MODE_WORLD_READABLE,null);
+			Log.i("gancuirong", "db======databaseFilename"+db);
+			
+			//Cursor cursor = db.query("database01",new String[]{"nameId","nameFlag","name"},"nameId='phoneId'",null,null,null,null);
+			Cursor cursor=db.query("emerphb", new String[]{"_id","name","phonenum","photo"}, null, null, null, null, null);
+			Log.i("gancuirong", cursor+"cursor=============");
+			if(cursor!=null){
+				while(cursor.moveToNext()){
+					GalleryContactEntry phoneContactEntry = new GalleryContactEntry();
+					// phoneContactEntry.setContactPhone(cursor.getString(cursor.getColumnIndex("nameId")));//联系人的电话号码
+					// phoneContactEntry.setImageId(Integer.valueOf(phoneContactEntry.getContactPhone().substring(2)));//唯一标识 
+					// phoneContactEntry.setContactName(cursor.getString(cursor.getColumnIndex("nameFlag")));//联系人的名字
+					
+					phoneContactEntry.setImageId(cursor.getInt(cursor.getColumnIndex("_id")));
+					phoneContactEntry.setContactPhone(cursor.getString(cursor.getColumnIndex("phonenum")));
+					phoneContactEntry.setContactName(cursor.getString(cursor.getColumnIndex("name")));
+					
+					phones.add(phoneContactEntry);
+				}
+				cursor.close();
+			}		
+			db.close();
+		}
+		catch(Exception e){}
 		return phones;
 	}
 
